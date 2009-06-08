@@ -1,30 +1,43 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en" dir="ltr">
     <head profile="http://gmpg.org/xfn/1">
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <title>{{ page.title }}</title>
 
+        <!-- Meta-rubbish -->
         <meta name="keywords" content="{{ page.keywords }}">
         <meta name="description" content="{{ page.description }}">
         <meta name="copyright" content="(c) copyright Arjan van der Gaag">
         <meta name="author" content="Arjan van der Gaag">
-
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <meta http-equiv="Content-Language" content="en-GB">
         <meta name="robots" content="index, follow">
 
-        <link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen, projection">
-        <link rel="stylesheet" href="stylesheets/print.css" type="text/css" media="print">
+        <!-- Stylesheets, feed, favicon -->
+        <link rel="stylesheet" href="/assets/screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="/assets/syntax.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="/assets/print.css" type="text/css" media="print">
+        <link rel="alternate" type="application/rss+xml" title="Arjanvandergaag.nl RSS Feed" href="/atom.xml">
+        <link href="/assets/images/favicon.ico" rel="Shortcut Icon" type="image/ico">
 
-        <link href="assets/images/favicon.ico" rel="Shortcut Icon" type="image/ico">
+        <!-- OpenID -->
+        <link rel="openid.server" href="http://www.myopenid.com/server" />
+        <link rel="openid.delegate" href="http://avdgaag.myopenid.com/" />
+        <link rel="openid2.local_id" href="http://avdgaag.myopenid.com/" />
+        <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+        <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=avdgaag.myopenid.com" />
     </head>
     <body>
         <div id="site">
             <div id="header">
                 <div id="branding">
-                    <div id="title"><a href="http://arjanvandergaag.nl/" title="Return to the home page" rel="home">Arjan van der Gaag<small>.nl</small></a></div>
+                    <div id="title"><a href="/" title="Return to the home page" rel="home">Arjan van der Gaag<small>.nl</small></a></div>
                     <div id="tagline">I&rsquo;m Arjan van der Gaag and this is my website about me, good food, photography et cetera. If you like, we can <a href="/contact.html" title="Get in touch with me." rel="help">get in touch</a>.</div>
-                </div>
+                </div><!-- /branding -->
+                <ul>
+                    <li><a href="/" title="Return to the front page" rel="home">Home</a></li>
+                    <li><a href="/archives.html" title="Browse through the blog archives" rel="home">Archives</a></li>
+                    <li><a href="/contact.html" title="Get in touch" rel="home">Contact</a></li>
+                </ul>
                 <hr>
             </div><!-- /header -->
             <div id="content">
@@ -63,29 +76,29 @@
                     <li>
                         <h4>Elsewhere</h4>
                         <ul>
-                            <li><a href="http://twitter.com/avdgaag" title="" rel="external">twitter</a></li>
-                            <li><a href="http://linkedin.com/avdgaag" title="" rel="external">LinkedIn</a></li>
-                            <li><a href="http://digg.com/avdgaag" title="" rel="external">Digg</a></li>
-                            <li><a href="http://github.com/avdgaag" title="" rel="external">Github</a></li>
-                            <li><a href="http://flickr.com/users/arjanvandergaag" title="" rel="external">Flickr</a></li>
-                            <li><a href="http://delicious.com/arjanvandergaag" title="" rel="external">Delicious</a></li>
+                            <li><a href="http://twitter.com/avdgaag" title="Follow my updates on Twitter" rel="external">Twitter</a></li>
+                            <li><a href="http://linkedin.com/avdgaag" title="My professional profile on LinkedIn" rel="external">LinkedIn</a></li>
+                            <li><a href="http://digg.com/avdgaag" title="Sites that I like on Digg" rel="external">Digg</a></li>
+                            <li><a href="http://github.com/avdgaag" title="Code that I share on Github" rel="external">Github</a></li>
+                            <li><a href="http://flickr.com/users/arjanvandergaag" title="My photos on Flickr" rel="external">Flickr</a></li>
+                            <li><a href="http://delicious.com/arjanvandergaag" title="My bookmarks on Delicious" rel="external">Delicious</a></li>
                         </ul>
                     </li>
                     <li>
                         <h4>Sites</h4>
                         <ul>
-                            <li><a title="" href="http://pasttense.nl" rel="external me">the Past Tense</a></li>
-                            <li><a title="" href="http://agwebdesign.nl" rel="external me">AG Webdesign</a></li>
-                            <li><a title="" href="http://yummyinmytummy.nl" rel="external me">Yummy in my Tummy!</a></li>
-                            <li><a title="" href="http://arjanvandergaag.nl" rel="external me">Arjan van der Gaag.nl</a></li>
+                            <li><a title="My history weblog" href="http://pasttense.nl" rel="external me">the Past Tense</a></li>
+                            <li><a title="My web development company website" href="http://agwebdesign.nl" rel="external me">AG Webdesign</a></li>
+                            <li><a title="My Dutch cooking website" href="http://yummyinmytummy.nl" rel="external me">Yummy in my Tummy!</a></li>
+                            <li><a title="My personal blog" href="http://arjanvandergaag.nl" rel="external me">Arjan van der Gaag.nl</a></li>
                         </ul>
                     </li>
                     <li>
                         <h4>About me</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Arjan van der Gaag is a Dutch web developer and historian.<br><a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;">arjan@arjanvandergaag.nl</a></p>
                     </li>
                 </ul>
-                <p>&copy; copyright 2009 Arjan van der Gaag.</p>
+                <p>&copy; copyright 2009 Arjan van der Gaag unless noted otherwise.</p>
             </div><!-- /footer -->
         </div><!-- /site -->
     </body>
