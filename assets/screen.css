@@ -1,0 +1,346 @@
+/* @override http://localhost:4000/assets/screen.css */
+
+/* @group Reset */
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, font, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-weight: inherit;
+		font-style: inherit;
+		font-size: 100%;
+		font-family: inherit;
+		vertical-align: baseline;
+	}
+	:focus {
+		outline: 0;
+	}
+	body {
+		line-height: 1;
+		color: black;
+		background: white;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	table {
+		border-collapse: separate;
+		border-spacing: 0;
+	}
+	caption, th, td {
+		text-align: left;
+		font-weight: normal;
+	}
+	blockquote:before, blockquote:after, q:before, q:after {
+		content: "";
+	}
+	blockquote, q {
+		quotes: "" "";
+	}
+
+/* @end */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    line-height: 1.8em;
+    color: #333;
+    text-align: center;
+}
+
+#site {
+	width: 500px;
+	text-align: left;
+	margin: 40px auto;
+}
+
+#content {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 40px 0;
+}
+
+#header hr, #footer hr {
+	display: none;
+}
+
+#footer, #branding {
+	background: #f6f6f6;
+	padding: 10px;
+	margin: -10px;
+	-webkit-border-radius: 5px;
+}
+
+#sidebar {
+	display: none;
+}
+
+/* @group Footer */
+
+	#footer {
+		font-size: 11px;
+	}
+	
+	#footer li {
+		float: left;
+		width: 166px;
+	}
+	
+	#footer li li {
+		float: none;
+	}
+	
+	#footer p {
+		text-align: center;
+		clear: both;
+	}
+	
+	#footer li p {
+		clear: both;
+		margin: 0;
+		text-align: left;
+	}
+
+/* @end */
+
+/* @group Links */
+    a {
+        color: #0071bc;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:visited {
+        color: #f00;
+    }
+
+    a:hover {
+        color: #c33;
+    }
+
+    a:active,.a:focus {
+        color: #000;
+    }
+
+/* @end */
+
+/* @group Headers */
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: normal;
+		font-family: Cambria, Georgia, sans-serif;
+		color: #222;
+	}
+
+    h1 {
+		font-weight: bold;
+		color: #0071bc;
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin: 30px 0 -10px;
+    }
+
+    h3 {
+        font-size: 14px;
+        margin:  20px 0 0;
+    }
+    
+    h4 {
+		font: bold 12px/20px Helvetica, Arial, sans-serif;
+		margin: 0;
+		font-size: 12px;
+	}
+	
+	h5 {
+		font-style: italic;
+		font-weight: normal;
+		margin: 20px 0 0 0;
+	}
+	
+	h6 {
+		font-size: 11px;
+		margin: 0;
+	}
+
+/* @end */
+
+/* @group Block-level styles */
+
+    p {
+        margin: 20px 0;
+    }
+    
+    p.leader {
+		font-weight: bold;
+		color: #555;
+	}
+	
+	p.meta {
+		color: #aaa;
+	}
+	
+	#title {
+		font-size: 24px;
+		font-weight: bold;
+		text-transform: lowercase;
+	}
+	
+	#title small {
+		font: italic 16px/20px Cambria, Georgia, serif;
+		margin: 10px 0;
+	}
+	
+	#nav {
+		display: none;
+	}
+	
+	#tagline {
+		font: 14px/20px Helvetica, Arial, sans-serif;
+		margin: 10px 0;
+		color: #666;
+	}
+	
+    blockquote {
+        margin: 0 20px;
+        color: #666;
+    }
+
+    blockquote > *:first-child:before {
+        content: "\201C";
+        display: block;
+        font-size: 2.5em;
+        margin: 1em 0 -.5em -.62em;
+        font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+        padding-right: .2em;
+        color: #aaa;
+        line-height: 0;
+    }
+
+    .safari blockquote > *:first-child:before {
+        margin: .9em 0 -.9em -.62em;
+    }
+
+    pre {
+        white-space: pre;
+        background: #444;
+        color: #ddd;
+        padding: 10px;
+        margin: 20px 0;
+        -webkit-border-radius: 5px;
+    }
+
+/* @end */
+
+/* @group Inline styles */
+    q {
+        quotes:"\201C""\201D""\2018""\2019";
+    }
+
+    q:before {
+        content:'\201C';
+    }
+
+    q:after {
+        content:'\201D';
+    }
+
+    q q:before {
+        content:'\2018';
+    }
+
+    q q:after {
+        content:'\2019';
+    }
+
+    strong, th, thead td, dt {
+        font-weight:bold;
+    }
+
+    cite, em, dfn {
+        font-style: italic;
+    }
+
+    code, kbd, samp, pre, tt, var, input[type='text'], input[type='password'], textarea {
+        font-size: 100%;
+        font-family: Consolas, Lucida Console, Monaco, monospace;
+    }
+
+    sub {
+        vertical-align: sub;
+    }
+
+    sup {
+        vertical-align: super;
+    }
+
+    abbr, acronym {
+        text-transform:uppercase;
+        font-size:85%;
+        letter-spacing:.1em;
+    }
+
+    abbr[title], acronym[title], dfn[title] {
+        cursor:help;
+        border-bottom:1px solid #ccc;
+    }
+
+    del {
+        text-decoration: line-through;
+        color: #666;
+    }
+
+    ins, dfn {
+        border-bottom: 1px solid #666;
+    }
+
+    small, sup, sub {
+        font-size: 85%;
+    }
+    
+    small.dim {
+		font-size: inherit;
+		color: #ccc;
+		font-weight: normal;
+	}
+	
+	small.dim strong {
+		color: #999;
+		padding: 0 1px;
+	}
+
+/* @end */
+
+/* @group Lists */
+
+    #content ul, #content ol {
+        margin:  20px;
+    }
+
+    #content ul ul, #content ol ol {
+        margin:  0 20px;
+    }
+
+    #content ul {
+        list-style: disc outside;
+    }
+
+    #content ol {
+        list-style: decimal outside;
+    }
+
+    #content dd {
+        margin-left: 20px;
+    }
+/* @end */
