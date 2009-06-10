@@ -67,35 +67,110 @@ body {
     font-size: 13px;
     line-height: 20px;
     margin: 40px 0;
+    position: relative;
 }
 
 #header hr, #footer hr {
 	display: none;
 }
 
-#footer {
-	background: #f6f6f6;
-	padding: 10px;
-	margin: -10px;
-	-webkit-border-radius: 5px;
-}
+/* @group Sidebar */
 
-#sidebar {
-	display: none;
-}
+	.frontpage #sidebar {
+		display: none;
+	}
+
+	#sidebar {
+		background: #f6f6f6;
+		padding: 10px;
+		-webkit-border-radius: 5px;
+		color: #999;
+		width: 125px;
+		position: absolute;
+		right: -200px;
+		top: -20px;
+	}
+	
+	#sidebar h4 {
+		color: #fff;
+		background: #ccc;
+		margin: 0 -12px;
+		padding: 0 12px;
+		-webkit-border-radius: 3px;
+		text-shadow: #999 1px 1px 1px
+	}
+	
+	#sidebar a {
+		color: #999;
+	}
+	
+	#sidebar a:visited {
+		color: #bbb;
+	}
+	
+	#sidebar a:hover {
+		color: #666;
+	}
+	
+	#sidebar a:focus,
+	#sidebar a:active {
+		color: #222;
+	}
+
+/* @end */
 
 /* @group Footer */
 
 	#footer {
-		font-size: 11px;
+		border-top: 2px solid #0071bc;
+		margin: 80px 0 40px;
+		padding: 18px 0 0;
+		font-size: 12px;
+	}
+	
+	#footer, #footer h4 {
+		color: #aaa;
+	}
+	
+	#footer a, #footer a:visited {
+		color: #999;
+		font-weight: normal;
+		
+	}
+	
+	#footer a:hover {
+		color: #666;
+		text-decoration: underline;
+	}
+	
+	#footer a:focus,
+	#footer a:active {
+		color: #333;
 	}
 	
 	#footer li {
 		float: left;
-		width: 166px;
+		width: 146px;
+		margin-left: 20px;
+	}
+	
+	#footer ul {
+		margin-left: -20px;
+		overflow: auto;
+	}
+	
+	#footer ul ul {
+		margin-left: -15px;
+	}
+	
+	#footer li li:before {
+		content: "\00bb";
+		padding-right: 8px;
+		color: #ccc;
 	}
 	
 	#footer li li {
+		margin: 0;
 		float: none;
 	}
 	
@@ -105,7 +180,6 @@ body {
 	}
 	
 	#footer li p {
-		clear: both;
 		margin: 0;
 		text-align: left;
 	}
@@ -252,8 +326,8 @@ body {
 
     pre {
         white-space: pre;
-        background: #444;
-        color: #ddd;
+        background: #f6f6f6;
+        color: #888;
         padding: 10px;
         margin: 20px 0;
         -webkit-border-radius: 5px;
@@ -361,4 +435,150 @@ body {
     #content dd {
         margin-left: 20px;
     }
+/* @end */
+
+/* @group Modules */
+
+	.module {
+		position: relative;
+	}
+
+	.module .footer {
+		font-size: 11px;
+		text-align: right;
+	}
+
+	.module h2 {
+		font: bold 50px/50px Helvetica Neue, Arial, sans-serif;
+		margin: 0;
+		letter-spacing: -2px;
+		color: #ddd;
+		text-transform: lowercase;
+	}
+	
+	#twitter_module, #flickr_module {
+		margin: 80px 0;
+	}
+	
+	/* @group Subscribe module */
+	
+		#subscribe_module {
+			margin: 0 0 20px 0;
+		}
+		
+		#subscribe_module .header, #subscribe_module .footer {
+			display: none;
+		}
+		
+		#subscribe_module a {
+			display: block;
+			background: url(/assets/feed.png) no-repeat 5px 7px;
+			margin: -5px;
+			padding: 8px 5px 7px 45px;
+			line-height: 15px;
+			text-shadow: #eee 1px 1px 1px;
+		}
+		
+		#subscribe_module a:hover {
+			background-color: #e6e6e6;
+			-webkit-border-radius: 3px;
+		}
+	
+	/* @end */
+
+	/* @group Twitter module */
+	
+		#twitter_module p {
+			margin: 10px 0;
+			font-size: 11px;
+			line-height: 16px;
+		}
+		
+		#twitter_module .body {
+			margin-left: 150px;
+		}
+		
+		#twitter_module ul {
+			margin: 0;
+			list-style: none;
+			min-height: 175px;
+		}
+		
+		#twitter_module li {
+			margin: 20px 0;
+		}
+		
+		#twitter_module .header,
+		#twitter_module .footer {
+			position: absolute;
+			width: 240px;
+			text-align: right;
+			right: 400px;
+			top: -12px;
+		}
+		
+		#twitter_module .footer {
+			top: auto;
+			bottom: 0;
+		}
+	
+	/* @end */
+
+	/* @group Flickr module */
+
+		#flickr_module .header,
+		#flickr_module .footer {
+			position: absolute;
+			width: 200px;
+			left: 425px;
+			top: -15px;
+		}
+		
+		#flickr_module .footer {
+			top: auto;
+			bottom: 0;
+			text-align: left;
+		}
+
+		#flickr_module .body {
+			overflow: auto;
+			width: 395px;
+		}
+		
+		#flickr_module .flickr_badge_image {
+			border: 1px solid #333;
+			width: 65px;
+			float: left;
+			margin-right: 11px;
+		}
+
+		#flickr_module #flickr_badge_image1 {
+			width: 250px;
+			margin-right: 10px;
+		}
+
+		#flickr_module #flickr_badge_image2,
+		#flickr_module #flickr_badge_image3 {
+			width: 116px;
+			margin-bottom: 10px;
+		}
+
+		#flickr_module .flickr_badge_image a {
+			display: block;
+			position: relative;
+			padding-bottom: 66%;
+			height: 0;
+		}
+		
+		#flickr_module .flickr_badge_image img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+/* @end */
+
+
 /* @end */
