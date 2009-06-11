@@ -44,6 +44,9 @@
                 <div id="main">
                     {{ content }}
                 </div><!-- /main -->
+
+                {% if page.hide_sidebar != true %}
+                {% assign tweets = 1 %}
                 <div id="sidebar">
 
                     <div id="subscribe_module" class="module">
@@ -61,7 +64,7 @@
                             <h4>Currently on Twitter</h4>
                         </div>
                         <div class="body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <ul id="twitter_update_list"></ul>
                         </div>
                         <div class="footer">
                             <a href="http://twitter.com/avdgaag">More updates &rsaquo;</a>
@@ -69,6 +72,9 @@
                     </div><!-- /twitter_module -->
 
                 </div><!-- /sidebar -->
+                {% else %}
+                    {% assign tweets = 3 %}
+                {% endif %}
             </div><!-- /content -->
             <div id="footer">
                 <hr>
@@ -102,5 +108,8 @@
                 <p>&copy; copyright 2009 Arjan van der Gaag unless noted otherwise.</p>
             </div><!-- /footer -->
         </div><!-- /site -->
+
+        <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+        <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/avdgaag.json?callback=twitterCallback2&amp;count={{ tweets }}"></script>
     </body>
 </html>

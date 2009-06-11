@@ -2,9 +2,36 @@
 layout: default
 title: Arjan van der Gaag
 kind: frontpage
+hide_sidebar: true
 ---
 
-<div id="flickr_module" class="module">
+<div id="archives_module" class="module xl">
+    <div class="header">
+        <h2>Blog posts</h2>
+    </div>
+    <div class="body">
+        <ol>
+        {% for post in site.posts %}
+            <li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{post.title}}</a></li>
+        {% endfor %}
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through</a></li>
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog postsblog posts met nog langere titel</a></li>
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog</a></li>
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog postsblog posts</a></li>
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+        </ol>
+    </div>
+    <div class="footer">
+        <a href="/archives" title="Browse through all blog posts" rel="index">Browse the archives &rsaquo;</a>
+    </div>
+</div>
+
+<div id="flickr_module" class="module xl alt">
     <div class="header">
         <h2>Recent photos on Flickr</h2>
     </div>
@@ -16,7 +43,7 @@ kind: frontpage
     </div>
 </div>
 
-<div id="twitter_module" class="module">
+<div id="twitter_module" class="module xl">
     <div class="header">
         <h2>Recent updates on Twitter</h2>
     </div>
@@ -27,13 +54,3 @@ kind: frontpage
         <a href="http://twitter.com/avdgaag" title="Go visit my Twitter profile" rel="external me">follow me on Twitter &rsaquo;</a>
     </div>
 </div>
-
-<h2>Archives</h2>
-<ul>
-    {% for post in site.posts %}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{post.title}}</a></li>
-    {% endfor %}
-</ul>
-
-<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/avdgaag.json?callback=twitterCallback2&amp;count=3"></script>

@@ -76,9 +76,6 @@ body {
 
 /* @group Sidebar */
 
-	.frontpage #sidebar {
-		display: none;
-	}
 
 	#sidebar {
 		background: #f6f6f6;
@@ -448,17 +445,53 @@ body {
 		text-align: right;
 	}
 
-	.module h2 {
-		font: bold 50px/50px Helvetica Neue, Arial, sans-serif;
-		margin: 0;
-		letter-spacing: -2px;
-		color: #ddd;
-		text-transform: lowercase;
-	}
-	
-	#twitter_module, #flickr_module {
-		margin: 80px 0;
-	}
+	/* @group Extra-large modules on the frontpage */
+
+		.module.xl {
+			margin: 80px 0;
+		}
+
+		.module.xl h2 {
+			font: bold 50px/50px Helvetica Neue, Arial, sans-serif;
+			margin: 0;
+			letter-spacing: -2px;
+			color: #ddd;
+			text-transform: lowercase;
+		}
+
+		.module.xl .header,
+		.module.xl .footer {
+			position: absolute;
+			width: 220px;
+			text-align: right;
+			right: 520px;
+			top: -12px;
+		}
+		
+		.module.xl.alt .header,
+		.module.xl.alt .footer {
+			text-align: left;
+			left: 500px;
+		}
+
+		.module.xl .footer {
+			top: auto;
+			bottom: 0;
+		}
+		
+		.module.xl .body {
+			min-height: 120px;
+		}
+		
+		.module.xl .body:after {
+			content: ".";
+			clear: both;
+			height: 0px;
+			visibility: hidden;
+			display: block;
+		}
+
+	/* @end */
 	
 	/* @group Subscribe module */
 	
@@ -488,86 +521,79 @@ body {
 
 	/* @group Twitter module */
 	
-		#twitter_module p {
+		#twitter_module li {
 			margin: 10px 0;
 			font-size: 11px;
 			line-height: 16px;
 		}
 		
-		#twitter_module .body {
-			margin-left: 150px;
-		}
-		
 		#twitter_module ul {
 			margin: 0;
 			list-style: none;
+		}
+
+		.frontpage #twitter_module .body {
 			min-height: 175px;
 		}
 		
-		#twitter_module li {
+		.frontpage #twitter_module li {
 			margin: 20px 0;
+			font-size: 12px;
+			line-height: 20px;
 		}
 		
-		#twitter_module .header,
-		#twitter_module .footer {
-			position: absolute;
-			width: 240px;
-			text-align: right;
-			right: 400px;
-			top: -12px;
+		.frontpage #twitter_module span {
+			background: #eee;
+			display: block;
+			padding: 5px;
+			-webkit-border-radius: 5px
 		}
 		
-		#twitter_module .footer {
-			top: auto;
-			bottom: 0;
+		.frontpage #twitter_module .body a {
+			display: block;
+			padding: 5px 25px;
+		}
+		
+		.frontpage #twitter_module li:nth-child(2) {
+			opacity: .75;
+		}
+
+		.frontpage #twitter_module li:nth-child(3) {
+			opacity: .5;
 		}
 	
 	/* @end */
 
 	/* @group Flickr module */
 
-		#flickr_module .header,
-		#flickr_module .footer {
-			position: absolute;
-			width: 200px;
-			left: 425px;
-			top: -15px;
-		}
-		
-		#flickr_module .footer {
-			top: auto;
-			bottom: 0;
-			text-align: left;
-		}
-
-		#flickr_module .body {
-			overflow: auto;
-			width: 395px;
-		}
-		
 		#flickr_module .flickr_badge_image {
-			border: 1px solid #333;
-			width: 65px;
+			width: 87px;
 			float: left;
 			margin-right: 11px;
 		}
 
 		#flickr_module #flickr_badge_image1 {
-			width: 250px;
+			width: 320px;
 			margin-right: 10px;
 		}
 
 		#flickr_module #flickr_badge_image2,
 		#flickr_module #flickr_badge_image3 {
-			width: 116px;
+			width: 150px;
 			margin-bottom: 10px;
 		}
 
 		#flickr_module .flickr_badge_image a {
+			border: 1px solid #333;
 			display: block;
 			position: relative;
 			padding-bottom: 66%;
 			height: 0;
+			opacity: .75;
+		}
+		
+		#flickr_module .flickr_badge_image a:hover {
+			opacity: 1;
 		}
 		
 		#flickr_module .flickr_badge_image img {
@@ -578,7 +604,43 @@ body {
 			height: 100%;
 		}
 
-/* @end */
-
+	/* @end */
+	
+	/* @group Archives module */
+	
+		#archives_module ol {
+			list-style: none;
+			margin: 0 0 0 -20px;
+			font-size: 18px;
+		}
+		
+		#archives_module span {
+			display: block;
+			font-size: 11px;
+			color: #999;
+		}
+		
+		#archives_module li {
+			position: relative;
+			margin: 0 0 20px 20px;
+			width: 240px;
+			float: left;
+		}
+		
+		#archives_module .body a {
+			display: block;
+			margin: -25px -5px -5px -5px;
+			padding: 25px 5px 5px 5px;
+			-webkit-border-radius: 5px;
+		}
+		
+		#archives_module .body a:hover {
+			background: #f6f6f6;
+		}
+		
+		#archives_module li:nth-child(2n+1) {
+			clear: left;
+		}
+	/* @end */
 
 /* @end */
