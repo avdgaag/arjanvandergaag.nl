@@ -3,7 +3,6 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
     <title>Arjan van der Gaag</title>
     <link href="http://arjanvandergaag.nl/atom.xml" rel="self"/>
     <link href="http://arjanvandergaag.nl/"/>
@@ -13,7 +12,6 @@ layout: nil
         <name>Arjan van der Gaag</name>
         <email>arjan@arjanvandergaag.nl</email>
     </author>
-
     {% for post in site.posts %}
     <entry>
         <title>{{ post.title }}</title>
@@ -23,5 +21,4 @@ layout: nil
         <content type="html">{{ post.content | xml_escape }}</content>
     </entry>
     {% endfor %}
-
 </feed>
