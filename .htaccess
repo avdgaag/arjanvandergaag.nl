@@ -6,3 +6,9 @@ RewriteRule ^atom.xml$ http://feeds2.feedburner.com/avdgaag [R=301,L]
 
 # Set up pretty error document pages
 ErrorDocument 404 404.html
+
+# Protect this file
+<Files .htaccess>
+order deny,allow
+deny from all
+</Files>
