@@ -227,6 +227,11 @@ body {
     .frontpage h2 {
 		margin: 40px 0 4px 0;
 	}
+	
+	h2.error {
+		font-weight: bold;
+		color: #900;
+	}
 
     h3 {
         font-size: 14px;
