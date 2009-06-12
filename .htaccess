@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Rewrite feeds to Feedburner, except for feedburner itself.
+RewriteCond %{HTTP_USER_AGENT} !FeedBurner
+RewriteRule ^atom.xml$ http://feeds2.feedburner.com/avdgaag [R=301,L]
+
+# Set up pretty error document pages
+ErrorDocument 404 404.html
