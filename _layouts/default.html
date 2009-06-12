@@ -14,10 +14,9 @@
 
         <!-- Stylesheets, feed, favicon -->
         <link rel="stylesheet" href="/assets/screen.css" type="text/css" media="screen, projection">
-        <link rel="stylesheet" href="/assets/syntax.css" type="text/css" media="screen, projection">
         <link rel="stylesheet" href="/assets/print.css" type="text/css" media="print">
-        <link rel="alternate" type="application/rss+xml" title="Arjanvandergaag.nl RSS Feed" href="/atom.xml">
-        <link href="/assets/images/favicon.ico" rel="Shortcut Icon" type="image/ico">
+        <link rel="alternate" type="application/atom+xml" title="Arjanvandergaag.nl Atom Feed" href="/atom.xml">
+        <link href="/assets/favicon.png" rel="icon" type="image/png">
 
         <!-- OpenID -->
         <link rel="openid.server" href="http://www.myopenid.com/server" />
@@ -26,7 +25,7 @@
         <link rel="openid2.provider" href="http://www.myopenid.com/server" />
         <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=avdgaag.myopenid.com" />
     </head>
-    <body class="{{ page.kind }}">
+    <body>
         <div id="site">
             <div id="header">
                 <div id="branding">
@@ -44,37 +43,6 @@
                 <div id="main">
                     {{ content }}
                 </div><!-- /main -->
-
-                {% if page.hide_sidebar != true %}
-                {% assign tweets = 1 %}
-                <div id="sidebar">
-
-                    <div id="subscribe_module" class="module">
-                        <div class="header">
-                            <h4>Subscribe</h4>
-                        </div>
-                        <div class="body">
-                            <a href="/atom.xml" title="Subscribe to updates on this blog" rel="alternate">Subscribe to updates</a>
-                        </div>
-                    </div><!-- /subscribe_module -->
-
-
-                    <div id="twitter_module" class="module">
-                        <div class="header">
-                            <h4>Currently on Twitter</h4>
-                        </div>
-                        <div class="body">
-                            <ul id="twitter_update_list"></ul>
-                        </div>
-                        <div class="footer">
-                            <a href="http://twitter.com/avdgaag">More updates &rsaquo;</a>
-                        </div>
-                    </div><!-- /twitter_module -->
-
-                </div><!-- /sidebar -->
-                {% else %}
-                    {% assign tweets = 3 %}
-                {% endif %}
             </div><!-- /content -->
             <div id="footer">
                 <hr>
@@ -108,8 +76,5 @@
                 <p>&copy; copyright 2009 Arjan van der Gaag unless noted otherwise.</p>
             </div><!-- /footer -->
         </div><!-- /site -->
-
-        <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-        <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/avdgaag.json?callback=twitterCallback2&amp;count={{ tweets }}"></script>
     </body>
 </html>

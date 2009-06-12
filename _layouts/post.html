@@ -6,19 +6,3 @@ title: My first post
 <div class="post">
     {{ content }}
 </div>
-
-<div id="related_posts_module" class="module">
-    <div class="header">
-        <h2>Related posts</h2>
-    </div>
-    <div class="body">
-        <ul>
-          {% for post in site.related_posts limit:3 %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-          {% endfor %}
-        </ul>
-    </div>
-    <div class="footer">
-        <a href="/archives" title="Browse through all the posts on this site" rel="index">Browse all posts</a>
-    </div>
-</div>

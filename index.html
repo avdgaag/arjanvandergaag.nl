@@ -4,53 +4,25 @@ title: Arjan van der Gaag
 kind: frontpage
 hide_sidebar: true
 ---
+<h2>Recent <strong>blog posts</strong></h2>
+<ol class="posts">
+{% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{post.title}}</a></li>
+{% endfor %}
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through</a></li>
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog postsblog posts met nog langere titel</a></li>
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog</a></li>
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog postsblog posts</a></li>
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+    <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
+</ol>
 
-<div id="archives_module" class="module xl">
-    <div class="header">
-        <h2>Blog posts</h2>
-    </div>
-    <div class="body">
-        <ol>
-        {% for post in site.posts %}
-            <li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{post.title}}</a></li>
-        {% endfor %}
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through</a></li>
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog postsblog posts met nog langere titel</a></li>
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog</a></li>
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog postsblog posts</a></li>
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
-            <li><span>07 Jun 2009</span> <a href="http://some-site.com/">Browse through all blog posts</a></li>
-        </ol>
-    </div>
-    <div class="footer">
-        <a href="/archives" title="Browse through all blog posts" rel="index">Browse the archives &rsaquo;</a>
-    </div>
-</div>
+<h2>More about <strong>Arjan van der Gaag</strong></h2>
 
-<div id="flickr_module" class="module xl alt">
-    <div class="header">
-        <h2>Recent photos on Flickr</h2>
-    </div>
-    <div class="body">
-        <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=latest&amp;size=m&amp;layout=x&amp;source=user&amp;user=88712753%40N00"></script>
-    </div>
-    <div class="footer">
-        <a href="http://some-site.com/" title="Browse through all of my photos" rel="me external">More photos &rsaquo;</a>
-    </div>
-</div>
+<img src="assets/avatar.png" width="64" height="64" class="photo left bordered">
 
-<div id="twitter_module" class="module xl">
-    <div class="header">
-        <h2>Recent updates on Twitter</h2>
-    </div>
-    <div class="body">
-        <ul id="twitter_update_list"></ul>
-    </div>
-    <div class="footer">
-        <a href="http://twitter.com/avdgaag" title="Go visit my Twitter profile" rel="external me">follow me on Twitter &rsaquo;</a>
-    </div>
-</div>
+<p>I&rsquo;m a twentysomething web developer and historian from the Netherlands. My hobbies include photography, cooking, music and snooker. I currently live in Veenendaal, the Netherlands. You can contact me at <a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;">&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;</a>.</p>
