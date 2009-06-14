@@ -2,49 +2,49 @@
 
 /* @group Reset */
 
-	html, body, div, span, applet, object, iframe,
-	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-	a, abbr, acronym, address, big, cite, code,
-	del, dfn, em, font, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var,
-	dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend,
-	table, caption, tbody, tfoot, thead, tr, th, td {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		outline: 0;
-		font-weight: inherit;
-		font-style: inherit;
-		font-size: 100%;
-		font-family: inherit;
-		vertical-align: baseline;
-	}
-	:focus {
-		outline: 0;
-	}
-	body {
-		line-height: 1;
-		color: black;
-		background: white;
-	}
-	ol, ul {
-		list-style: none;
-	}
-	table {
-		border-collapse: separate;
-		border-spacing: 0;
-	}
-	caption, th, td {
-		text-align: left;
-		font-weight: normal;
-	}
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: "";
-	}
-	blockquote, q {
-		quotes: "" "";
-	}
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, font, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+    }
+    :focus {
+        outline: 0;
+    }
+    body {
+        line-height: 1;
+        color: black;
+        background: white;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    caption, th, td {
+        text-align: left;
+        font-weight: normal;
+    }
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: "";
+    }
+    blockquote, q {
+        quotes: "" "";
+    }
 
 /* @end */
 
@@ -57,10 +57,10 @@ body {
 }
 
 #site {
-	width: 500px;
-	text-align: left;
-	margin: 40px auto;
-	position: relative;
+    width: 500px;
+    text-align: left;
+    margin: 40px auto;
+    position: relative;
 }
 
 #content {
@@ -71,115 +71,73 @@ body {
 }
 
 #header hr, #footer hr {
-	display: none;
+    display: none;
 }
-
-/* @group Sidebar */
-
-
-	#sidebar {
-		background: #f6f6f6;
-		padding: 10px;
-		-webkit-border-radius: 5px;
-		color: #999;
-		width: 125px;
-		position: absolute;
-		right: -200px;
-		top: -20px;
-	}
-	
-	#sidebar h4 {
-		color: #fff;
-		background: #ccc;
-		margin: 0 -12px;
-		padding: 0 12px;
-		-webkit-border-radius: 3px;
-		text-shadow: #999 1px 1px 1px
-	}
-	
-	#sidebar a {
-		color: #999;
-	}
-	
-	#sidebar a:visited {
-		color: #bbb;
-	}
-	
-	#sidebar a:hover {
-		color: #666;
-	}
-	
-	#sidebar a:focus,
-	#sidebar a:active {
-		color: #222;
-	}
-
-/* @end */
 
 /* @group Footer */
 
-	#footer {
-		border-top: 2px solid #eee;
-		margin: 80px 0 40px;
-		padding: 18px 0 0;
-		font-size: 12px;
-	}
-	
-	#footer, #footer h4 {
-		color: #aaa;
-	}
-	
-	#footer a, #footer a:visited {
-		color: #999;
-		font-weight: normal;
-		
-	}
-	
-	#footer a:hover {
-		color: #666;
-		text-decoration: underline;
-	}
-	
-	#footer a:focus,
-	#footer a:active {
-		color: #333;
-	}
-	
-	#footer li {
-		float: left;
-		width: 146px;
-		margin-left: 20px;
-	}
-	
-	#footer ul {
-		margin-left: -20px;
-		overflow: auto;
-	}
-	
-	#footer ul ul {
-		margin-left: -15px;
-	}
-	
-	#footer li li:before {
-		content: "\00bb";
-		padding-right: 8px;
-		color: #ccc;
-	}
-	
-	#footer li li {
-		margin: 0;
-		float: none;
-	}
-	
-	#footer p {
-		text-align: center;
-		clear: both;
-	}
-	
-	#footer li p {
-		margin: 0;
-		text-align: left;
-	}
+    #footer {
+        border-top: 2px solid #eee;
+        margin: 80px 0 40px;
+        padding: 18px 0 0;
+        font-size: 12px;
+    }
+
+    #footer, #footer h4 {
+        color: #aaa;
+    }
+
+    #footer a, #footer a:visited {
+        color: #999;
+        font-weight: normal;
+
+    }
+
+    #footer a:hover {
+        color: #666;
+        text-decoration: underline;
+    }
+
+    #footer a:focus,
+    #footer a:active {
+        color: #333;
+    }
+
+    #footer li {
+        float: left;
+        width: 146px;
+        margin-left: 20px;
+    }
+
+    #footer ul {
+        margin-left: -20px;
+        overflow: auto;
+    }
+
+    #footer ul ul {
+        margin-left: -15px;
+    }
+
+    #footer li li:before {
+        content: "\00bb";
+        padding-right: 8px;
+        color: #ccc;
+    }
+
+    #footer li li {
+        margin: 0;
+        float: none;
+    }
+
+    #footer p {
+        text-align: center;
+        clear: both;
+    }
+
+    #footer li p {
+        margin: 0;
+        text-align: left;
+    }
 
 /* @end */
 
@@ -206,15 +164,15 @@ body {
 
 /* @group Headers */
 
-	h1, h2, h3, h4, h5, h6 {
-		font-weight: normal;
-		font-family: Cambria, Georgia, sans-serif;
-		color: #222;
-	}
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        font-family: Cambria, Georgia, sans-serif;
+        color: #222;
+    }
 
     h1 {
-		font-weight: bold;
-		color: #0071bc;
+        font-weight: bold;
+        color: #0071bc;
         font-size: 18px;
         margin: 20px 0;
     }
@@ -223,38 +181,38 @@ body {
         font-size: 18px;
         margin: 30px 0 -10px;
     }
-    
+
     .frontpage h2 {
-		margin: 40px 0 4px 0;
-	}
-	
-	h2.error {
-		font-weight: bold;
-		color: #900;
-	}
+        margin: 40px 0 4px 0;
+    }
+
+    h2.error {
+        font-weight: bold;
+        color: #900;
+    }
 
     h3 {
         font-size: 14px;
         margin:  30px 0 -10px;
         font-style: italic;
     }
-    
+
     h4 {
-		font: bold 12px/20px Helvetica, Arial, sans-serif;
-		margin: 0;
-		font-size: 12px;
-	}
-	
-	h5 {
-		font-style: italic;
-		font-weight: normal;
-		margin: 20px 0 0 0;
-	}
-	
-	h6 {
-		font-size: 11px;
-		margin: 0;
-	}
+        font: bold 12px/20px Helvetica, Arial, sans-serif;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    h5 {
+        font-style: italic;
+        font-weight: normal;
+        margin: 20px 0 0 0;
+    }
+
+    h6 {
+        font-size: 11px;
+        margin: 0;
+    }
 
 /* @end */
 
@@ -263,77 +221,82 @@ body {
     p {
         margin: 20px 0;
     }
-    
-    p.leader {
-		font-weight: bold;
-		color: #555;
-	}
-	
-	p.meta {
-		color: #aaa;
-	}
-	
-	#title a, #title a:visited {
-		position: absolute;
-		display: block;
-		top: -40px;
-		left: -20px;
-		padding: 30px 20px 10px;
-		background: #0071bc;
-		color: #fff;
-		font-size: 24px;
-		font-family: Cambria, Georgia, sans-serif;
-		text-transform: lowercase;
-		width: 225px;
-		color: #fff;
-		text-shadow: #1a1c25 1px 1px 2px;
-		-webkit-border-bottom-right-radius: 4px;
-		-webkit-border-bottom-left-radius: 4px;
-        -webkit-box-shadow: 1px 1px 2px #ccc;
-	}
-	
-	#title a:hover {
-		color: #cde0f1;
-	}
-	
-	#title small {
-		font: italic 16px/20px Cambria, Georgia, serif;
-		margin: 0 0 0 5px;
-	}
-	
-	#nav {
-		display: none;
-	}
-	
-	#tagline {
-		margin: 0 -40px 0 300px;
-		letter-spacing: 0;
-		font: normal 14px/20px Helvetica Neue, Arial, sans-serif;
-		color: #ccc;
-	}
 
-	.frontpage #tagline {
-		margin: 0;
-		font: bold 28px/36px Helvetica Neue, Arial, sans-serif;
-		letter-spacing: -1px;
-		padding: 40px 0 0 0;
-	}
-	
+    p.leader {
+        font-weight: bold;
+        color: #555;
+    }
+
+    p.meta {
+        color: #aaa;
+    }
+
+    #title a, #title a:visited {
+        position: absolute;
+        display: block;
+        top: -40px;
+        left: -20px;
+        padding: 30px 20px 10px;
+        background: #0071bc;
+        color: #fff;
+        font-size: 24px;
+        font-family: Cambria, Georgia, sans-serif;
+        text-transform: lowercase;
+        width: 225px;
+        color: #fff;
+        text-shadow: #1a1c25 1px 1px 2px;
+
+        -webkit-border-bottom-right-radius: 4px;
+        -webkit-border-bottom-left-radius: 4px;
+        -webkit-box-shadow: 1px 1px 2px #ccc;
+        -moz-border-radius-bottomright: 4px;
+        -moz-border-radius-bottomleft: 4px;
+        -moz-box-shadow: 1px 1px 2px #ccc;
+
+    }
+
+    #title a:hover {
+        color: #cde0f1;
+    }
+
+    #title small {
+        font: italic 16px/20px Cambria, Georgia, serif;
+        margin: 0 0 0 5px;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #tagline {
+        margin: 0 -40px 0 300px;
+        letter-spacing: 0;
+        font: normal 14px/20px Helvetica Neue, Arial, sans-serif;
+        color: #ccc;
+    }
+
+    .frontpage #tagline {
+        margin: 0;
+        font: bold 28px/36px Helvetica Neue, Arial, sans-serif;
+        letter-spacing: -1px;
+        padding: 40px 0 0 0;
+    }
+
     blockquote {
         margin: 0 20px;
         color: #666;
     }
-    
+
     blockquote.pull {
-		font-size: 20px;
-		font-weight: bold;
-		letter-spacing: -1px;
-		color: #999;
-		line-height: 30px;
-		float: right;
-		width: 300px;
-		margin: 20px -100px 20px 100px;
-	}
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        color: #999;
+        line-height: 30px;
+        float: right;
+        width: 300px;
+        margin: 20px -100px 20px 100px;
+    }
 
     blockquote > *:first-child:before {
         content: "\201C";
@@ -345,11 +308,11 @@ body {
         color: #aaa;
         line-height: 0;
     }
-    
+
     blockquote.pull > *:first-child:before {
-		margin: .5em 0 -.8em -.75em;
-		color: #ccc;
-	}
+        margin: .5em 0 -.8em -.75em;
+        color: #ccc;
+    }
 
     pre {
         white-space: pre;
@@ -359,6 +322,8 @@ body {
         margin: 20px -10px;
         -webkit-border-radius: 5px;
         -webkit-box-shadow: 1px 1px 2px #ccc;
+        -moz-border-radius: 5px;
+        -moz-box-shadow: 1px 1px 2px #ccc;
     }
 
 /* @end */
@@ -428,17 +393,17 @@ body {
     small, sup, sub {
         font-size: 85%;
     }
-    
+
     small.dim {
-		font-size: inherit;
-		color: #ccc;
-		font-weight: normal;
-	}
-	
-	small.dim strong {
-		color: #999;
-		padding: 0 1px;
-	}
+        font-size: inherit;
+        color: #ccc;
+        font-weight: normal;
+    }
+
+    small.dim strong {
+        color: #999;
+        padding: 0 1px;
+    }
 
 /* @end */
 
@@ -463,60 +428,61 @@ body {
     #content dd {
         margin-left: 20px;
     }
-    
+
     #content ol.posts {
-		list-style: none;
-		margin: 20px 0;
-	}
-	
-	#content ol.posts span {
-		font-size: 11px;
-		color: #888;
-		display: block;
-		float: left;
-		width: 70px;
-		margin: 0 20px 0 -90px;
-		position: relative;
-	}
-	
-	#content ol.posts li {
-		clear: left;
-		padding-left: 90px;
-	}
+        list-style: none;
+        margin: 20px 0;
+    }
+
+    #content ol.posts span {
+        font-size: 11px;
+        color: #888;
+        display: block;
+        float: left;
+        width: 70px;
+        margin: 0 20px 0 -90px;
+        position: relative;
+    }
+
+    #content ol.posts li {
+        clear: left;
+        padding-left: 90px;
+    }
 /* @end */
 
 /* @group Photos */
 
-	div.photo.left, img.left {
-	    float: left;
-	    margin: 20px 20px 20px 0;
-	}
-	
-	div.photo.right, img.right {
-	    float: right;
-	    margin: 20px 0 20px 20px;
-	}
-	
-	div.photo.full, img.full {
-	    clear: both;
-	    display: block;
-	    text-align: center;
-	    margin: 20px auto;
-	}
-	
-	img.bordered {
-	    border: 1px solid #111;
+    div.photo.left, img.left {
+        float: left;
+        margin: 20px 20px 20px 0;
+    }
+
+    div.photo.right, img.right {
+        float: right;
+        margin: 20px 0 20px 20px;
+    }
+
+    div.photo.full, img.full {
+        clear: both;
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    img.bordered {
+        border: 1px solid #111;
         -webkit-box-shadow: 1px 1px 2px #ccc;
-	}
-	
-	div.photo p {
-	    /*
-	     * photo caption
-	     */
-	    margin: 0;
-	    font-size: .8571em;
-	    color: #999;
-	}
+        -moz-box-shadow: 1px 1px 2px #ccc;
+    }
+
+    div.photo p {
+        /*
+         * photo caption
+         */
+        margin: 0;
+        font-size: .8571em;
+        color: #999;
+    }
 
 /* @end */
 
