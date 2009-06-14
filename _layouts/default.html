@@ -25,7 +25,11 @@
         <link rel="openid2.provider" href="http://www.myopenid.com/server">
         <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=avdgaag.myopenid.com">
     </head>
-    <body class="{{ page.kind }}">
+    {% if page.id %}
+    <body>
+    {% else %}
+    <body class="page">
+    {% endif %}
         <div id="site">
             <div id="header">
                 <div id="branding">
