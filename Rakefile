@@ -1,19 +1,26 @@
-require 'net/http'
-require 'uri'
-require 'xmlrpc/client'
-
 task :default => :dev
 
 desc 'Ping pingomatic'
 task :ping do
-  puts '* Pinging ping-o-matic'
-  XMLRPC::Client.new('rpc.pingomatic.com', '/').call('weblogUpdates.extendedPing', 'Arjan van der Gaag' , 'http://arjanvandergaag.nl', 'http://arjanvandergaag.nl/atom.xml')
+  begin
+    require 'xmlrpc/client'
+    puts '* Pinging ping-o-matic'
+    XMLRPC::Client.new('rpc.pingomatic.com', '/').call('weblogUpdates.extendedPing', 'Arjan van der Gaag' , 'http://arjanvandergaag.nl', 'http://arjanvandergaag.nl/atom.xml')
+  rescue LoadError
+    puts '! Could not ping ping-o-matic, because XMLRPC::Client could not be found.'
+  end
 end
 
 desc 'Notify Google of the new sitemap'
 task :sitemap do
-  puts '* Pinging Google about our sitemap'
-  Net::HTTP.get('www.google.com', '/webmasters/tools/ping?sitemap=' + URI.escape('http://arjanvandergaag.nl/sitemap.xml'))
+  begin
+    require 'net/http'
+    require 'uri'
+    puts '* Pinging Google about our sitemap'
+    Net::HTTP.get('www.google.com', '/webmasters/tools/ping?sitemap=' + URI.escape('http://arjanvandergaag.nl/sitemap.xml'))
+  rescue LoadError
+    puts '! Could not ping Google about our sitemap, because Net::HTTP or URI could not be found.'
+  end
 end
 
 desc 'Run Jekyll in development mode'
@@ -60,21 +67,44 @@ desc 'Generate and publish the entire site, and send out pings'
 task :publish => [:build, :push, :sync, :sitemap, :ping] do
 end
 
+desc 'create a new draft post'
+task :draft do
+  title, slug = get_title
+  file = File.join(File.dirname(__FILE__), '_drafts', slug + '.markdown')
+  create_blank_post(file, title)
+  open_in_editor(file)
+end
+
 desc 'Create post with TITLE in CAT'
 task :post do
+  title, slug = get_title
+  post_file = File.join(File.dirname(__FILE__), (ENV['CAT'] || ''), '_posts', "#{post_title}.markdown")
+  create_blank_post(post_file, title)
+  puts `git add #{post_file}`
+  open_in_editor(post_file)
+end
+
+# Helper method for :draft and :post, that required a TITLE environment
+# variable to be set. If there is none, the task will exit.
+#
+# If there is a title given, then this method will return it and a escaped
+# version suitable for filenames.
+def get_title
   unless title = ENV['TITLE']
     puts "USAGE: rake post TITLE='the post title'"
     exit(1)
   end
-  category = ENV['CAT'] || ''
-  post_title = "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"
+  return [title, "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"]
+end
 
-  post_path = File.join(File.dirname(__FILE__), category, '_posts')
-  FileUtils.mkpath(post_path)
+# Helper method for :draft and :post, that will create a file at a given
+# location and fill it with an empty post.
+def create_blank_post(path, title)
+  # Create the directories to this path if needed
+  FileUtils.mkpath(File.dirname(path))
 
-  post_file = File.join(post_path, "#{post_title}.markdown")
-
-  File.open(post_file, "w") do |f|
+  # Write the template to the file
+  File.open(path, "w") do |f|
     f << <<-EOS.gsub(/^    /, '')
     ---
     layout: post
@@ -83,10 +113,11 @@ task :post do
 
     EOS
   end
+end
 
-  puts `git add #{post_file}`
-
+# Helper method to open a file in the default text editor.
+def open_in_editor(file)
   if (ENV['EDITOR'])
-    system ("#{ENV['EDITOR']} #{post_file}")
+    system ("#{ENV['EDITOR']} #{file}")
   end
 end
