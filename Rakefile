@@ -23,7 +23,7 @@ task :push do
   puts `git push github master`
 end
 
-task :publish => [:build, :push] do
+task :publish => [:build, :push, :sync] do
 end
 
 desc 'Create post with TITLE in CAT'
