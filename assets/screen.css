@@ -275,7 +275,7 @@ body {
         color: #ccc;
     }
 
-    .frontpage #tagline {
+    .page #tagline {
         margin: 0;
         font: bold 28px/36px Helvetica Neue, Arial, sans-serif;
         letter-spacing: -1px;
@@ -447,6 +447,10 @@ body {
     #content ol.posts li {
         clear: left;
         padding-left: 90px;
+    }
+
+    #content li p {
+        margin: 0;
     }
 /* @end */
 
