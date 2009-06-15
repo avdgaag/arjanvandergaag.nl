@@ -1,7 +1,24 @@
+require 'net/http'
+require 'uri'
+require 'xmlrpc/client'
+
 task :default => :dev
+
+desc 'Ping pingomatic'
+task :ping do
+  puts '* Pinging ping-o-matic'
+  XMLRPC::Client.new('rpc.pingomatic.com', '/').call('weblogUpdates.extendedPing', 'Arjan van der Gaag' , 'http://arjanvandergaag.nl', 'http://arjanvandergaag.nl/atom.xml')
+end
+
+desc 'Notify Google of the new sitemap'
+task :sitemap do
+  puts '* Pinging Google about our sitemap'
+  Net::HTTP.get('www.google.com', '/webmasters/tools/ping?sitemap=' + URI.escape('http://arjanvandergaag.nl/sitemap.xml'))
+end
 
 desc 'Run Jekyll in development mode'
 task :dev do
+  puts '* Running Jekyll with auto-generation and server'
   puts `jekyll --auto --server`
 end
 
@@ -23,7 +40,8 @@ task :push do
   puts `git push github master`
 end
 
-task :publish => [:build, :push, :sync] do
+desc 'Generate and publish the entire site, and send out pings'
+task :publish => [:build, :push, :sync, :sitemap, :ping] do
 end
 
 desc 'Create post with TITLE in CAT'
