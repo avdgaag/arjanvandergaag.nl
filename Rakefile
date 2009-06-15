@@ -37,7 +37,7 @@ end
 desc 'Push source code to Github'
 task :push do
   puts '* Pushing to Github'
-  puts `git push`
+  puts `git push github master`
 end
 
 desc 'Create and push a tag'
@@ -53,7 +53,7 @@ task :tag do
   puts `git tag -a -m "#{m}" #{t}`
 
   puts '* Pushing tags'
-  puts `git push --tags`
+  puts `git push github master --tags`
 end
 
 desc 'Generate and publish the entire site, and send out pings'
