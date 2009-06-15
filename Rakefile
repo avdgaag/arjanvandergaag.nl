@@ -37,7 +37,23 @@ end
 desc 'Push source code to Github'
 task :push do
   puts '* Pushing to Github'
-  puts `git push github master`
+  puts `git push`
+end
+
+desc 'Create and push a tag'
+task :tag do
+  t = ENV['T']
+  m = ENV['M']
+  unless t && m
+    puts "USAGE: rake tag T='1.0-my-tag-name' M='My description of this tag'"
+    exit(1)
+  end
+
+  puts '* Creating tag'
+  puts `git tag -a -m "#{m}" #{t}`
+
+  puts '* Pushing tags'
+  puts `git push --tags`
 end
 
 desc 'Generate and publish the entire site, and send out pings'
