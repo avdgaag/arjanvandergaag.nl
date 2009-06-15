@@ -326,6 +326,38 @@ body {
         -moz-box-shadow: 1px 1px 2px #ccc;
     }
 
+	.footnotes {
+		font-size: 11px;
+	}
+	
+	.footnotes hr {
+		height: 1px;
+		color: #999;
+		background: #999;
+		border: none;
+		width: 200px;
+		text-align: left;
+		margin: 40px 0 0 0;
+	}
+	
+	.footnotes ol li {
+		position: relative;
+		list-style-type: decimal-leading-zero;
+		padding-right: 12px;
+	}
+	
+	.footnotes a {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	
+	.footnotes p a {
+		position: relative;
+		bottom: auto;
+		right: auto;
+	}
+
 /* @end */
 
 /* @group Inline styles */
@@ -369,26 +401,39 @@ body {
     sup {
         vertical-align: super;
     }
+    
+    sup a {
+		font-weight: normal;
+		color: #999;
+		font-size: 11px;
+		padding: 0 2px 0 2px;
+	}
 
     abbr, acronym {
-        text-transform:uppercase;
-        font-size:85%;
-        letter-spacing:.1em;
+        text-transform: uppercase;
+        font-size: 85%;
+        letter-spacing: .15em;
     }
 
     abbr[title], acronym[title], dfn[title] {
         cursor:help;
-        border-bottom:1px solid #ccc;
     }
 
     del {
         text-decoration: line-through;
-        color: #666;
+        color: #bbb;
     }
 
-    ins, dfn {
+    dfn {
         border-bottom: 1px solid #666;
     }
+    
+    ins {
+		border: none;
+		text-decoration: none;
+		background: #e1ffe1;
+		padding: 2px;
+	}
 
     small, sup, sub {
         font-size: 85%;
