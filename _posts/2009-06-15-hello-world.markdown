@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hello, world!
+category: meta
 ---
 
 I have decided to start blogging again. You are currently reading my new blog; my old blog is now gone ([not really][4]). It was time for a fresh start.

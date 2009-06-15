@@ -68,20 +68,16 @@ task :publish => [:build, :push, :sync, :sitemap, :ping] do
 end
 
 desc 'create a new draft post'
-task :draft do
+task :post do
   title, slug = get_title
-  file = File.join(File.dirname(__FILE__), '_drafts', slug + '.markdown')
+  file = File.join(File.dirname(__FILE__), '_posts', slug + '.markdown')
   create_blank_post(file, title)
   open_in_editor(file)
 end
 
-desc 'Create post with TITLE in CAT'
-task :post do
-  title, slug = get_title
-  post_file = File.join(File.dirname(__FILE__), (ENV['CAT'] || ''), '_posts', "#{post_title}.markdown")
-  create_blank_post(post_file, title)
-  puts `git add #{post_file}`
-  open_in_editor(post_file)
+desc 'List all draft posts'
+task :drafts do
+  puts `find ./_posts -type f -exec grep -H 'published: false' {} \\;`
 end
 
 # Helper method for :draft and :post, that required a TITLE environment
@@ -109,6 +105,8 @@ def create_blank_post(path, title)
     ---
     layout: post
     title: #{title}
+    published: false
+    categories:
     ---
 
     EOS
