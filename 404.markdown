@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Oops... page not found
+type: plain
 ---
 
 ## Oops... that page does not exist!

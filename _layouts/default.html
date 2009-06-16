@@ -66,9 +66,9 @@ sites:
         <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=avdgaag.myopenid.com">
     </head>
     {% if page.id %}
-    <body>
+    <body class="{{ page.type }}">
     {% else %}
-    <body class="page">
+    <body class="page {{ page.type }}">
     {% endif %}
         <div id="site">
             <div id="header">
