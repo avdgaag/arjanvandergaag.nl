@@ -31,6 +31,8 @@ end
 
 desc 'Run Jekyll to generate the site'
 task :build do
+  puts '* Removing old site'
+  puts `rm -r ./_site/*`
   puts '* Generating static site with Jekyll'
   puts `jekyll`
 end
@@ -38,7 +40,7 @@ end
 desc 'rsync the contents of ./_site to the server'
 task :sync do
   puts '* Publishing files to live server'
-  puts `rsync -avz "_site/" avdgaag@avdgaag.webfactional.com:~/webapps/jekyllblog/`
+  puts `rsync -avz --delete "_site/" avdgaag@avdgaag.webfactional.com:~/webapps/jekyllblog/`
 end
 
 desc 'Push source code to Github'
