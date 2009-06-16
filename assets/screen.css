@@ -458,8 +458,8 @@ body {
     }
 
     small.dim {
-        font-size: inherit;
-        color: #ccc;
+        font-size: 11px;
+        color: #888;
         font-weight: normal;
     }
 

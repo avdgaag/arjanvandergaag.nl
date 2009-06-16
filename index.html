@@ -8,10 +8,13 @@ type: frontpage
         <p class="meta">There are no posts yet. Please check back later.</p>
     {% else %}
         <ol class="posts">
-            {% for post in site.posts %}
+            {% for post in site.posts limit:10 %}
                 <li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{post.title}}</a></li>
             {% endfor %}
         </ol>
+        {% if site.posts.size > 10 %}
+        <p>Find more in the <a href="/archives.html" rel="index" title="Browse throug all posts on this site">archives&hellip;</a></p>
+        {% endif %}
     {% endif %}
 
 <h2>More about <strong>Arjan van der Gaag</strong></h2>
