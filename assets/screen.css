@@ -224,9 +224,13 @@ body {
 
     p.leader {
         font-weight: bold;
-        color: #555;
+        color: #666;
     }
-
+    
+    p.leader strong {
+		font-style: italic;
+	}
+    
     p.meta {
         color: #aaa;
     }
