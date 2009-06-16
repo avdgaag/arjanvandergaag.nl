@@ -317,9 +317,14 @@ body {
     pre {
         white-space: pre;
         color: #888;
-        margin: 20px 40px;
+        margin: 20px 0;
+        background: #f6f6f6;
+        border: 1px solid #eee;
+        padding: 10px;
+        width: 478px;
+        overflow-x: hidden;
     }
-
+    
 	.footnotes {
 		font-size: 11px;
 	}
@@ -597,5 +602,6 @@ body {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.highlight .lineno { color: #ccc; }
 
 /* @end */
