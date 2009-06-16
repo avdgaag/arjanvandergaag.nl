@@ -85,6 +85,22 @@ sites:
             </div><!-- /content -->
             <div id="footer">
                 <hr>
+
+                    <form action="http://www.google.com/cse" id="cse-search-box">
+                        <div>
+                            <label for="google-search-box">Search this site:</label>
+                            <input type="hidden" name="cx" value="013424593838246409070:wnaxfzkihdk">
+                            <input type="hidden" name="ie" value="UTF-8">
+                            <input type="text" name="q" size="31" id="google-search-box">
+                            <input type="submit" name="sa" value="Search">
+                        </div>
+                    </form>
+
+                    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+                    <script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+                    <script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+                    <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
                 <ul>
                     <li>
                         <h4>Elsewhere</h4>
@@ -112,6 +128,16 @@ sites:
         </div><!-- /site -->
 
         <!-- Last modified at {{ site.time }} -->
+
+        <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-80284-1");
+        pageTracker._trackPageview();
+        } catch(err) {}</script>
 
     </body>
 </html>

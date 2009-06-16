@@ -146,6 +146,13 @@ body {
         margin: 0;
         text-align: left;
     }
+    
+    #cse-search-box {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 19px;
+        margin-bottom: 20px;
+        text-align: center;
+	}
 
 /* @end */
 
