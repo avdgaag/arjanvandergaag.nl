@@ -2,7 +2,9 @@
 layout: post
 title: Using Jekyll to create websites
 published: true
-category: code
+categories:
+  - code
+  - jekyll
 ---
 
 To both speed up and simplify this site's maintenance I've gotten rid of
@@ -35,77 +37,13 @@ system for my blog, rather than some wimpy `<textarea>`.
 
 ## Here comes trouble
 
-Jekyll doesn't do a lot, by design. Some manual labour is involved; here are
-some of my automations -- because we don't like manual labour, now do we?
+Jekyll doesn't do a lot, by design. Some manual labour is involved, which is
+to be automated -- because we don't like manual labour, now do we? I've
+written about some of my scripts to enhance Jekyll in separate posts:
 
-### 1. **Publishing files to a server**
-
-I use `rsync` to copy my generated site to my server:
-
-{% highlight bash %}
-$> rsync -avz "_site/" username@server:~/dir/to/public/
-{% endhighlight %}
-
-### 2. **Creating new posts**
-
-Manually typing filenames in the form `yyyy-mm-dd-title.filter` is a
-pain, so I use the following Rake task:
-
-{% highlight ruby %}
-desc 'create a new draft post'
-task :post do
-  title = ENV['TITLE']
-  slug = "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"
-
-  file = File.join(File.dirname(__FILE__), '_posts', slug + '.markdown')
-
-  File.open(file, "w") do |f|
-    f << <<-EOS.gsub(/^    /, '')
-    ---
-    layout: post
-    title: #{title}
-    published: false
-    categories:
-    ---
-
-    EOS
-  end
-
-  system ("#{ENV['EDITOR']} #{file}")
-end
-{% endhighlight %}
-
-Now I can type `rake post TITLE='hello, world'` to create a post, launch
-TextMate and start typing.
-
-### 3. **Draft posts**
-
-I keep all my posts in one directory (`./_posts`) and use the `published` flag
-in the YAML front matter to exclude certain posts from publication. I can find
-all draft posts as follows:
-
-{% highlight bash %}
-$> find ./_posts -type f -exec grep -H 'published: false' {} \\;
-{% endhighlight %}
-
-### 4. **Sitemaps**
-
-I have created a sitemap file for my site, and I want to ping Google every
-time I republish my site. Here's how I do it:
-
-{% highlight ruby %}
-desc 'Notify Google of the new sitemap'
-task :sitemap do
-    require 'net/http'
-    require 'uri'
-    Net::HTTP.get(
-        'www.google.com',
-        '/webmasters/tools/ping?sitemap=' +
-        URI.escape('http://domain.com/sitemap.xml')
-    )
-  end
-end
-{% endhighlight %}
+- [Creating new posts][8]
+- [Publishing files to a server][9]
+- [Ping Google about my updated sitemap][10]
 
 ## Publication process
 
@@ -117,7 +55,7 @@ all the files to the server and ping Google about my new sitemap.
 The actual [source code to my site is shared publicly at Github][5], so you
 can check out [my collection of tasks][6].
 
-## Downsides, Conclusion
+## Issues unresolved
 
 First, since my entire website is now just static HTML it is **no longer
 possible to have comments** on my site, unless I would use something like
@@ -128,6 +66,8 @@ solution**. Luckily it's easy to fork Jekyll on Github and hack away. Thirdly,
 setting up archive pages, searching, RSS syndication, tagging and post
 browsing **take some manual labour**, but for now I'm fine without them.
 Jekyll is certainly not suited for everyone, but for simple sites it works fine.
+
+## Conclusion
 
 Jekyll makes creating and maintaining websites fun, in a geeky kind of way. I
 love the control it gives me. Tom Preston-Werner writes:
@@ -149,3 +89,7 @@ I couldn't agree more.
 [5]: http://github.com/avdgaag/arjanvandergaag.nl/tree/master "Browse the source code to this site at Github"
 [7]: http://disqus.com/ "DISQUS is a Javascript-based commenting system"
 [6]: http://github.com/avdgaag/arjanvandergaag.nl/blob/28539bc736a05b28f2aa4ef81e4f61f3f91375a0/Rakefile "See my project's Rakefile"
+
+[8]: /code/jekyll/2009/06/16/creating-new-jekyll-posts.html "Creating new empty posts with a rake task"
+[9]: /code/jekyll/2009/06/13/publishing-a-jekyll-website-to-a-server.html "Using rsync to copy files to my server"
+[10]: /code/jekyll/2009/06/10/rake-task-to-ping-google.html "Pinging Google with a Rake task"
