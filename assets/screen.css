@@ -74,6 +74,14 @@ body {
     display: none;
 }
 
+.plain #tagline, .plain #footer ul {
+    display: none;
+}
+
+.plain #content {
+    padding-top: 50px;
+}
+
 /* @group Footer */
 
     #footer {
@@ -226,11 +234,11 @@ body {
         font-weight: bold;
         color: #666;
     }
-    
+
     p.leader strong {
-		font-style: italic;
-	}
-    
+        font-style: italic;
+    }
+
     p.meta {
         color: #aaa;
     }
@@ -328,38 +336,38 @@ body {
         width: 478px;
         overflow-x: hidden;
     }
-    
-	.footnotes {
-		font-size: 11px;
-	}
-	
-	.footnotes hr {
-		height: 1px;
-		color: #999;
-		background: #999;
-		border: none;
-		width: 200px;
-		text-align: left;
-		margin: 40px 0 0 0;
-	}
-	
-	.footnotes ol li {
-		position: relative;
-		list-style-type: decimal-leading-zero;
-		padding-right: 12px;
-	}
-	
-	.footnotes a {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-	}
-	
-	.footnotes p a {
-		position: relative;
-		bottom: auto;
-		right: auto;
-	}
+
+    .footnotes {
+        font-size: 11px;
+    }
+
+    .footnotes hr {
+        height: 1px;
+        color: #999;
+        background: #999;
+        border: none;
+        width: 200px;
+        text-align: left;
+        margin: 40px 0 0 0;
+    }
+
+    .footnotes ol li {
+        position: relative;
+        list-style-type: decimal-leading-zero;
+        padding-right: 12px;
+    }
+
+    .footnotes a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .footnotes p a {
+        position: relative;
+        bottom: auto;
+        right: auto;
+    }
 
 /* @end */
 
@@ -404,13 +412,13 @@ body {
     sup {
         vertical-align: super;
     }
-    
+
     sup a {
-		font-weight: normal;
-		color: #999;
-		font-size: 11px;
-		padding: 0 2px 0 2px;
-	}
+        font-weight: normal;
+        color: #999;
+        font-size: 11px;
+        padding: 0 2px 0 2px;
+    }
 
     abbr, acronym {
         text-transform: uppercase;
@@ -430,13 +438,13 @@ body {
     dfn {
         border-bottom: 1px solid #666;
     }
-    
+
     ins {
-		border: none;
-		text-decoration: none;
-		background: #e1ffe1;
-		padding: 2px;
-	}
+        border: none;
+        text-decoration: none;
+        background: #e1ffe1;
+        padding: 2px;
+    }
 
     small, sup, sub {
         font-size: 85%;
@@ -452,11 +460,11 @@ body {
         color: #999;
         padding: 0 1px;
     }
-    
+
     code {
-		background: #f6f6f6;
-		padding: 4px;
-		white-space: nowrap;
+        background: #f6f6f6;
+        padding: 4px;
+        white-space: nowrap;
 }
 
 /* @end */
