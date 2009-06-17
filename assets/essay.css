@@ -1,0 +1,194 @@
+/* @override http://localhost:4000/assets/essay.css */
+
+/* @group Reset */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, font, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+    }
+    :focus {
+        outline: 0;
+    }
+    body {
+        line-height: 1;
+        color: black;
+        background: white;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    caption, th, td {
+        text-align: left;
+        font-weight: normal;
+    }
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: "";
+    }
+    blockquote, q {
+        quotes: "" "";
+    }
+
+/* @end */
+
+body {
+    background: #fff;
+    text-align: center;
+    font: 14px/22px Cambria, Georgia, Times, Times New Roman, serif;
+}
+
+#site {
+    text-align: left;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: bold;
+    margin: 60px 0 0 0;
+}
+
+h2 {
+    font-size: 16px;
+    font-style: italic;
+    margin: 32px 0 10px;
+}
+
+p + p {
+    text-indent: 1.5em;
+}
+
+p.tagline {
+    font-weight: bold;
+    font-style: italic;
+    line-height: 33px;
+}
+
+p.meta {
+    font-size: 12px;
+    line-height: 22px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #666;
+    text-indent: 0;
+}
+
+#quotes {
+    text-align: right;
+    padding-left: 25%;
+    margin: 66px 0;
+}
+
+blockquote {
+    margin: 22px 44px;
+    font-size: 13px;
+}
+
+#quotes blockquote {
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+}
+
+#quotes blockquote + p {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #666;
+    font-size: 12px;
+    margin: 0 0 22px 0;
+    display: block;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 11px;
+    padding: 0 3px;
+}
+
+ul, ol {
+    margin: 22px 0 22px 25px;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
+div.footnotes {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #666;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+div.footnotes li {
+    position: relative;
+    margin: 9px 0;
+}
+
+div.footnotes p {
+    margin: 0;
+}
+
+div.footnotes hr {
+    height: 1px;
+    border: none;
+    color: #ccc;
+    background: #ccc;
+    margin: 22px 66% 22px 0;
+    text-align: left;
+}
+
+div.footnotes a {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+div.footnotes li:hover a {
+    display: block;
+}
+
+div.footnotes li {
+    text-indent: -4px;
+}
+
+cite.title {
+    font-style: italic;
+}
+
+#header {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #666;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+#header p {
+    margin: 0 30px 20px;
+    text-align: center;
+}
+
+#header hr {
+    height: 1px;
+    border: none;
+    color: #ccc;
+    background: #ccc;
+}
