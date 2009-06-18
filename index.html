@@ -12,9 +12,13 @@ type: frontpage
                 <li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{post.title}}</a></li>
             {% endfor %}
         </ol>
+
+        <p>
         {% if site.posts.size > 10 %}
-        <p>Find more in the <a href="/archives.html" rel="index" title="Browse throug all posts on this site">archives&hellip;</a></p>
+        Find more in the <a href="/archives.html" rel="index" title="Browse throug all posts on this site">archives</a>.
         {% endif %}
+        I have also published <a href="/writings" rel="section" title="Read some of my essays">more elaborate writings</a>.
+        </p>
     {% endif %}
 
 <h2>More about <strong>Arjan van der Gaag</strong></h2>

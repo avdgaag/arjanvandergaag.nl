@@ -78,8 +78,8 @@ body {
     display: none;
 }
 
-.plain #content {
-    padding-top: 50px;
+.plain #header {
+	height: 30px;
 }
 
 /* @group Footer */
