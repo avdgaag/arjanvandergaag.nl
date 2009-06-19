@@ -41,7 +41,7 @@ sites:
         <title>{{ page.title }}</title>
 
         <!-- Meta-rubbish -->
-        <meta name="keywords" content="{{ page.keywords }}">
+        <meta name="keywords" content="{{ page.keywords }}, Arjan van der Gaag, arjan, gaag">
         <meta name="description" content="{{ page.description }}">
         <meta name="copyright" content="(c) copyright Arjan van der Gaag">
         <meta name="author" content="Arjan van der Gaag">
@@ -129,15 +129,7 @@ sites:
 
         <!-- Last modified at {{ site.time }} -->
 
-        <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-        try {
-        var pageTracker = _gat._getTracker("UA-80284-1");
-        pageTracker._trackPageview();
-        } catch(err) {}</script>
+        {% include google-analytics.html %}
 
     </body>
 </html>
