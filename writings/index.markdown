@@ -2,6 +2,8 @@
 title: Writings by Arjan van der Gaag
 layout: default
 type: plain
+keywords: writings, essays, works, essay, writing, paper, report, white paper, whitepaper, text, academic, adacademia, academy
+description: A collection of my writings that I have decided to publish online.
 articles:
   - filename: mensenrechten-en-islam
     title: Mensenrechten in Islamitische werelden

@@ -1,6 +1,8 @@
 ---
 title: Mensenrechten in Islamitische werelden
 layout: essay
+keywords: islam, mensenrechten, rechten van de mens, schendingen, islamitisch, moslim, arabisch, midden-oosten, midden oosten, arabieren, syrie, saudi-arabie, kirgizstan, essay, paper
+description: Essay over de werking van mensenrechten in de Islamitische wereld.
 ---
 # Mensenrechten in Islamitische werelden
 
