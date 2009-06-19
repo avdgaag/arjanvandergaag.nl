@@ -2,6 +2,8 @@
 layout: post
 title: Hello, world!
 category: meta
+keywords: blog, blogging, website, meta, cms, writing
+description: In which I announce the launch of my new website.
 ---
 
 I have decided to start blogging again. You are currently reading my new blog; my old blog is now gone ([not really][4]). It was time for a fresh start.

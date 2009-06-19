@@ -2,6 +2,8 @@
 layout: post
 title: Rake task to ping Google
 published: true
+keywords: ruby, rake, google, ping, automation, blog, blogging, script
+description: In which I describe how I use ruby scripting to notify Google of changes to my site.
 categories:
   - code
   - jekyll

@@ -2,6 +2,8 @@
 layout: post
 title: Using Jekyll to create websites
 published: true
+keywords: blog, blogging, jekyll, code, ruby, writing
+description: In which I describe how I use Jekyll to generate my website.
 categories:
   - code
   - jekyll

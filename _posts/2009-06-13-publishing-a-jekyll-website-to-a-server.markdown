@@ -2,6 +2,8 @@
 layout: post
 title: Publishing a Jekyll website to a server
 published: true
+keywords: blog, blogging, code, ruby, rake, automation, script
+description: In which I describe how I publish static HTML files to a server using ruby scripts.
 categories:
   - code
   - jekyll

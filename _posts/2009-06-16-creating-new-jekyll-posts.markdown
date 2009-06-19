@@ -2,6 +2,8 @@
 layout: post
 title: Creating new Jekyll posts
 published: true
+keywords: blog, blogging, website, meta, cms, writing, automation
+description: In which I describe how I use ruby scripts to generate files for my blog.
 categories:
   - code
   - jekyll
