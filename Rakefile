@@ -108,6 +108,8 @@ def create_blank_post(path, title)
     layout: post
     title: #{title}
     published: false
+    keywords:
+    description:
     categories:
     ---
 
