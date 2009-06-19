@@ -13,7 +13,224 @@
         <meta name="robots" content="index, follow">
 
         <!-- Stylesheets, feed, favicon -->
-        <link rel="stylesheet" href="assets/cv.css" type="text/css" media="screen, projection, print">
+        <style type="text/css" media="screen, projection, print">
+            /* @group Reset */
+
+                html, body, div, span, applet, object, iframe,
+                h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                a, abbr, acronym, address, big, cite, code,
+                del, dfn, em, font, img, ins, kbd, q, s, samp,
+                small, strike, strong, sub, sup, tt, var,
+                dl, dt, dd, ol, ul, li,
+                fieldset, form, label, legend,
+                table, caption, tbody, tfoot, thead, tr, th, td {
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    outline: 0;
+                    font-weight: inherit;
+                    font-style: inherit;
+                    font-size: 100%;
+                    font-family: inherit;
+                    vertical-align: baseline;
+                }
+                :focus {
+                    outline: 0;
+                }
+                body {
+                    line-height: 1;
+                    color: black;
+                    background: white;
+                }
+                ol, ul {
+                    list-style: none;
+                }
+                table {
+                    border-collapse: separate;
+                    border-spacing: 0;
+                }
+                caption, th, td {
+                    text-align: left;
+                    font-weight: normal;
+                }
+                blockquote:before, blockquote:after, q:before, q:after {
+                    content: "";
+                }
+                blockquote, q {
+                    quotes: "" "";
+                }
+
+            /* @end */
+
+            body {
+                background: #eee;
+                text-align: center;
+                font: 12px/20px Helvetica Neue, Helvetica, Arial, sans-serif;
+                color: #444;
+            }
+
+            #cv {
+                width: 720px;
+                text-align: left;
+                margin: 40px auto;
+                background: #fff;
+                padding: 40px 80px;
+                border-top: 6px solid #666;
+                border-bottom: 2px solid #666;
+                -webkit-box-shadow: #ddd 2px 2px 10px;
+            }
+
+            div.section, div.header {
+                margin: 20px 0;
+                padding: 0 0 40px 200px;
+            }
+
+            div.section:after, div.header:after {
+                content: ".";
+                display: block;
+                clear: both;
+                visibility: hidden;
+                height: 0;
+            }
+
+            div.header {
+                padding-left: 0;
+            }
+
+            .column {
+                float: left;
+                margin-right: 20px;
+            }
+
+            .column.last {
+                margin-right: 0;
+            }
+
+            div.header div.column {
+                width: 477px;
+            }
+
+            div.header div.last {
+                width: 200px;
+            }
+
+            div.section .column {
+                width: 160px;
+            }
+
+            li {
+                position: relative;
+            }
+
+            h1 {
+                font-size: 33px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                line-height: 40px;
+                font-weight: bold;
+                text-shadow: #eee 1px 1px 1px;
+                color: #111;
+            }
+
+            h2 {
+                font-size: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: #666;
+            }
+
+            div.section h2 {
+                color: #999;
+                float: left;
+                position: relative;
+                margin-left: -200px;
+            }
+
+            h3 {
+                font-size: 18px;
+                margin: 0 0 20px 0;
+                font-weight: bold;
+            }
+
+            .header h3 {
+                margin: 0;
+                font-weight: normal;
+                font-size: 14px;
+            }
+
+            h4 {
+                font-size: 16px;
+                margin: -20px 0 20px 0;
+            }
+
+            h5 {
+                font-size: 18px;
+                color: #999;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            p {
+                margin: 20px 0;
+            }
+
+            li p {
+                padding: 0 0 20px 0;
+            }
+
+            li.last p {
+                border-bottom: none;
+            }
+
+            p.leader {
+                font-size: 16px;
+            }
+
+            #pdf, #pdf a:visited {
+                display: block;
+                background: #444;
+                color: #eee;
+                text-decoration: none;
+                padding: 5px 10px;
+                margin: 0 0 0 -10px;
+                font-weight: normal;
+                text-shadow: #000 1px 1px 1px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+            }
+
+            #pdf:hover {
+                background: #666;
+                color: #fff;
+            }
+
+            #pdf:active, #pdf:focus {
+                background: #888;
+            }
+
+            a {
+                color: #22f;
+            }
+
+            a:visited {
+                color: #99f;
+            }
+
+            a:hover {
+                color: #66f;
+            }
+
+            a:focus, a:active {
+                color: #ccf;
+            }
+
+            abbr {
+                font-size: 87.5%;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+        </style>
         <link href="/assets/favicon.png" rel="icon" type="image/png">
     </head>
     <body>
@@ -34,24 +251,24 @@
 
             <div class="section">
                 <h2>Profile</h2>
-                <p class="leader">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="leader">I am an expert front-end web developer, programmer with passion for the web. I constantly strive for the highest quality. Furthermore I am an academic historian specialised in researching international affairs in the 19<sup>th</sup> and 20<sup>th</sup> centuries.</p>
             </div>
 
             <div class="section">
                 <h2>Skills</h2>
                 <div class="column">
                     <h3>Web development</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Front-end web developent is what I enjoy most. I put great value in high-quality, maintainable template code (<abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading StyleSheets">CSS</abbr>), <abbr title="Search Engine Optimization">SEO</abbr>, and a streamlined, accesible user experience.</p>
                 </div>
 
                 <div class="column">
                     <h3>Programming</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>I'm an experienced programmer, capable of developing and deploying small to mid-sized applications in various popular languages.</p>
                 </div>
 
                 <div class="column last">
                     <h3>Writing &amp; research</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>I excel at researching and reporting on complex historic subjects, and presenting them clearly. I specialise in international affairs in the 19<sup>th</sup> and 20<sup>th</sup> century.</p>
                 </div>
             </div>
 
@@ -61,16 +278,19 @@
                     <li>Mac OSX</li>
                     <li>MS Office</li>
                     <li>Windows</li>
+                    <li>Linux</li>
                 </ol>
                 <ol class="column">
                     <li>(X)HTML</li>
                     <li>CSS</li>
                     <li>Javascript</li>
+                    <li>SQL</li>
                 </ol>
                 <ol class="column last">
                     <li>jQuery</li>
                     <li>PHP</li>
                     <li>Ruby (&amp; Rails)</li>
+                    <li>Python</li>
                 </ol>
             </div>
 
@@ -81,19 +301,19 @@
                         <h3>Mixe &ndash; Medische Marketing B.V.</h3>
                         <h4>Webdesigner</h4>
                         <h5>2008&ndash;2009</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>As webdesigner in a small marketing agency for the health care sector I was responsible for front-end development of various projects (large and small) and various technical management and innovational projects.</p>
                     </li>
                     <li>
                         <h3>AG Webdesign</h3>
                         <h4>Web developer</h4>
                         <h5>2005&ndash;2008</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>As a self-taught and self-employed web designer and developer I have worked with numerous companies and individuals to plan, design, build and evaluate various successful websites. I also provided services in copywriting, <abbr title="Search Engine Optimization">SEO</abbr> and photography.</p>
                     </li>
                     <li class="last">
                         <h3>Woonpunt</h3>
                         <h4>Intern</h4>
                         <h5>2005&ndash;2006</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>As an intern at this mid-sized housing corporation I researched intranet communications and knowledge management tools in business environments for my master's thesis.</p>
                     </li>
                 </ol>
             </div>
@@ -102,14 +322,24 @@
                 <h2>Education</h2>
                 <ol>
                     <li>
-                        <h3>Bachelor Geschiedenis</h3>
-                        <h4>Universiteit Utrecht</h4>
+                        <h3>Master History of Politics and Culture</h3>
+                        <h4>Utrecht University</h4>
+                        <h5>2009&rarr;</h5>
+                    </li>
+                    <li>
+                        <h3>Doctoraal Information Management</h3>
+                        <h4>Tilburg University</h4>
+                        <h5>2002&rarr;</h5>
+                    </li>
+                    <li>
+                        <h3>Bachelor History</h3>
+                        <h4>Utrecht University</h4>
                         <h5>2006&ndash;2009</h5>
                     </li>
                     <li>
-                        <h3>Information Management</h3>
-                        <h4>Universiteit van Tilburg</h4>
-                        <h5>2001&ndash;2006</h5>
+                        <h3>Propedeuse Information Management</h3>
+                        <h4>Tilburg University</h4>
+                        <h5>2001&ndash;2002</h5>
                     </li>
                     <li>
                         <h3>VWO</h3>
