@@ -63,96 +63,104 @@ body {
     position: relative;
 }
 
-#content {
+header, footer, article, section {
+    display: block;
+}
+
+time {
+    display: inline;
+}
+
+article {
     font-size: 13px;
     line-height: 20px;
     margin: 40px 0;
     position: relative;
 }
 
-#header hr, #footer hr {
+header hr, footer hr {
     display: none;
 }
 
-.plain #tagline, .plain #footer ul {
+.plain #tagline, .plain footer ul {
     display: none;
 }
 
-.plain #header {
-	height: 30px;
+.plain #site > header {
+    height: 30px;
 }
 
 /* @group Footer */
 
-    #footer {
+    footer {
         border-top: 2px solid #eee;
         margin: 80px 0 40px;
         padding: 18px 0 0;
         font-size: 12px;
     }
 
-    #footer, #footer h4 {
+    footer, footer h4 {
         color: #aaa;
     }
 
-    #footer a, #footer a:visited {
+    footer a, footer a:visited {
         color: #999;
         font-weight: normal;
 
     }
 
-    #footer a:hover {
+    footer a:hover {
         color: #666;
         text-decoration: underline;
     }
 
-    #footer a:focus,
-    #footer a:active {
+    footer a:focus,
+    footer a:active {
         color: #333;
     }
 
-    #footer li {
+    footer li {
         float: left;
         width: 146px;
         margin-left: 20px;
     }
 
-    #footer ul {
+    footer ul {
         margin-left: -20px;
         overflow: auto;
     }
 
-    #footer ul ul {
+    footer ul ul {
         margin-left: -15px;
     }
 
-    #footer li li:before {
+    footer li li:before {
         content: "\00bb";
         padding-right: 8px;
         color: #ccc;
     }
 
-    #footer li li {
+    footer li li {
         margin: 0;
         float: none;
     }
 
-    #footer p {
+    footer p {
         text-align: center;
         clear: both;
     }
 
-    #footer li p {
+    footer li p {
         margin: 0;
         text-align: left;
     }
-    
+
     #cse-search-box {
         border-bottom: 1px solid #eee;
         padding-bottom: 19px;
         margin-bottom: 20px;
         text-align: center;
-	}
+    }
 
 /* @end */
 
@@ -281,10 +289,6 @@ body {
     #title small {
         font: italic 16px/20px Cambria, Georgia, serif;
         margin: 0 0 0 5px;
-    }
-
-    #nav {
-        display: none;
     }
 
     #tagline {
@@ -478,32 +482,32 @@ body {
 
 /* @group Lists */
 
-    #content ul, #content ol {
+    article ul, article ol {
         margin:  20px;
     }
 
-    #content ul ul, #content ol ol {
+    article ul ul, article ol ol {
         margin:  0 20px;
     }
 
-    #content ul {
+    article ul {
         list-style: disc outside;
     }
 
-    #content ol {
+    article ol {
         list-style: decimal outside;
     }
 
-    #content dd {
+    article dd {
         margin-left: 20px;
     }
 
-    #content ol.posts {
+    article ol.posts {
         list-style: none;
         margin: 20px 0;
     }
 
-    #content ol.posts span {
+    article ol.posts time {
         font-size: 11px;
         color: #888;
         display: block;
@@ -513,12 +517,12 @@ body {
         position: relative;
     }
 
-    #content ol.posts li {
+    article ol.posts li {
         clear: left;
         padding-left: 90px;
     }
 
-    #content li p {
+    article li p {
         margin: 0;
     }
 /* @end */

@@ -5,24 +5,29 @@ type: frontpage
 keywords: homepage, website, blog, about
 description: My personal home page with my blog, my resume and my writings.
 ---
-<h2>Recent <strong>blog posts</strong></h2>
+
+<section>
+    <h2>Recent <strong>blog posts</strong></h2>
     {% if site.posts == empty %}
-        <p class="meta">There are no posts yet. Please check back later.</p>
+    <p class="meta">There are no posts yet. Please check back later.</p>
     {% else %}
-        <ol class="posts">
-            {% for post in site.posts limit:10 %}
-                <li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{post.title}}</a></li>
-            {% endfor %}
-        </ol>
+    <ol class="posts">
+        {% for post in site.posts limit:10 %}
+            <li><time>{{ post.date | date_to_string }}</time> <a href="{{ post.url }}">{{post.title}}</a></li>
+        {% endfor %}
+    </ol>
 
-        <p>
-        {% if site.posts.size > 10 %}
-        Find more in the <a href="/archives.html" rel="index" title="Browse throug all posts on this site">archives</a>.
-        {% endif %}
-        I have also published <a href="/writings" rel="section" title="Read some of my essays">more elaborate writings</a>, and I also keep a <a href="http://tumble.arjanvandergaag.nl/" rel="me" title="Go read my tumblelog, with short bits and pieces I stumble upon during the day.">tumblelog</a>.
-        </p>
+    <p>
+    {% if site.posts.size > 10 %}
+    Find more in the <a href="/archives.html" rel="index" title="Browse throug all posts on this site">archives</a>.
     {% endif %}
+    I have also published <a href="/writings" rel="section" title="Read some of my essays">more elaborate writings</a>, and I also keep a <a href="http://tumble.arjanvandergaag.nl/" rel="me" title="Go read my tumblelog, with short bits and pieces I stumble upon during the day.">tumblelog</a>.
+    </p>
+    {% endif %}
+</section>
 
-<h2>More about <strong>Arjan van der Gaag</strong></h2>
-<img src="assets/avatar.png" width="64" height="64" class="photo left bordered" alt="Arjan van der Gaag" title="">
-<p>I&rsquo;m a twentysomething web developer and historian from the Netherlands. My hobbies include photography, cooking, music and snooker. I currently live in Veenendaal, the Netherlands. You can contact me at <a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;">&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;</a>. See <a href="/resume.html" title="Resume of Arjan van der Gaag">my resume (<abbr title="Curriculum Vitae">CV</abbr>)</a>.</p>
+<section>
+    <h2>More about <strong>Arjan van der Gaag</strong></h2>
+    <img src="assets/avatar.png" width="64" height="64" class="photo left bordered" alt="Arjan van der Gaag" title="">
+    <p>I&rsquo;m a twentysomething web developer and historian from the Netherlands. My hobbies include photography, cooking, music and snooker. I currently live in Veenendaal, the Netherlands. You can contact me at <a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;">&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;</a>. See <a href="/resume.html" title="Resume of Arjan van der Gaag">my resume (<abbr title="Curriculum Vitae">CV</abbr>)</a>.</p>
+</section>

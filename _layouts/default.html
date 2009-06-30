@@ -71,60 +71,60 @@ sites:
     <body class="page {{ page.type }}">
     {% endif %}
         <div id="site">
-            <div id="header">
+            <header>
                 <div id="branding">
                     <div id="title"><a href="/" title="Return to the home page" rel="home">Arjan van der Gaag<small>.nl</small></a></div>
                     <div id="tagline">I&rsquo;m Arjan van der Gaag and this is my website about me, code, food, photography and more. If you like, we can <a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;" title="Get in touch with me." rel="help">get in touch</a>.</div>
                 </div><!-- /branding -->
                 <hr>
-            </div><!-- /header -->
-            <div id="content">
-                <div id="main">
+            </header>
+            <article>
                     {{ content }}
-                </div><!-- /main -->
-            </div><!-- /content -->
-            <div id="footer">
+            </article>
+            <footer>
                 <hr>
 
-                    <form action="http://www.google.com/cse" id="cse-search-box">
-                        <div>
-                            <label for="google-search-box">Search this site:</label>
-                            <input type="hidden" name="cx" value="013424593838246409070:wnaxfzkihdk">
-                            <input type="hidden" name="ie" value="UTF-8">
-                            <input type="text" name="q" size="31" id="google-search-box">
-                            <input type="submit" name="sa" value="Search">
-                        </div>
-                    </form>
+                <form action="http://www.google.com/cse" id="cse-search-box">
+                    <div>
+                        <label for="google-search-box">Search this site:</label>
+                        <input type="hidden" name="cx" value="013424593838246409070:wnaxfzkihdk">
+                        <input type="hidden" name="ie" value="UTF-8">
+                        <input type="text" name="q" size="31" id="google-search-box">
+                        <input type="submit" name="sa" value="Search">
+                    </div>
+                </form>
 
-                    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-                    <script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-                    <script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-                    <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+                <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+                <script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+                <script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+                <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
 
-                <ul>
-                    <li>
-                        <h4>Elsewhere</h4>
-                        <ul>
-                        {% for service in page.services %}
-                            <li><a href="{{ service.url }}" title="{{ service.title }}" rel="external me">{{ service.name }}</a></li>
-                        {% endfor %}
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Sites</h4>
-                        <ul>
-                        {% for site in page.sites %}
-                            <li><a href="{{ site.url }}" title="{{ site.title }}" rel="external me">{{ site.name }}</a></li>
-                        {% endfor %}
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>About me</h4>
-                        <p>Arjan van der Gaag is a Dutch web developer and historian.<br><a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;" title="Send me an e-mail">arjan@arjanvandergaag.nl</a></p>
-                    </li>
-                </ul>
+                <nav>
+                    <ul>
+                        <li>
+                            <h4>Elsewhere</h4>
+                            <ul>
+                            {% for service in page.services %}
+                                <li><a href="{{ service.url }}" title="{{ service.title }}" rel="external me">{{ service.name }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>Sites</h4>
+                            <ul>
+                            {% for site in page.sites %}
+                                <li><a href="{{ site.url }}" title="{{ site.title }}" rel="external me">{{ site.name }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>About me</h4>
+                            <p>Arjan van der Gaag is a Dutch web developer and historian.<br><a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;" title="Send me an e-mail">arjan@arjanvandergaag.nl</a></p>
+                        </li>
+                    </ul>
+                </nav>
                 <p>&copy; copyright 2009 Arjan van der Gaag unless noted otherwise.</p>
-            </div><!-- /footer -->
+            </footer>
         </div><!-- /site -->
 
         <!-- Last modified at {{ site.time }} -->

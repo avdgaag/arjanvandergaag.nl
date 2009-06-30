@@ -18,17 +18,17 @@
     </head>
     <body>
         <div id="site">
-            <div id="header">
+            <header>
                 <p>This article was written by Arjan van der Gaag and is &copy; copyrighted. Please do not reproduce without permission. Do not quote. <a href="/writings" title="Go to the index of all my writings" rel="index">Find more writings</a> or <a href="/" title="Get back to my website" rel="home">return to the home page</a>.</p>
                 <hr>
-            </div><!-- /header -->
-            <div id="content">
+            </header>
+            <article>
                 {{ content }}
-            </div><!-- /content -->
+            </article>
         </div><!-- /site -->
 
         <!-- Last modified at {{ site.time }} -->
-        
+
         {% include google-analytics.html %}
     </body>
 </html>
