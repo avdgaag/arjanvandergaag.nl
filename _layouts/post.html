@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<header>
-    <h1>{{ page.title }}</h1>
+<article>
+    <header>
+        <h1>{{ page.title }}</h1>
 
-    <p class="meta">
-        Published on <time>{{ page.date | date_to_string }}</time>
-        {% if page.categories.size > 0 %}
-        under {{ page.categories | array_to_sentence_string }}
-        {% endif %}
-    </p>
-</header>
+        <p class="meta">
+            <a href="{{ post.url }}" title="Permalink to this post" rel="bookmark">&infin;</a> Published on <time>{{ page.date | date_to_string }}</time>
+            {% if page.categories.size > 0 %}
+            under {{ page.categories | array_to_sentence_string }}
+            {% endif %}
+        </p>
+    </header>
 
-{{ content }}
+    {{ content }}
+</article>

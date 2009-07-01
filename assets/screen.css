@@ -63,7 +63,7 @@ body {
     position: relative;
 }
 
-header, footer, article, section {
+header, footer, article, section, nav, figure, figure legend {
     display: block;
 }
 
@@ -71,7 +71,7 @@ time {
     display: inline;
 }
 
-article {
+#content {
     font-size: 13px;
     line-height: 20px;
     margin: 40px 0;
@@ -182,6 +182,26 @@ header hr, footer hr {
     a:active,.a:focus {
         color: #a6733c;
     }
+
+    /* @group Permalinks */
+
+        a[rel="bookmark"], a[rel="bookmark"]:visited {
+            margin-right: 5px;
+            padding: 1px 5px;
+            color: #aaa;
+        }
+
+        a[rel="bookmark"]:hover {
+            color: #999;
+            background: #eee;
+        }
+
+        a[rel="bookmark"]:active,
+        a[rel="bookmark"]:focus {
+            color: #333;
+        }
+
+    /* @end */
 
 /* @end */
 
@@ -332,9 +352,21 @@ header hr, footer hr {
         line-height: 0;
     }
 
+    @-moz-document url-prefix() {
+        blockquote > *:first-child:before {
+            margin: .9em 0 -.55em -.62em;
+        }
+    }
+
     blockquote.pull > *:first-child:before {
         margin: .5em 0 -.8em -.75em;
         color: #ccc;
+    }
+
+    @-moz-document url-prefix() {
+        blockquote.pull > *:first-child:before {
+            margin: .5em 0 -.45em -.75em;
+        }
     }
 
     pre {
@@ -482,32 +514,32 @@ header hr, footer hr {
 
 /* @group Lists */
 
-    article ul, article ol {
+    #content ul, #content ol {
         margin:  20px;
     }
 
-    article ul ul, article ol ol {
+    #content ul ul, #content ol ol {
         margin:  0 20px;
     }
 
-    article ul {
-        list-style: disc outside;
+    #content ul {
+        list-style: disc outside url(bullet.png);
     }
 
-    article ol {
+    #content ol {
         list-style: decimal outside;
     }
 
-    article dd {
+    #content dd {
         margin-left: 20px;
     }
 
-    article ol.posts {
+    #content ol.posts {
         list-style: none;
         margin: 20px 0;
     }
 
-    article ol.posts time {
+    #content ol.posts time {
         font-size: 11px;
         color: #888;
         display: block;
@@ -517,29 +549,32 @@ header hr, footer hr {
         position: relative;
     }
 
-    article ol.posts li {
+    #content ol.posts li {
         clear: left;
         padding-left: 90px;
     }
 
-    article li p {
+    #content li p {
         margin: 0;
     }
 /* @end */
 
 /* @group Photos */
 
-    div.photo.left, img.left {
-        float: left;
-        margin: 20px 20px 20px 0;
-    }
-
-    div.photo.right, img.right {
+    figure, figure.right, img.right {
+        border: 1px solid #ccc;
+        display: block;
         float: right;
         margin: 20px 0 20px 20px;
     }
 
-    div.photo.full, img.full {
+    figure.left, img.left {
+        display: block;
+        float: left;
+        margin: 20px 20px 20px 0;
+    }
+
+    figure.full, img.full {
         clear: both;
         display: block;
         text-align: center;
@@ -552,10 +587,8 @@ header hr, footer hr {
         -moz-box-shadow: 1px 1px 2px #ccc;
     }
 
-    div.photo p {
-        /*
-         * photo caption
-         */
+    figure p.legend {
+        display: block;
         margin: 0;
         font-size: .8571em;
         color: #999;

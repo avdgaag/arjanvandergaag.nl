@@ -6,7 +6,11 @@
     zoom: 1;
 }
 
-#footer ul ul {
+#content ul {
+    list-style: disc outside none;
+}
+
+footer ul ul {
     margin-left: 0;
 }
 

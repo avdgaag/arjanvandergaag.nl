@@ -35,7 +35,7 @@ sites:
     url:    http://arjanvandergaag.nl
     name:   Arjan van der Gaag.nl
 ---
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head profile="http://gmpg.org/xfn/1">
         <title>{{ page.title }}</title>
@@ -56,6 +56,7 @@ sites:
         <link href="/assets/favicon.png" rel="icon" type="image/png">
         <!--[if IE]>
         <link rel="stylesheet" href="/assets/ie.css" type="text/css" media="screen, projection">
+        <script src="/assets/html5.js" type="text/javascript"></script>
         <![endif]-->
 
         <!-- OpenID -->
@@ -78,9 +79,9 @@ sites:
                 </div><!-- /branding -->
                 <hr>
             </header>
-            <article>
+            <section id="content">
                     {{ content }}
-            </article>
+            </section>
             <footer>
                 <hr>
 
