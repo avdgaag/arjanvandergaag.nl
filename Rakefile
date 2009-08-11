@@ -50,9 +50,9 @@ task :push do
 end
 
 desc 'Create and push a tag'
-task :tag do
-  t = ENV['T']
-  m = ENV['M']
+task :tag, :title, :message do |t, args|
+  t = args.title
+  m = args.message
   unless t && m
     puts "USAGE: rake tag T='1.0-my-tag-name' M='My description of this tag'"
     exit(1)
@@ -70,8 +70,8 @@ task :publish => [:build, :push, :sync, :sitemap, :ping] do
 end
 
 desc 'create a new draft post'
-task :post do
-  title, slug = get_title
+task :post, :title do |t, args|
+  title, slug = get_title(args.title)
   file = File.join(File.dirname(__FILE__), '_posts', slug + '.markdown')
   create_blank_post(file, title)
   open_in_editor(file)
@@ -87,8 +87,8 @@ end
 #
 # If there is a title given, then this method will return it and a escaped
 # version suitable for filenames.
-def get_title
-  unless title = ENV['TITLE']
+def get_title(title)
+  if title.nil?
     puts "USAGE: rake post TITLE='the post title'"
     exit(1)
   end
@@ -110,7 +110,7 @@ def create_blank_post(path, title)
     published: false
     keywords:
     description:
-    categories:
+    category:
     ---
 
     EOS
