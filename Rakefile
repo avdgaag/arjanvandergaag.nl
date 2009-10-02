@@ -26,7 +26,7 @@ end
 desc 'Run Jekyll in development mode'
 task :dev do
   puts '* Running Jekyll with auto-generation and server'
-  puts `jekyll --auto --server`
+  puts jekyll('--auto --server')
 end
 
 desc 'Run Jekyll to generate the site'
@@ -34,7 +34,7 @@ task :build do
   puts '* Removing old site'
   puts `rm -r ./_site/*`
   puts '* Generating static site with Jekyll'
-  puts `jekyll`
+  puts jekyll
 end
 
 desc 'rsync the contents of ./_site to the server'
@@ -80,6 +80,10 @@ end
 desc 'List all draft posts'
 task :drafts do
   puts `find ./_posts -type f -exec grep -H 'published: false' {} \\;`
+end
+
+def jekyll(args)
+  `~/bin/jekyll/bin/jekyll #{args}`
 end
 
 # Helper method for :draft and :post, that required a TITLE environment
