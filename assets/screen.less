@@ -395,14 +395,17 @@ header hr, footer hr {
     }
 
     pre {
-        white-space: pre;
+        white-space: pre-line;
         color: #888;
         margin: @single-line 0;
         background: #f6f6f6;
         border: 1px solid #eee;
         padding: @half-line;
         width: 478px;
-        overflow-x: hidden;
+    }
+
+    pre code {
+        white-space: pre;
     }
 
     .footnotes {
