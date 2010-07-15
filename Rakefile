@@ -82,7 +82,7 @@ task :drafts do
   puts `find ./_posts -type f -exec grep -H 'published: false' {} \\;`
 end
 
-def jekyll(args)
+def jekyll(args = nil)
   `~/bin/jekyll/bin/jekyll #{args}`
 end
 
