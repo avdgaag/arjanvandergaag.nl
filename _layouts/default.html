@@ -74,6 +74,9 @@ sites:
     {% else %}
     <body class="page {{ page.type }}">
     {% endif %}
+
+        {% include google-analytics.html %}
+
         <div id="site">
             <header>
                 <div id="branding">
@@ -132,8 +135,5 @@ sites:
         </div><!-- /site -->
 
         <!-- Last modified at {{ site.time }} -->
-
-        {% include google-analytics.html %}
-
     </body>
 </html>
