@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<!--[if lt IE 7 ]> <html lang="nl" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="nl" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="nl" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="nl" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="nl"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Publishing a Jekyll website to a server &bull; Arjan van der Gaag.nl</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="copyright" content="">
+        <meta name="author" content="">
+
+        <meta name="robots" content="index, follow">
+
+        <link rel="stylesheet" href="/assets/styles.css">
+        <link href="/assets/favicon.png" rel="shortcut icon">
+
+        <script>
+            var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+            (function(d, t) {
+                var g = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+                g.async = true;
+                g.src = '//www.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g, s);
+            })(document, 'script');
+        </script>
+    </head>
+    <body class="inside">
+
+        <div id="page">
+
+            <div id="header">
+
+                <a href="/" title="Back to the front page" rel="home" accesskey="h" id="title">Arjan van der Gaag <small>.nl</small></a>
+
+                <p>I’m <strong>Arjan van der Gaag</strong> and this is my website about me, code, food, photography and more. If you like, we can <a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;">get in touch</a>.</p>
+
+                <hr>
+
+            </div><!-- /header -->
+
+            <div id="content">
+
+                <h1>Publishing a Jekyll website to a server</h1>
+<p class="meta">
+    Published at 13-06-2009 &bull;
+    Tagged blog, blogging, code, ruby, rake, automation, script<br>
+    Next: <a href="/blog/creating-new-jekyll-posts.html">Creating new Jekyll posts</a>
+    Previous: <a href="/blog/rake-task-to-ping-google.html">Rake task to ping Google</a>
+</p>
+
+<p class="leader">One of the problems with using Jekyll, a static website generator, is that you
+have to copy your files to a server <em>manually</em> if you want the world to see
+them. Luckily, <strong>it is easy to automate</strong>.</p>
+
+<h2 id="using-rsync">Using <code>rsync</code>
+</h2>
+
+<p>I use <code>rsync</code> to copy my generated site to my server. This works like a charm:</p>
+
+<pre><code>$&gt; rsync -avz "_site/" username@server:~/dir/to/public/
+</code></pre>
+
+<p>The <code>avz</code> flags tell it to be verbose, and both archive and compress the data.</p>
+
+<h2 id="rake-task">Rake task</h2>
+
+<p>Remembering and typing that <code>rsync</code> line every time I want to publish my site
+is not a good idea, so I dropped the whole thing in a Rake task:</p>
+
+<pre><code class="language-ruby">desc <span class="s"><span class="dl">'</span><span class="k">rsync the contents of ./_site to the server</span><span class="dl">'</span></span>
+task <span class="sy">:sync</span> <span class="r">do</span>
+  puts <span class="s"><span class="dl">'</span><span class="k">* Publishing files to live server</span><span class="dl">'</span></span>
+  puts <span class="sh"><span class="dl">`</span><span class="k">rsync -avz "_site/" username@server:~/dir/to/public/</span><span class="dl">`</span></span>
+<span class="r">end</span></code></pre>
+
+<p>Publishing my site is now as easy as <code>rake sync</code>. The good thing about putting
+this in a Rake task is that I can now <strong>chain the syncing with other tasks</strong>:
+calling <code>rake publish</code> will re-generate my site, push code to Github, sync my
+site with the server and notify various web services about the changes to my
+site. Awesome.</p>
+
+<p>You can check out <a href="http://github.com/avdgaag/arjanvandergaag.nl/blob/cbc47e03d4cf766278f2982bfe79862cb251fd34/Rakefile" title="View my Rakefile on Github">my <code>Rakefile</code> at Github</a>.</p>
+
+            </div><!-- /content -->
+
+            <div id="footer" class="autoclear">
+
+                <form action="http://www.google.com/cse" id="cse-search-box">
+                    <div>
+                        <label for="google-search-box">Search this site:</label>
+                        <input type="hidden" name="cx" value="013424593838246409070:wnaxfzkihdk">
+                        <input type="hidden" name="ie" value="UTF-8">
+                        <input type="search" name="q" size="31" id="google-search-box">
+                        <input type="submit" name="sa" value="Search">
+                    </div>
+                </form>
+
+                <div class="col">
+                    <h6>Find me elsewhere</h6>
+                    <ul>
+                        <li><a href="http://twitter.com/avdgaag" title="" rel="external me">Twitter</a></li>
+                        <li><a href="http://linkedin.com/avdgaag" title="" rel="external me">LinkedIn</a></li>
+                        <li><a href="http://github.com/avdgaag" title="" rel="external me">Github</a></li>
+                        <li><a href="http://flickr.com/users/arjanvandergaag" title="" rel="external me">Flickr</a></li>
+                        <li><a href="http://delicious.com/arjanvandergaag" title="" rel="external me">Delicious</a></li>
+                        <li><a href="http://last.fm/user/surtur" title="" rel="external me">Last.fm</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h6>More of my sites</h6>
+                    <ul>
+                        <li><a href="http://pasttense.nl/" title="" rel="external me">the Past Tense</a></li>
+                        <li><a href="http://agwebdesign.nl/" title="" rel="external me">AG Webdesign</a></li>
+                        <li><a href="http://yummyinmytummy.nl/" title="" rel="external me">Yummy in my Tummy!</a></li>
+                        <li><a href="http://arjanvandergaag.nl/" title="" rel="external me">Arjan van der Gaag.nl</a></li>
+                        <li><a href="http://library.arjanvandergaag.nl/" title="" rel="external me">My Library</a></li>
+                    </ul>
+                </div>
+
+                <p class="col">© copyright 1995&ndash;2010 Arjan van der Gaag unless noted otherwise.</p>
+
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <script src="http://www.google.com/jsapi"></script>
+        <script>google.load("elements", "1", {packages: "transliteration"});</script>
+        <script src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+        <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+    </body>
+</html>

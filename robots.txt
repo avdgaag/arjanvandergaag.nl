@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /assets
-Sitemap: sitemap.xml
-Disallow: /403.html
-Disallow: 404.html
-Disallow: /assets

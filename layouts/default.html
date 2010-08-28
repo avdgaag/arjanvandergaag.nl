@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<!--[if lt IE 7 ]> <html lang="nl" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="nl" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="nl" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="nl" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="nl"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title><%= @item[:title] %> &bull; Arjan van der Gaag.nl</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="copyright" content="">
+        <meta name="author" content="">
+
+        <meta name="robots" content="index, follow">
+
+        <link rel="stylesheet" href="/assets/styles.css">
+        <link href="/assets/favicon.png" rel="shortcut icon">
+
+        <script>
+            var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+            (function(d, t) {
+                var g = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+                g.async = true;
+                g.src = '//www.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g, s);
+            })(document, 'script');
+        </script>
+    </head>
+    <body class="<%= @item[:body_class] %>">
+
+        <div id="page">
+
+            <div id="header">
+
+                <a href="/" title="Back to the front page" rel="home" accesskey="h" id="title">Arjan van der Gaag <small>.nl</small></a>
+
+                <p>I’m <strong>Arjan van der Gaag</strong> and this is my website about me, code, food, photography and more. If you like, we can <a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;">get in touch</a>.</p>
+
+                <hr>
+
+            </div><!-- /header -->
+
+            <div id="content">
+
+                <%= yield %>
+
+            </div><!-- /content -->
+
+            <div id="footer" class="autoclear">
+
+                <form action="http://www.google.com/cse" id="cse-search-box">
+                    <div>
+                        <label for="google-search-box">Search this site:</label>
+                        <input type="hidden" name="cx" value="013424593838246409070:wnaxfzkihdk">
+                        <input type="hidden" name="ie" value="UTF-8">
+                        <input type="search" name="q" size="31" id="google-search-box">
+                        <input type="submit" name="sa" value="Search">
+                    </div>
+                </form>
+
+                <div class="col">
+                    <h6>Find me elsewhere</h6>
+                    <ul>
+                        <li><a href="http://twitter.com/avdgaag" title="" rel="external me">Twitter</a></li>
+                        <li><a href="http://linkedin.com/avdgaag" title="" rel="external me">LinkedIn</a></li>
+                        <li><a href="http://github.com/avdgaag" title="" rel="external me">Github</a></li>
+                        <li><a href="http://flickr.com/users/arjanvandergaag" title="" rel="external me">Flickr</a></li>
+                        <li><a href="http://delicious.com/arjanvandergaag" title="" rel="external me">Delicious</a></li>
+                        <li><a href="http://last.fm/user/surtur" title="" rel="external me">Last.fm</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h6>More of my sites</h6>
+                    <ul>
+                        <li><a href="http://pasttense.nl/" title="" rel="external me">the Past Tense</a></li>
+                        <li><a href="http://agwebdesign.nl/" title="" rel="external me">AG Webdesign</a></li>
+                        <li><a href="http://yummyinmytummy.nl/" title="" rel="external me">Yummy in my Tummy!</a></li>
+                        <li><a href="http://arjanvandergaag.nl/" title="" rel="external me">Arjan van der Gaag.nl</a></li>
+                        <li><a href="http://library.arjanvandergaag.nl/" title="" rel="external me">My Library</a></li>
+                    </ul>
+                </div>
+
+                <p class="col">© copyright 1995&ndash;2010 Arjan van der Gaag unless noted otherwise.</p>
+
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <script src="http://www.google.com/jsapi"></script>
+        <script>google.load("elements", "1", {packages: "transliteration"});</script>
+        <script src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+        <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+    </body>
+</html>

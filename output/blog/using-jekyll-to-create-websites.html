@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<!--[if lt IE 7 ]> <html lang="nl" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="nl" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="nl" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="nl" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="nl"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Using Jekyll to create websites &bull; Arjan van der Gaag.nl</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="copyright" content="">
+        <meta name="author" content="">
+
+        <meta name="robots" content="index, follow">
+
+        <link rel="stylesheet" href="/assets/styles.css">
+        <link href="/assets/favicon.png" rel="shortcut icon">
+
+        <script>
+            var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+            (function(d, t) {
+                var g = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+                g.async = true;
+                g.src = '//www.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g, s);
+            })(document, 'script');
+        </script>
+    </head>
+    <body class="inside">
+
+        <div id="page">
+
+            <div id="header">
+
+                <a href="/" title="Back to the front page" rel="home" accesskey="h" id="title">Arjan van der Gaag <small>.nl</small></a>
+
+                <p>I’m <strong>Arjan van der Gaag</strong> and this is my website about me, code, food, photography and more. If you like, we can <a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;">get in touch</a>.</p>
+
+                <hr>
+
+            </div><!-- /header -->
+
+            <div id="content">
+
+                <h1>Using Jekyll to create websites</h1>
+<p class="meta">
+    Published at 07-06-2009 &bull;
+    Tagged blog, blogging, jekyll, code, ruby, writing<br>
+    Next: <a href="/blog/rake-task-to-ping-google.html">Rake task to ping Google</a>
+    Previous: <a href="/blog/hello-world.html">Hello, world!</a>
+</p>
+
+<p class="leader">To both speed up and simplify this site’s maintenance I’ve gotten rid of
+traditional <abbr title="Content Management Systems">CMS</abbr>; I now use Jekyll: a static site generator. You should give it
+a try if you’re not afraid of a little hacking.</p>
+
+<h2 id="about-jekyll">About Jekyll</h2>
+
+<p>Jekyll generates static <abbr title="HyperText Markup Language">HTML</abbr> pages for you. The project’s author, Tom
+Preston-Werner, has written <a href="http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html" title="Read more about Jekyll on Tom Preston-Werner's site">a nice introduction to Jekyll</a>, but it comes
+down to this:</p>
+
+<ul>
+<li>Create some text files that will be your pages and blog posts.</li>
+  <li>Create an <abbr title="HyperText Markup Language">HTML</abbr> lay-out file that defines headers and footers for your pages.</li>
+  <li>Run Jekyll to combine your text files and lay-out to a website.</li>
+  <li>Upload your files to your server for the world to see.</li>
+</ul><p>If it sounds easy, that’s because it is. I can use <a href="http://macromates.com" title="TextMate">my favourite text editor</a>
+and <a href="http://git-scm.com" title="Git - Fast Version Control System">version control system</a> to write my posts, and then I let Jekyll use
+<a href="http://daringfireball.net/projects/markdown/" title="Daring Fireball: Markdown">Markdown</a> to turn my files into <abbr title="HyperText Markup Language">HTML</abbr>. You can also use other filters, or
+write plain <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+
+<p>Let me stress my point: I can use my favorite text editor and versioning
+system for my blog, rather than some wimpy <code>&lt;textarea&gt;</code>.</p>
+
+<h2 id="here-comes-trouble">Here comes trouble</h2>
+
+<p>Jekyll doesn’t do a lot, by design. Some manual labour is involved, which is
+to be automated – because we don’t like manual labour, now do we? I’ve
+written about some of my scripts to enhance Jekyll in separate posts:</p>
+
+<ul>
+<li><a href="/code/jekyll/2009/06/16/creating-new-jekyll-posts.html" title="Creating new empty posts with a rake task">Creating new posts</a></li>
+  <li><a href="/code/jekyll/2009/06/13/publishing-a-jekyll-website-to-a-server.html" title="Using rsync to copy files to my server">Publishing files to a server</a></li>
+  <li><a href="/code/jekyll/2009/06/10/rake-task-to-ping-google.html" title="Pinging Google with a Rake task">Ping Google about my updated sitemap</a></li>
+</ul><h2 id="publication-process">Publication process</h2>
+
+<p>I have included all these snippets, and some others, in one big Rakefile in my
+project directory. Whenever I am ready to publish my site to my server I can
+simply call <code>rake publish</code> and it will let Jekyll re-generate my site, upload
+all the files to the server and ping Google about my new sitemap.</p>
+
+<p>The actual <a href="http://github.com/avdgaag/arjanvandergaag.nl/tree/master" title="Browse the source code to this site at Github">source code to my site is shared publicly at Github</a>, so you
+can check out <a href="http://github.com/avdgaag/arjanvandergaag.nl/blob/28539bc736a05b28f2aa4ef81e4f61f3f91375a0/Rakefile" title="See my project's Rakefile">my collection of tasks</a>.</p>
+
+<h2 id="issues-unresolved">Issues unresolved</h2>
+
+<p>First, since my entire website is now just static <abbr title="HyperText Markup Language">HTML</abbr> it is <strong>no longer
+possible to have comments</strong> on my site, unless I would use something like
+<a href="http://disqus.com/" title="DISQUS is a Javascript-based commenting system">Disqus</a>. I’m fine without comments. Second, since Jekyll is Ruby gem,
+writing more Ruby to add functionality to the website is easy – but actually
+getting it in there is a little harder. <strong>Jekyll lacks a neat plug-in
+solution</strong>. Luckily it’s easy to fork Jekyll on Github and hack away. Thirdly,
+setting up archive pages, searching, <abbr title="Really Simple Syndication">RSS</abbr> syndication, tagging and post
+browsing <strong>take some manual labour</strong>, but for now I’m fine without them.
+Jekyll is certainly not suited for everyone, but for simple sites it works fine.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Jekyll makes creating and maintaining websites fun, in a geeky kind of way. I
+love the control it gives me. Tom Preston-Werner writes:</p>
+
+<blockquote>
+  <p>The distance from my brain to my blog has shrunk, and, in the end,
+I think that will make me a better author.</p>
+</blockquote>
+
+<p>I couldn’t agree more.</p>
+
+            </div><!-- /content -->
+
+            <div id="footer" class="autoclear">
+
+                <form action="http://www.google.com/cse" id="cse-search-box">
+                    <div>
+                        <label for="google-search-box">Search this site:</label>
+                        <input type="hidden" name="cx" value="013424593838246409070:wnaxfzkihdk">
+                        <input type="hidden" name="ie" value="UTF-8">
+                        <input type="search" name="q" size="31" id="google-search-box">
+                        <input type="submit" name="sa" value="Search">
+                    </div>
+                </form>
+
+                <div class="col">
+                    <h6>Find me elsewhere</h6>
+                    <ul>
+                        <li><a href="http://twitter.com/avdgaag" title="" rel="external me">Twitter</a></li>
+                        <li><a href="http://linkedin.com/avdgaag" title="" rel="external me">LinkedIn</a></li>
+                        <li><a href="http://github.com/avdgaag" title="" rel="external me">Github</a></li>
+                        <li><a href="http://flickr.com/users/arjanvandergaag" title="" rel="external me">Flickr</a></li>
+                        <li><a href="http://delicious.com/arjanvandergaag" title="" rel="external me">Delicious</a></li>
+                        <li><a href="http://last.fm/user/surtur" title="" rel="external me">Last.fm</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h6>More of my sites</h6>
+                    <ul>
+                        <li><a href="http://pasttense.nl/" title="" rel="external me">the Past Tense</a></li>
+                        <li><a href="http://agwebdesign.nl/" title="" rel="external me">AG Webdesign</a></li>
+                        <li><a href="http://yummyinmytummy.nl/" title="" rel="external me">Yummy in my Tummy!</a></li>
+                        <li><a href="http://arjanvandergaag.nl/" title="" rel="external me">Arjan van der Gaag.nl</a></li>
+                        <li><a href="http://library.arjanvandergaag.nl/" title="" rel="external me">My Library</a></li>
+                    </ul>
+                </div>
+
+                <p class="col">© copyright 1995&ndash;2010 Arjan van der Gaag unless noted otherwise.</p>
+
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <script src="http://www.google.com/jsapi"></script>
+        <script>google.load("elements", "1", {packages: "transliteration"});</script>
+        <script src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+        <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+    </body>
+</html>

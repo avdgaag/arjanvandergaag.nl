@@ -1,4 +1,0 @@
-pygments:    true
-exclude:
-  - readme.markdown
-  - Rakefile
