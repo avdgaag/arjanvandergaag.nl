@@ -14,6 +14,12 @@ output_dir: output
 # such as “default.htm”. This list is used by nanoc to generate pretty URLs.
 index_filenames: [ 'index.html' ]
 
+# Configuration of deployment targets using rsync.
+deploy:
+  default:
+    dst: "webfaction:~/webapps/jekyllblog"
+    options: ['-glpPrtvz', '--delete']
+
 # Collection of site metadata
 site:
   # Tacking code for Google Analytics
