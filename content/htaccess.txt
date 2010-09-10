@@ -85,6 +85,12 @@ DirectorySlash On
 RewriteEngine On
 
 Redirect 301 /feed http://feeds.feedburner.com/avdgaag
+Redirect 301 /code/javascript/2010/02/08/introducing-mutil.html http://arjanvandergaag.nl/blog/introducing-mutil.html
+Redirect 301 /code/jekyll/2009/06/16/creating-new-jekyll-posts.html http://arjanvandergaag.nl/blog/creating-new-jekyll-posts.html
+Redirect 301 /code/jekyll/2009/06/13/publishing-a-jekyll-website-to-a-server.html http://arjanvandergaag.nl/blog/publishing-a-jekyll-website-to-a-server.html
+Redirect 301 /code/jekyll/2009/06/10/rake-task-to-ping-google.html http://arjanvandergaag.nl/blog/rake-task-to-ping-google.html
+Redirect 301 /code/jekyll/2009/06/07/using-jekyll-to-create-websites.html http://arjanvandergaag.nl/blog/using-jekyll-to-create-websites.html
+Redirect 301 /meta/2009/06/04/hello-world.html http://arjanvandergaag.nl/blog/hello-world.html
 
 RewriteRule ^(.*)_cb\d+(\.(js|css|png))$ /$1$2
 
