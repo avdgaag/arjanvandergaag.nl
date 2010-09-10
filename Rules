@@ -27,6 +27,11 @@ compile '/blog/*' do
   layout 'default'
 end
 
+compile '/sitemap/' do
+  filter :erb
+  filter :clean_sitemap
+end
+
 compile '*' do
   filter :erb
   layout 'default' if item[:extension] == 'html'
