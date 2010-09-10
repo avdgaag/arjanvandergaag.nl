@@ -1,7 +1,7 @@
 ---
 title: Hello, world!
 kind: article
-created_at: 2009-06-04
+created_at: 2009-06-04 12:00
 tags: [blog, blogging, website, meta, cms, writing]
 ---
 

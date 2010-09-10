@@ -1,7 +1,7 @@
 ---
 title: Introducing μtil
 kind: article
-created_at: 2010-02-08
+created_at: 2010-02-08 12:00
 tags: [javascript, library, μtil, jquery, dom]
 ---
 Lately in my web development work I find myself needing some simple JavaScript tools. Usually I bring out jQuery, but sometimes it just doesn't feel right to load an entire library in order to show and hide some elements.

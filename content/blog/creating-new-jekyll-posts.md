@@ -1,7 +1,7 @@
 ---
 title: Creating new Jekyll posts
 kind: article
-created_at: 2009-06-16
+created_at: 2009-06-16 12:00
 tags: [blog, blogging, website, meta, cms, writing, automation]
 ---
 Jekyll, a static site generator, is *blog-aware*. That means it tracks posts

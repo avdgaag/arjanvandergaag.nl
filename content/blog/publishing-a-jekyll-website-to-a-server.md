@@ -1,7 +1,7 @@
 ---
 title: Publishing a Jekyll website to a server
 kind: article
-created_at: 2009-06-13
+created_at: 2009-06-13 12:00
 tags: [blog, blogging, code, ruby, rake, automation, script]
 ---
 

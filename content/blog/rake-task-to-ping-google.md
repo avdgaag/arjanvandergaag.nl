@@ -1,6 +1,6 @@
 ---
 title: Rake task to ping Google
-created_at: 2009-06-10
+created_at: 2009-06-10 12:00
 kind: article
 tags: [ruby, rake, google, ping, automation, blog, blogging, script]
 ---

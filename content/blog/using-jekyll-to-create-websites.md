@@ -1,7 +1,7 @@
 ---
 kind: article
 title: Using Jekyll to create websites
-created_at: 2009-06-07
+created_at: 2009-06-07 12:00
 tags: [blog, blogging, jekyll, code, ruby, writing]
 ---
 To both speed up and simplify this site's maintenance I've gotten rid of

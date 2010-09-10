@@ -36,7 +36,7 @@ route '/htaccess/' do
   '/.htaccess'
 end
 
-route %r{^/(assets/.*|sitemap|robots)/$} do
+route %r{^/(assets/.*|sitemap|robots|atom)/$} do
   item.identifier.chop + '.' + item[:extension]
 end
 

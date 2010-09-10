@@ -1,0 +1,6 @@
+---
+title: arjanvandergaag.nl atom feed
+author_name: Arjan van der Gaag
+author_uri: http://arjanvandergaag.nl
+---
+<%= atom_feed %>
