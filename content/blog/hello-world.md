@@ -26,9 +26,9 @@ Oh, and it's got a feed. [Stay in the loop][2].
 
 
 [1]: http://twitter.com/avdgaag "Follow me on Twitter. Or not."
-[2]: /atom.xml "Subscribe to updates throug my feed"
+[2]: /feed/ "Subscribe to updates throug my feed"
 [3]: http://chyrp.net "Chyrp is a light-weight tumble log app"
-[4]: http://archived.arjanvandergaag.nl "Archived version of my old website"
+[4]: http://old.arjanvandergaag.nl "Archived version of my old website"
 [5]: http://twitter.com/avdgaag/status/2063885128 "Tweet: I really should start blogging again."
 
 *[CMS]: Content Management System

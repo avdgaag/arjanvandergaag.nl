@@ -83,6 +83,6 @@ I couldn't agree more.
 [7]: http://disqus.com/ "DISQUS is a Javascript-based commenting system"
 [6]: http://github.com/avdgaag/arjanvandergaag.nl/blob/28539bc736a05b28f2aa4ef81e4f61f3f91375a0/Rakefile "See my project's Rakefile"
 
-[8]: /code/jekyll/2009/06/16/creating-new-jekyll-posts.html "Creating new empty posts with a rake task"
-[9]: /code/jekyll/2009/06/13/publishing-a-jekyll-website-to-a-server.html "Using rsync to copy files to my server"
-[10]: /code/jekyll/2009/06/10/rake-task-to-ping-google.html "Pinging Google with a Rake task"
+[8]: /blog/creating-new-jekyll-posts.html "Creating new empty posts with a rake task"
+[9]: /blog/publishing-a-jekyll-website-to-a-server.html "Using rsync to copy files to my server"
+[10]: /blog/rake-task-to-ping-google.html "Pinging Google with a Rake task"
