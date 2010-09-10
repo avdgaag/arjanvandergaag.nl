@@ -6,7 +6,7 @@ tags: [javascript, library, μtil, jquery, dom]
 ---
 Lately in my web development work I find myself needing some simple JavaScript tools. Usually I bring out jQuery, but sometimes it just doesn't feel right to load an entire library in order to show and hide some elements.
 
-That is why I recently started developing a tiny JavaScript toolkit of my own, called μtil (mu-til). It's purpose is to make basic DOM operations a little easier without taking on too much bloat. You can find the [μtil at Github][].
+That is why I recently started developing a tiny JavaScript toolkit of my own, called μtil (mu-til). It's purpose is to make basic DOM operations a little easier without taking on too much bloat. You can find the [μtil at Github][1].
 
 ## Why a new library?
 
@@ -67,6 +67,6 @@ Writing a little library is great fun, as you get to explore practical needs, wr
 
 ## Dive in
 
-You can find the code for [μtil at github][], along with documentation and an issue tracker. Please do fork and hack away!
+You can find the code for [μtil at github][1], along with documentation and an issue tracker. Please do fork and hack away!
 
-[μtil at Github]: http://github.com/avdgaag/mutil
+[1]: http://github.com/avdgaag/mutil

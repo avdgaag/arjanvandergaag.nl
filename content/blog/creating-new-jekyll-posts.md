@@ -13,7 +13,7 @@ way of using Rake to ease the pain.
 
 Jekyll requires blog posts to be saved in files with a specific filename. It
 should include the title of the post **and the publication date**. Example:
-2009-06-15-hello-world.markdown. The extension tells Jekyll what text filter
+`2009-06-15-hello-world.markdown`. The extension tells Jekyll what text filter
 to use (Markdown in this case).
 
 ## What we want

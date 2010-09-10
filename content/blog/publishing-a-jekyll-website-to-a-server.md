@@ -14,7 +14,8 @@ them. Luckily, **it is easy to automate**.
 
 I use `rsync` to copy my generated site to my server. This works like a charm:
 
-    $> rsync -avz "_site/" username@server:~/dir/to/public/
+{:.sh}
+    rsync -avz "_site/" username@server:~/dir/to/public/
 
 The `avz` flags tell it to be verbose, and both archive and compress the data.
 

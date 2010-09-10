@@ -26,7 +26,7 @@ and [version control system][4] to write my posts, and then I let Jekyll use
 write plain HTML.
 
 Let me stress my point: I can use my favorite text editor and versioning
-system for my blog, rather than some wimpy `<textarea>`.
+system for my blog, rather than some wimpy `<textarea>`{:.html}.
 
 ## Here comes trouble
 
