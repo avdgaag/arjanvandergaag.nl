@@ -1,6 +1,7 @@
 require 'time'
 include Nanoc3::Helpers::Blogging
 include Nanoc3::Helpers::LinkTo
+include Nanoc3::Helpers::XMLSitemap
 
 def published_at(item)
   Time.parse(item[:created_at].to_s).strftime '%d-%m-%Y'
@@ -25,4 +26,10 @@ end
 
 def previous_article(item)
   next_article(item, 1, 'Previous: ')
+end
+
+def cache_busted(path)
+  real_path = File.join(File.dirname(__FILE__), '..', 'content', path)
+  ext = File.extname(path)
+  path.sub(ext, '_cb' + File.mtime(real_path).strftime('%Y%m%d%H%m') + ext)
 end

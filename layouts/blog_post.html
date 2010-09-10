@@ -1,9 +1,13 @@
-<h1><%= @item[:title] %></h1>
-<p class="meta">
-    Published at <%= published_at @item %> &bull;
-    Tagged <%= tags @item %><br>
-    <%= next_article(@item) %>
-    <%= previous_article(@item) %>
-</p>
+<article>
+    <header>
+        <h1><%= @item[:title] %></h1>
+    </header>
+    <footer>
+        Published at <%= published_at @item %> &bull;
+        Tagged <%= tags @item %><br>
+        <%= next_article(@item) %>
+        <%= previous_article(@item) %>
+    </footer>
 
-<%= yield %>
+    <%= yield %>
+</article>

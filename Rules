@@ -14,7 +14,7 @@
 #   # don’t filter or layout
 # end
 
-compile %r{^/(cv|resume|404|500|assets)} do
+compile %r{^/(htaccess|cv|resume|404|500|assets)} do
   # don't filter or layout
 end
 
@@ -29,10 +29,14 @@ end
 
 compile '*' do
   filter :erb
-  layout 'default'
+  layout 'default' if item[:extension] == 'html'
 end
 
-route '/assets/*' do
+route '/htaccess/' do
+  '/.htaccess'
+end
+
+route %r{^/(assets/.*|sitemap|robots)/$} do
   item.identifier.chop + '.' + item[:extension]
 end
 

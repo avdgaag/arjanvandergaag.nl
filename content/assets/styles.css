@@ -1,5 +1,5 @@
 /*
- * Stylesheet for [project name]
+ * Stylesheet for arjanvandergaag.nl
  *
  * DESCRIPTION
  *
@@ -22,6 +22,7 @@
  *       #001.f Tables
  *       #001.g Forms
  *       #001.h Images
+ *       #001.i Syntax highlighting
  * #002. Print syles
  *       #002.a Page layout
  *       #002.b Typography
@@ -151,7 +152,7 @@
         font-style: italic;
     }
     pre {
-        padding: 15px;
+        padding: 0 15px;
         font-size: 12px;
         word-wrap: break-word;  /* IE */
     }
@@ -190,10 +191,14 @@
     #title {
         background: #0071BC;
         border-radius: 0 0 5px 5px;
+        -webkit-border-radius: 0 0 5px 5px;
+        -moz-border-radius: 0 0 5px 5px;
         color: #fff;
         display: block;
         font-size: 24px;
         font-weight: bold;
+        position: relative;
+        zoom: 1;
         margin: 0 -10px;
         padding: 40px 10px 20px;
         text-decoration: none;
@@ -210,18 +215,18 @@
         font-weight: normal;
         text-shadow: none;
     }
-    #header p {
+    header p {
         color: #ccc;
         font-size: 28px;
         font-weight: bold;
         line-height: 40px;
         margin-bottom: 40px;
     }
-    .inside #header p {
+    .inside header p {
         font-size: 13px;
         line-height: 20px;
     }
-    .error #header p, .error #footer .col {
+    .error header p, .error footer .col {
         display: none;
     }
     .error #title {
@@ -230,12 +235,13 @@
     .error h1, .error strong {
         color: #900;
     }
-    #header strong {
+    header strong {
         color: #999;
     }
-    #header hr {
+    header hr {
         display: none;
     }
+    footer:after,
     .autoclear:after {
         clear: both;
         content: " ";
@@ -244,10 +250,11 @@
         height: 0;
         visibility: hidden;
     }
+    footer,
     .autoclear { display: inline-block; }
     /* start commented backslash hack \*/
-    * html .autoclear { height: 1%; }
-    .autoclear { display: block; }
+    * html footer, * html .autoclear { height: 1%; }
+    footer, .autoclear { display: block; }
     /* close commented backslash hack */
 
     #cse-search-box {
@@ -261,23 +268,23 @@
         position: relative;
         text-align: center;
     }
-    #footer {
+    footer {
         margin: 0 0 40px -20px;
         position: relative;
     }
-    #footer .col {
+    footer .col {
         display: inline;
         float: left;
         margin-left: 20px;
         width: 153px;
     }
-    #footer ul, #footer p {
+    footer ul, footer p {
         font-size: 11px;
         color: #666;
         margin: 0;
         list-style: none;
     }
-    #footer h6 {
+    footer h6 {
         margin: 0 0 10px;
     }
 
@@ -330,7 +337,7 @@
         font-family: Cambria, Georgia, serif;
         font-style: italic;
     }
-    p.meta {
+    p.meta, article footer {
         color: #999;
         font-size: 11px;
         margin: -10px 0 30px;
@@ -376,6 +383,15 @@
         left: 0;
         font-size: 11px;
         color: #999;
+    }
+    .footnotes {
+        color: #999;
+        font-size: 11px;
+        border-top: 1px solid #ccc;
+        width: 30%;
+    }
+    .footnotes ol {
+        width: 300%;
     }
 
     /*
@@ -444,6 +460,42 @@
         margin: 0 20px 20px 0;
         box-shadow: rgba(0,0,0,.25) 2px 2px 2px;
         -webkit-box-shadow: rgba(0,0,0,.25) 2px 2px 2px;
+        -moz-box-shadow: rgba(0,0,0,.25) 2px 2px 2px;
+    }
+
+    /*
+     * #001.i: Syntax highlighting
+     */
+    pre code {
+        color: #111;
+    }
+    pre code .c {
+        color: #0066FF;
+        font-style: italic;
+    }
+    pre code .kw, pre code .r {
+        color: #0000FF;
+        font-weight: bold;
+    }
+    pre code .s, pre code .rx, pre code .sh {
+        color: #036A07;
+    }
+    pre code .lv {
+        color: #318495;
+    }
+    pre code .sy {
+        color: #C5060B;
+        font-weight: bold;
+    }
+    pre code .co, pre code .pc {
+        color: #585CF6;
+        font-weight: bold;
+    }
+    pre code .il {
+        color: #26B31A;
+    }
+    pre code .sh {
+
     }
 }
 
@@ -519,6 +571,9 @@
  * Conditional comments have applied some special classes to the HTML element,
  * such as .ie6, .ie7, .ie8 and .ie9.
  */
+.ie6 ul.posts time {
+    left: -75px;
+}
 
 
 /*
