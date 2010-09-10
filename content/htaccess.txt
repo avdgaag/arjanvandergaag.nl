@@ -84,7 +84,9 @@ DirectorySlash On
 
 RewriteEngine On
 
-RewriteRule ^(.*)_cb\d+(\.(js|css|png))$ $1$2
+Redirect 301 /feed http://feeds.feedburner.com/avdgaag
+
+RewriteRule ^(.*)_cb\d+(\.(js|css|png))$ /$1$2
 
 # ============================================================================
 # Force the use of domain.com, not www.domain.com

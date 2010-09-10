@@ -2,5 +2,6 @@
 title: arjanvandergaag.nl atom feed
 author_name: Arjan van der Gaag
 author_uri: http://arjanvandergaag.nl
+feed_url: http://arjanvandergaag.nl/feed/
 ---
 <%= atom_feed %>
