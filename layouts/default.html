@@ -8,6 +8,7 @@
         <meta name="description" content="<%= @item[:description] || @site.config[:site][:description] %>">
         <meta name="copyright" content="<%= @site.config[:site][:copyright] %>">
         <meta name="author" content="<%= @site.config[:site][:author] %>">
+<%= openid('avdgaag.myopenid.com') %>
         <link rel="stylesheet" href="<%= cache_busted('/assets/styles.css') %>">
         <link href="<%= cache_busted('/assets/favicon.png') %>" rel="shortcut icon">
         <% if @site.config[:site][:tracking_code] %>

@@ -33,3 +33,13 @@ def cache_busted(path)
   ext = File.extname(path)
   path.sub(ext, '_cb' + File.mtime(real_path).strftime('%Y%m%d%H%m') + ext)
 end
+
+def openid(id)
+  <<-EOS % id
+        <link rel="openid.server" href="http://www.myopenid.com/server">
+        <link rel="openid.delegate" href="%1$s">
+        <link rel="openid2.local_id" href="%1$s">
+        <link rel="openid2.provider" href="http://www.myopenid.com/server">
+        <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=%1$s">
+EOS
+end
