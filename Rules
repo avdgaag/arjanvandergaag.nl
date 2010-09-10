@@ -14,7 +14,7 @@
 #   # don’t filter or layout
 # end
 
-compile %r{^/(htaccess|cv|resume|404|500|assets)} do
+compile %r{^/(google|htaccess|cv|resume|404|500|assets)} do
   # don't filter or layout
 end
 
