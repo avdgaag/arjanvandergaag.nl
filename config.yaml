@@ -14,6 +14,9 @@ output_dir: output
 # such as “default.htm”. This list is used by nanoc to generate pretty URLs.
 index_filenames: [ 'index.html' ]
 
+# Tacking code for Google Analytics
+tracking_code: UA-80284-1
+
 # Whether or not to generate a diff of the compiled content when compiling a
 # site. The diff will contain the differences between the compiled content
 # before and after the last site compilation.
