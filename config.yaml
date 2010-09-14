@@ -14,7 +14,7 @@ output_dir: output
 # such as “default.htm”. This list is used by nanoc to generate pretty URLs.
 index_filenames: [ 'index.html' ]
 
-cache_busting: true
+cache_busting: false
 
 # Configuration of deployment targets using rsync.
 deploy:
