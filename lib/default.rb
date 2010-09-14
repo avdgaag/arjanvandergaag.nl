@@ -29,6 +29,7 @@ def previous_article(item)
 end
 
 def cache_busted(path)
+  return path unless @site.config[:cache_busting]
   real_path = File.join(File.dirname(__FILE__), '..', 'content', path)
   ext = File.extname(path)
   path.sub(ext, '_cb' + File.mtime(real_path).strftime('%Y%m%d%H%m') + ext)
