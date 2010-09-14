@@ -385,13 +385,16 @@
         color: #999;
     }
     .footnotes {
-        color: #999;
+        color: #888;
         font-size: 11px;
         border-top: 1px solid #ccc;
         width: 30%;
     }
     .footnotes ol {
         width: 300%;
+    }
+    .footnotes p {
+        margin: 0;
     }
 
     /*
@@ -461,6 +464,14 @@
         box-shadow: rgba(0,0,0,.25) 2px 2px 2px;
         -webkit-box-shadow: rgba(0,0,0,.25) 2px 2px 2px;
         -moz-box-shadow: rgba(0,0,0,.25) 2px 2px 2px;
+    }
+    div.photo.right.pull, img.photo.right.pull {
+        position: relative;
+        margin-right: -175px;
+    }
+    div.photo.left.pull, img.photo.left.pull {
+        position: relative;
+        margin-left: -175px;
     }
 
     /*
