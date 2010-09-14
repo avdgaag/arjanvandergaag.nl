@@ -494,8 +494,19 @@
     pre code .il {
         color: #26B31A;
     }
-    pre code .sh {
-
+    pre code .ta {
+        font-weight: bold;
+        color: #1C02FF;
+    }
+    pre code .an {
+        color: #1C02FF;
+        font-style: italic;
+    }
+    pre code .ty {
+        font-weight: bold;
+    }
+    pre code .cl {
+        font-style: italic;
     }
 }
 
