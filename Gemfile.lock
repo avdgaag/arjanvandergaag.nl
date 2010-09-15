@@ -1,14 +1,27 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    adsf (1.0.1)
+      rack (>= 1.0.0)
+    builder (2.1.2)
+    coderay (0.9.4)
     cri (1.0.1)
     kramdown (0.10.0)
     nanoc3 (3.2.0a2)
       cri (>= 1.0.0)
+    nokogiri (1.4.3.1)
+    rack (1.2.1)
+    rainpress (1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  adsf
+  builder
+  coderay
   kramdown
   nanoc3 (~> 3.2)
+  nokogiri
+  rack
+  rainpress
