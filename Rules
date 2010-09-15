@@ -16,6 +16,7 @@
 
 compile %r{^/(google|htaccess|cv|resume|404|500|assets)} do
   # don't filter or layout
+  filter :rainpress if item[:extension] == 'css'
 end
 
 compile '/blog/*' do
