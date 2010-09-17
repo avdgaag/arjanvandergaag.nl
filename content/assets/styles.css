@@ -112,8 +112,13 @@
         text-decoration: line-through;
     }
     abbr[title], dfn[title], acronym[title] {
-        border-bottom: 1px dotted #000;
+        border-bottom: 1px dotted #ccc;
         cursor: help;
+    }
+    abbr, acronym {
+        font-size: 85%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
     }
     hr {
         border-top: 1px solid #ccc;
@@ -143,7 +148,8 @@
     }
     sup {
         vertical-align: super;
-        font-size: smaller;
+        font-size: 10px;
+        line-height: 0;
     }
     strong {
         font-weight: bold;
@@ -447,7 +453,7 @@
         margin: 20px auto;
         text-align: center;
     }
-    div.photo.bordered, img.bordered {
+    div.photo.bordered img, img.bordered {
         border: 1px solid #111;
     }
     div.photo p {
