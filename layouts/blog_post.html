@@ -9,5 +9,14 @@
         <%= previous_article(@item) %>
     </footer>
 
+    <% if @item[:tldr] %>
+    <p class="summary">
+        <abbr title="Too Long, Didn&rsquo;t Read" class="tldr">tl;dr</abbr>:
+        <% filter :typogruby do %>
+        <%= @item[:tldr] %>
+        <% end %>
+    </p>
+    <% end %>
+
     <%= yield %>
 </article>

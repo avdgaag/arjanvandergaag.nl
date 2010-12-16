@@ -353,6 +353,15 @@
         color: #666;
         line-height: 30px;
     }
+    p.summary {
+		color: #888;
+    }
+    
+    p.summary abbr {
+		font-weight: bold;
+		border: none;
+		color: #444;
+	}
 
     /*
      * #001.e: Lists
