@@ -23,6 +23,7 @@ compile '/blog/*' do
   @item[:body_class] = 'inside'
   filter :kramdown
   filter :code_swap
+  filter :typogruby
   filter :colorize_syntax
   layout 'blog_post'
   layout 'default'
