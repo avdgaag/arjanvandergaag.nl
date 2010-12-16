@@ -23,7 +23,7 @@ But, as many other Vim users will tell you, once you do get used to it, you
 start missing it in other editors. The speed and precision of text operations
 and navigation in Vim command mode makes any other editor feel slow and clunky.
 
-<img src="/assets/images/vim.png" width="300" height="227" alt="Screenshot of Vim editing window" class="photo right pull">
+![Espcially with the right color scheme, Vim is an awesome editor](/assets/images/vim.png){:.photo .right .pull}
 
 ### Force yourself to adapt
 

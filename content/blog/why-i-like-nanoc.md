@@ -11,12 +11,7 @@ of choice for developing new, simple websites.
 
 ## Nanoc is a static site generator
 
-<div class="pull bordered photo right">
-<a href="http://nanoc.stoneship.org" rel="external">
-<img src="/assets/images/nanoc-website.png" widht="300" height="228" alt="The Nanoc website">
-</a>
-<p>The Nanoc website is a great resource to learn about Nanoc</p>
-</div>
+![The Nanoc website is a great resource to learn about Nanoc](/assets/images/nanoc-website.png){:.pull .bordered .photo .right}
 
 Like all static site generators, Nanoc takes a bunch of source files and
 transforms them into HTML pages. It nicely separates content from layout,
