@@ -25,7 +25,10 @@ deploy:
 # Collection of site metadata
 site:
   # Tacking code for Google Analytics
-  tracking_code: UA-80284-1
+  ga_tracking_code: "UA-80284-1"
+
+  # Tracking code for Observer
+  observer_tracking_code: "4c9491ee68b726ea7a002ce8"
 
   # The website title
   title: "Arjan van der Gaag.nl"
