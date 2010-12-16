@@ -75,6 +75,10 @@ elsewhere:
 # Links to my other sites and pages of interest
 other_sites:
   -
+    url: "http://border-none.com"
+    title: "Practical screencasts to make you a better web developer"
+    text: "border:none;"
+  -
     url: "http://pasttense.nl/"
     title:
     text: "the Past Tense"
