@@ -15,9 +15,9 @@ Or rather, there are two problems with tagging URL's:
 * **Tagging links is too much work**: you have to Google for [Google's URL builder tool][1], figure out what values you want to use for your campaign, and then copy the URL it spits out.
 * **Tagged URLs are ugly**: It's not very nice to send someone a link like `http://mysite.com/mypage?utm_campaign=x&utm_source=y&utm_medium=z`.
 
-So, I wanted an easier way to tag my links — and I created [a tiny Sinatra application][3] to do it. All the cool kids create tiny [Sinatra][5] applications to do stuff, right?
+So, I wanted an easier way to tag my links — and I created [a tiny Sinatra application][4] ([source code][3]) to do it. All the cool kids create tiny [Sinatra][5] applications to do stuff, right?
 
-![](/assets/images/tagger.png){:.photo .right .pull .bordered}
+[![](/assets/images/tagger.png){:.photo .right .pull .bordered}][4]
 
 ## Templates
 
