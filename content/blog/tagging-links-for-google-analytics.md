@@ -80,7 +80,7 @@ Only use tagging for URLs you share on the web if you have a clear and specific 
 Whatever you do, make it a habit and be consistent. The only thing worse than no data is incomplete or invalid data. Happy analysing!
 
 [1]: http://www.google.com/support/analytics/bin/answer.py?hl=en&answer=55578 "google's own, rather spartan, url tagger"
-[2]: http://tagger.agwebdesign.nl "my own tiny url tagger web app"
+[2]: http://tagger.orangecubed.nl "my own tiny url tagger web app"
 [3]: http://twitter.com
 [4]: http://bit.ly "bit.ly is one of many url shortening services"
 [5]: http://google.com/analytics
