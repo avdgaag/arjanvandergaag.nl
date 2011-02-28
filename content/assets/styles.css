@@ -513,6 +513,18 @@
         color: #C5060B;
         font-weight: bold;
     }
+    pre code .cr {
+        color: #C5060B;
+        font-weight: bold;
+    }
+    pre code .ke {
+        color: #6D79DE;
+        font-weight: bold;
+    }
+    pre code .vl {
+        color: #06960E;
+        font-weight: bold;
+    }
     pre code .co, pre code .pc {
         color: #585CF6;
         font-weight: bold;
