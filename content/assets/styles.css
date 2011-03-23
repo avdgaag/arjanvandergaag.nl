@@ -1,5 +1,5 @@
 /*
- * Stylesheet for arjanvandergaag.nl
+ * Stylesheet for <%= @site.config[:site][:title] %>
  *
  * DESCRIPTION
  *
@@ -8,8 +8,8 @@
  *
  * CREDITS
  *
- * Author: Arjan van der Gaag <arjan@arjanvandergaag.nl>
- * Date: 2010-08-18
+ * Author: <%= @site.config[:site][:author] %> <<%= @site.config[:site][:author_email] %>>
+ * Date: <%= @item.mtime.strftime('%Y-%m-%d') %>
  *
  * TABLE OF CONTENTS
  *
