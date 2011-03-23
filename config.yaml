@@ -106,6 +106,59 @@ other_sites:
     title:
     text: "My Library"
 
+# The path on the base URL users should be sent to when accessing the feed.
+# This gets rewritten to point at your feedburner_url option, which will
+# in turn know the location of the real URL.
+feed_url: /feed
+feedburner_url: http://arjanvandergaag.nl/atom.xml
+
+# Configure the robots.txt file for this site.
+# Setting 'default' to true-ish will use sensible defaults. If you
+# wish to customize it, you can list paths to allow and to disallow.
+# Finally, you could manually set the path to the sitemap file.
+#
+# You can customize the robots file fairly well like this, but you
+# can always manually create a content file with the exact contents
+# you need.
+robots:
+  default: true # disallow assets, allow assets/images and point at sitemap
+  # disallow:
+  #   - '/tag'
+  #   - '/newsletter'
+  # allow:
+  #   - '/tag/foo'
+  # sitemap: '/site-map.txt'
+
+# Set up authentication files for various webmaster tools (or something
+# similar). This simply creates a plain text file when generating the site.
+#
+# identifier: identifier of the output file, e.g. '/google12345/'
+# content: content of the file, e.g. 'aoa8202ns001'
+# extension: extension of the output file, e.g. 'html' or 'xml'
+webmaster_tools:
+  -
+    identifier: 'google6a204bd2a3818764'
+    content:    'google-site-verification: google6a204bd2a3818764.html'
+    extension:  'html'
+
+# Set up URL redirects in the .htacccess file to point old URLs to a new
+# location, thereby keeping your SEO-mojo intact and visitors happy.
+redirects:
+  - from: /feed
+    to:   http://feeds.feedburner.com/avdgaag
+  - from: /code/javascript/2010/02/08/introducing-mutil.html
+    to:   http://arjanvandergaag.nl/blog/introducing-mutil.html
+  - from: /code/jekyll/2009/06/16/creating-new-jekyll-posts.html
+    to:   http://arjanvandergaag.nl/blog/creating-new-jekyll-posts.html
+  - from: /code/jekyll/2009/06/13/publishing-a-jekyll-website-to-a-server.html
+    to:   http://arjanvandergaag.nl/blog/publishing-a-jekyll-website-to-a-server.html
+  - from: /code/jekyll/2009/06/10/rake-task-to-ping-google.html
+    to:   http://arjanvandergaag.nl/blog/rake-task-to-ping-google.html
+  - from: /code/jekyll/2009/06/07/using-jekyll-to-create-websites.html
+    to:   http://arjanvandergaag.nl/blog/using-jekyll-to-create-websites.html
+  - from: /meta/2009/06/04/hello-world.html
+    to:   http://arjanvandergaag.nl/blog/hello-world.html
+
 # Base URL for the site for use in the XML sitemap
 base_url: http://arjanvandergaag.nl
 
