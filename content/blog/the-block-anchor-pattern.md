@@ -1,15 +1,17 @@
 ---
 title: The a.block pattern
 kind: article
-created_at: 2011-02-28 10:00
+created_at: 2011-03-23 10:00
 tags: [html, css]
 tldr: I explain how I use HTML anchors as block-level elements.
 ---
-Wrapping block-level HTML elements inside an anchor (`<a>`) element has always worked fine, but used to be frowned upon since standards dictated you should not wrap block-level elements in inline elements. HTML5 has changed this, and now explicitly allows anchors to contain block-level elements.
+Wrapping block-level HTML elements inside an anchor (`<a>`) element has always worked fine, but used to be frowned upon. Standards dictated you should not put block-level elements inside inline elements. HTML5 has changed this, and now explicitly allows anchors to contain block-level elements.
 {:.leader}
 
-Before HTML5 we _could_ wrap, say, a `<div>` with an `<a>`, but it was considered invalid. However, there was still a wish to make entire areas clickable, rather than just a line of text saying something like "Read more". A larger clickable area improves CTR and reduces user mistakes.
-    
+Before HTML5 we _could_ wrap, say, a `<div>` with an `<a >`, but it was considered invalid. Yet the wish remained to make entire areas clickable, rather than just a "Read more"-line. A larger clickable area improves CTR and reduces user mistakes.
+
+## The problem
+
 Given a typical 'story' element, where a headline, thumbnail and short introduction text would link the user to a full article, here's the effect you'd want to achieve:
 
 {:.html}
@@ -19,6 +21,8 @@ Given a typical 'story' element, where a headline, thumbnail and short introduct
         <p><a href="/story">Lorem ipsum dolor sit amet</a></p>
         <a href="/story">Continue reading&hellip;</a>
     </div>
+
+## Script-based solutions
 
 That sort of markup is terrible to write -- let alone maintain. Javascript-solutions were concocted to keep markup clean, but still make the entire story-element respond to user clicks:
 
@@ -30,11 +34,15 @@ That sort of markup is terrible to write -- let alone maintain. Javascript-solut
         <a href="/story" class="bigtarget">Continue reading&hellip;</a>
     </div>
 
+And the script:
+
 {:.js}
     // dummy javascript code
     $('.bigtarget').parent('div').click(function() {
         document.location = $('.bigtarget', this).attr('href');
     });
+
+## The HTML5 way
 
 With HTML5 it is now considered alright to do the following:
 
@@ -52,7 +60,7 @@ That's clearly the best-looking code, without repetition or confusion of intent.
 
 However, doing so introduces a problem with styles, as we probably don't want our image, heading and paragraph to look like links (you know, blue text, underlined, etc.). I therefore used the following pattern to counter this.
 
-First, I introduce a class name to designate this is a special kind of anchor element:
+**First**, I introduce a class name to designate this is a special kind of anchor element:
 
 {:.html}
     <div class="article">
@@ -75,7 +83,7 @@ Using the `block` class, I can now reset the anchor's contents styles. I could d
     
 …or something along those lines, depending on how you style your links.
 
-Second, I want to give users a visual cue on the story's affordance of clicking. Therefore, we need something that looks like a link, and the story element in its entirety needs the same interaction as a link — i.e. `hover`, `focus`, `visited` and `active` states.
+**Second**, I want to give users a *visual cue* on the story's affordance of clicking. Therefore, we need something that looks like a link, and the story element in its entirety needs the same interaction as a link — i.e. `hover`, `focus`, `visited` and `active` states.
 
 I only want to style part of the story as a link, but I'm not sure which part. Maybe a "read more"-line at the bottom, or the heading… Since this might differ from case to case, I chose to use a generic class to indicate the link target:
 
@@ -118,4 +126,4 @@ Of course, you could also implement this same effect using just descendent selec
 *[CSS]: Cascading StyleSheets
 *[HTML5]: HyperText Markup Language 5
 
-[^1]: Internet Explorer is known to not properly support the `inherit` keyword.
+[^1]: Internet Explorer is known to not properly support the 'inherit' keyword.
