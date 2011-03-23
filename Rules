@@ -1,22 +1,24 @@
 #!/usr/bin/env ruby
 
-# A few helpful tips about the Rules file:
-#
-# * The order of rules is important: for each item, only the first matching
-#   rule is applied.
-#
-# * Item identifiers start and end with a slash (e.g. “/about/” for the file
-#   “content/about.html”). To select all children, grandchildren, … of an
-#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
-#   because “*” matches zero or more characters.
 
 # compile '/assets/*' do
 #   # don’t filter or layout
 # end
 
-compile %r{^/(google|htaccess|cv|resume|404|500|assets)} do
-  # don't filter or layout
-  filter :rainpress if item[:extension] == 'css'
+compile %r{^/assets/(lib|styles)/} do
+  filter :erb
+  filter :concat
+  filter :cache_buster
+  filter :minify
+end
+
+compile %r{^/(google|sitemap|htaccess|cv|resume|404)} do
+  filter :erb
+  filter :cache_buster
+end
+
+compile '/assets/*' do
+  # do nothing
 end
 
 compile '/blog/*' do
@@ -28,28 +30,29 @@ compile '/blog/*' do
   filter :colorize_syntax
   layout 'blog_post'
   layout 'default'
-end
-
-compile '/sitemap/' do
-  filter :erb
-  filter :clean_sitemap
+  filter :cache_buster
 end
 
 compile '*' do
   filter :erb
   layout 'default' if item[:extension] == 'html'
+  filter :cache_buster
 end
 
 route '/htaccess/' do
   '/.htaccess'
 end
 
-route %r{^/(assets/.*|sitemap|robots|atom)/$} do
-  item.identifier.chop + '.' + item[:extension]
-end
-
 route '/' do
   '/index.html'
+end
+
+route %r{^/(assets/.*|sitemap|robots|atom)/$} do
+  if CacheBusterFilter::EXTENSIONS.include?(item[:extension])
+    item.identifier.chop + CacheBusterFilter.hash(item[:filename]) + '.' + item[:extension]
+  else
+    item.identifier.chop + '.' + item[:extension]
+  end
 end
 
 route '*' do
