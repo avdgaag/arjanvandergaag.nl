@@ -86,16 +86,9 @@
 
         </div><!-- /page -->
 
-        <% if @site.config[:site][:observer_tracking_code] %>
-        <script src="http://www.observerapp.com/record.js"></script>
-        <script>
-        try { Observerapp.record("<%= @site.config[:site][:observer_tracking_code] %>"); } catch(e) {};
-        </script>
-        <% end %>
         <script src="http://www.google.com/jsapi"></script>
         <script>google.load("elements", "1", {packages: "transliteration"});</script>
         <script src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
         <script src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-
     </body>
 </html>
