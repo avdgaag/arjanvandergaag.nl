@@ -6,22 +6,41 @@ GEM
     builder (2.1.2)
     coderay (0.9.4)
     cri (1.0.1)
+    deadweight (0.2.0)
+      nokogiri
+    jsmin (1.0.1)
     kramdown (0.10.0)
-    nanoc3 (3.2.0a2)
+    less (1.2.21)
+      mutter (>= 0.4.2)
+      treetop (>= 1.4.2)
+    mutter (0.5.3)
+    nanoc (3.1.6)
+      nanoc3 (>= 3.1.6)
+    nanoc3 (3.1.6)
       cri (>= 1.0.0)
     nokogiri (1.4.3.1)
+    polyglot (0.3.1)
     rack (1.2.1)
     rainpress (1.0)
+    rubypants (0.2.0)
+    treetop (1.4.9)
+      polyglot (>= 0.3.1)
+    typogruby (1.0.11)
+      rubypants
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  adsf
-  builder
+  adsf (~> 1.0)
+  builder (~> 2.1)
   coderay
-  kramdown
-  nanoc3 (~> 3.2)
+  deadweight (~> 0.1)
+  jsmin (~> 1.0)
+  kramdown (~> 0.10)
+  less (~> 1.2)
+  nanoc (~> 3.1)
   nokogiri
-  rack
-  rainpress
+  rack (~> 1.2)
+  rainpress (~> 1.0)
+  typogruby (~> 1.0)
