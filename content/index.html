@@ -4,8 +4,7 @@ title: Welcome
 <% with_articles do |articles| %>
 <h2 class="inverted">Recent <strong>blog posts</strong></h2>
 <ul class="posts">
-    <% articles.each do |article| %>
-    <li><%= link_to article[:title], article %> <time><%= published_at(article) %></time></li>
+    <% articles.each do |article| %><li><%= link_to article[:title], article %> <time><%= published_at(article) %></time></li>
     <% end %>
 </ul>
 <% end %>
