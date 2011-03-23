@@ -29,7 +29,7 @@ site:
   observer_tracking_code: "4c9491ee68b726ea7a002ce8"
 
   # The website title
-  title: "Arjan van der Gaag.nl"
+  title: "The online home of Arjan van der Gaag"
 
   # Default keywords
   keywords: "Arjan van der Gaag, Arjan, van der Gaag, website, AG Webdesign"
@@ -42,6 +42,9 @@ site:
 
   # Author name in the meta-tag
   author: Arjan van der Gaag
+  
+  # Author e-mail address
+  author_email: arjan@arjanvandergaag.nl
 
   # Copyright line in the meta-tag
   copyright: "© copyright 1995–2010 Arjan van der Gaag unless noted otherwise."
