@@ -110,7 +110,7 @@ other_sites:
 # The path on the base URL users should be sent to when accessing the feed.
 # This gets rewritten to point at your feedburner_url option, which will
 # in turn know the location of the real URL.
-feed_url: /feed
+feed_url: /feed/
 feedburner_url: http://arjanvandergaag.nl/atom.xml
 
 # Configure the robots.txt file for this site.
