@@ -42,7 +42,7 @@ site:
 
   # Author name in the meta-tag
   author: Arjan van der Gaag
-  
+
   # Author e-mail address
   author_email: arjan@arjanvandergaag.nl
 
@@ -63,14 +63,6 @@ elsewhere:
     url: "http://github.com/avdgaag"
     title:
     text: "Github"
-  -
-    url: "http://flickr.com/photos/arjanvandergaag"
-    title:
-    text: "Flickr"
-  -
-    url: "http://delicious.com/arjanvandergaag"
-    title:
-    text: "Delicious"
   -
     url: "http://last.fm/user/surtur"
     title:
@@ -94,14 +86,6 @@ other_sites:
     url: "http://yummyinmytummy.nl/"
     title:
     text: "Yummy in my Tummy!"
-  -
-    url: "http://tumble.arjanvandergaag.nl"
-    title:
-    text: "My tumblelog"
-  -
-    url: "http://arjanvandergaag.nl/"
-    title:
-    text: "Arjan van der Gaag.nl"
   -
     url: "http://library.arjanvandergaag.nl/"
     title:
