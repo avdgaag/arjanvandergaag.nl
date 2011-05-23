@@ -10,6 +10,7 @@ GEM
     kramdown (0.10.0)
     nanoc (3.1.6)
       nanoc3 (>= 3.1.6)
+    nanoc-cachebuster (0.1.0)
     nanoc3 (3.1.6)
       cri (>= 1.0.0)
     nokogiri (1.4.3.1)
@@ -29,6 +30,7 @@ DEPENDENCIES
   jsmin (~> 1.0)
   kramdown (~> 0.10)
   nanoc (~> 3.1)
+  nanoc-cachebuster
   nokogiri
   rack (~> 1.2)
   rainpress (~> 1.0)

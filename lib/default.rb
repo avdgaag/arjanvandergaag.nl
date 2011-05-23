@@ -1,8 +1,11 @@
 require 'time'
+require 'nanoc3/cachebuster'
+
 include Nanoc3::Helpers::Blogging
 include Nanoc3::Helpers::LinkTo
 include Nanoc3::Helpers::Filtering
 include Nanoc3::Helpers::XMLSitemap
+include Nanoc3::Helpers::CacheBusting
 
 # Output a meta-tag for use in your site header. The key you supply is looked
 # up in the configuration under 'meta_data'. You can override it on a per-item
