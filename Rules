@@ -55,7 +55,7 @@ preprocess do
       )
     end
   end
-  
+
   def create_feed
     @items << Nanoc3::Item.new(
       "<%= atom_feed %>",
@@ -119,11 +119,8 @@ route '/' do
 end
 
 route %r{^/(assets/.*|sitemap|robots|atom)/$} do
-  if CacheBusterFilter::EXTENSIONS.include?(item[:extension])
-    item.identifier.chop + CacheBusterFilter.hash(item[:filename]) + '.' + item[:extension]
-  else
-    item.identifier.chop + '.' + item[:extension]
-  end
+  cb = cachebust?(item) ? fingerprint(item[:filename]) : ''
+  item.identifier.chop + cb + '.' + item[:extension]
 end
 
 route '*' do
