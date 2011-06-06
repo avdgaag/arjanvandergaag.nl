@@ -126,6 +126,13 @@ webmaster_tools:
     content:    'google-site-verification: google6a204bd2a3818764.html'
     extension:  'html'
 
+# Should Nanoc generate some standard asset files for you, or skip them
+# completely?
+#
+# This currently controls the generation of robots.txt, sitemap.xml,
+# sitemap.xml.gz and webmaster tools authentication files.
+output_generated_assets: true
+
 # Set up URL redirects in the .htacccess file to point old URLs to a new
 # location, thereby keeping your SEO-mojo intact and visitors happy.
 redirects:
