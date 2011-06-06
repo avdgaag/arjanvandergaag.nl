@@ -3,35 +3,35 @@ GEM
   specs:
     adsf (1.0.1)
       rack (>= 1.0.0)
-    builder (2.1.2)
-    coderay (0.9.4)
+    builder (3.0.0)
+    coderay (0.9.8)
     cri (1.0.1)
     jsmin (1.0.1)
-    kramdown (0.10.0)
-    nanoc (3.1.6)
-      nanoc3 (>= 3.1.6)
-    nanoc-cachebuster (0.1.0)
-    nanoc3 (3.1.6)
+    kramdown (0.13.3)
+    nanoc (3.1.7)
+      nanoc3 (>= 3.1.7)
+    nanoc-cachebuster (0.1.2)
+    nanoc3 (3.1.7)
       cri (>= 1.0.0)
-    nokogiri (1.4.3.1)
-    rack (1.2.1)
+    nokogiri (1.4.4)
+    rack (1.3.0)
     rainpress (1.0)
     rubypants (0.2.0)
-    typogruby (1.0.11)
+    typogruby (1.0.12)
       rubypants
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  adsf (~> 1.0)
-  builder (~> 2.1)
+  adsf
+  builder
   coderay
-  jsmin (~> 1.0)
-  kramdown (~> 0.10)
+  jsmin
+  kramdown
   nanoc (~> 3.1)
   nanoc-cachebuster
   nokogiri
-  rack (~> 1.2)
-  rainpress (~> 1.0)
-  typogruby (~> 1.0)
+  rack
+  rainpress
+  typogruby
