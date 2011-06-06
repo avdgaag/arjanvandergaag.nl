@@ -19,6 +19,11 @@ compile %r{^/(google|sitemap|htaccess|cv|resume|404)} do
   filter :cache_buster
 end
 
+compile '/sitemap/', :rep => 'gzip' do
+  filter :erb
+  filter :shellcmd, :cmd => 'gzip'
+end
+
 compile '/assets/*' do
   # do nothing
 end
@@ -43,6 +48,10 @@ end
 
 route '/htaccess/' do
   '/.htaccess'
+end
+
+route '/sitemap/', :rep => 'gzip' do
+  '/sitemap.xml.gz'
 end
 
 route '/' do
