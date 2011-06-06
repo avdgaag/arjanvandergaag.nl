@@ -24,7 +24,7 @@ First, I had only generic rules and a single print block, like so:
 Then, I included the stylesheet on my page with a media type:
 
 {: .html }
-    <link rel="stylesheet" href="styles.css" media="screen, projection">
+    <link rel="stylesheet" href="style.css" media="screen, projection">
 
 As I understood the specs all generic styles (outside the `@media print` block) should apply to the media specified in the `link`, while the print-specific styles should apply only to the `print` media type.
 

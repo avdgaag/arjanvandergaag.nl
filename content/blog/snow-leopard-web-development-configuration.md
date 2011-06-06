@@ -5,7 +5,7 @@ tags:
   - development
 created_at: 2009-08-29 12:20
 kind: article
-title: Snow Leopard web developemnt configuration
+title: Snow Leopard web development configuration
 ---
 After installing Snow Leopard on my iMac I found I had to tweak some settings before I could continue my daily web development workflow. First, you should note Snow Leopard now comes with PHP 5.3 and it will overwrite your custom Apache configuration.
 

@@ -21,7 +21,7 @@ Here's how I might call my awesome plugin in my main javascript file:
 {: .js }
     $(function() {
         // One option: create complex inline selectors:
-        $('a[href$="jpg"], a[href$="png"]).awesome_plugin();
+        $('a[href$="jpg"], a[href$="png"]').awesome_plugin();
 
         // Second option: filtering
         $('a').filter(function() {

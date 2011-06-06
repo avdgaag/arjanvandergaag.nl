@@ -7,7 +7,7 @@ tags:
 kind: article
 title: Using Postbox
 ---
-I've decided to give [Postbox](http://postbox-inc.com) a try as my default e-mail client. I love Mail.app's simplicity, but it has some quirks and I feel I could do better.
+I've decided to give [Postbox](http://postbox-inc.com) (version 1) a try as my default e-mail client. I love Mail.app's simplicity, but it has some quirks and I feel I could do better.
 
 Here's what I like so far:
 

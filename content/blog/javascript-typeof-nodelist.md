@@ -16,7 +16,7 @@ This will return `'function'`, which I did not expect. What _is_ returned is a `
 If you want to detect a `NodeList` you're better off with feature detection:
 
 {: .js }
-    var isNodelist = (typeof myvar.length != 'undefined &&
+    var isNodelist = (typeof myvar.length != 'undefined' &&
       typeof myvar.item != 'undefined')
 
 Do note that this makes it probable you're dealing with a `NodeList` -- but you can't be sure.

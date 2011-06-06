@@ -11,5 +11,6 @@ When working with Git it can be cumbersome to have to remove files from the inde
 {: .sh }
     git rm $(git ls-files -d)
 
+What that does is use `ls-files -d` to list all files in the project that are deleted from the file system, and apply the `rm` command to those paths to delete them from the git index.
 
 I've got that aliased to `grd` (Git Remove Deleted).
