@@ -1,5 +1,6 @@
 source :rubygems
 gem 'nanoc', '~>3.1'
+gem 'rake'
 gem 'coderay'
 gem 'nokogiri'
 gem 'jsmin'
