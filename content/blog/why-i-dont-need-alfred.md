@@ -66,8 +66,7 @@ I use `⌘§` to toggle the terminal window on or off.
 Here are some other commonly used operations that I do not need Alfred for:
 
 * Quickly opening a folder in the Finder: Mac OS X comes with `⌘G` for that. Works with autocomplation.
-* Quickly opening a web address: I just use `⌘ Tab` and then `⌘N` to open a new Safari window. `⌘L` into the address bar and there you go.
-* Quickly search with Google: I just open a new Safari window as before, but use `⌘⌥F` to go to the search box.
+* Quickly opening a web address: I just use `⌘ Tab` and then `⌘L` to open a new Safari window with the focus on the address bar. Using `⌘⌥F` focuses on the search box.
 * Searching other services: I use [GlimmerBlocker][] that sets up nice URL rewriting for me, so I can type `imdb robocop` in the address bar to quickly look up Robocop on IMDb.com.
 * Calculate and spell: Spotlight already does that. Also, using `⌃⌘D` on any word in Mac OS X, in any app, will invoke a Dictionary pop-up.
 
