@@ -135,7 +135,7 @@ The only thing left to do was to properly test the routes. In hindsight, it is a
 
 So, creating custom constraint objects allows you to neatly separate routing logic into testable objects, as long a you keep a few nasty gotchas in mind.
 
-[issue2510]: http://github.com/rails/rails/issues/2510
-[issue2781]: http://github.com/rails/rails/issues/2781
+[issue2510]: https://github.com/rails/rails/issues/2510
+[issue2781]: https://github.com/rails/rails/issues/2781
 [guide]: http://guides.rubyonrails.org/routing.html#advanced-constraints
 [routing]: https://www.relishapp.com/rspec/rspec-rails/docs/routing-specs

@@ -79,9 +79,9 @@ I couldn't agree more.
 [2]: http://daringfireball.net/projects/markdown/ "Daring Fireball: Markdown"
 [3]: http://macromates.com "TextMate"
 [4]: http://git-scm.com "Git - Fast Version Control System"
-[5]: http://github.com/avdgaag/arjanvandergaag.nl/tree/master "Browse the source code to this site at Github"
+[5]: https://github.com/avdgaag/arjanvandergaag.nl/tree/master "Browse the source code to this site at Github"
 [7]: http://disqus.com/ "DISQUS is a Javascript-based commenting system"
-[6]: http://github.com/avdgaag/arjanvandergaag.nl/blob/28539bc736a05b28f2aa4ef81e4f61f3f91375a0/Rakefile "See my project's Rakefile"
+[6]: https://github.com/avdgaag/arjanvandergaag.nl/blob/28539bc736a05b28f2aa4ef81e4f61f3f91375a0/Rakefile "See my project's Rakefile"
 
 [8]: /blog/creating-new-jekyll-posts.html "Creating new empty posts with a rake task"
 [9]: /blog/publishing-a-jekyll-website-to-a-server.html "Using rsync to copy files to my server"

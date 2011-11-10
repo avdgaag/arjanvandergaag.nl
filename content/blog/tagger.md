@@ -54,6 +54,6 @@ Oh, so many ideas, so little time… Maybe someone [will fork the project on Git
 
 [1]: http://www.google.com/support/analytics/bin/answer.py?hl=en&answer=55578
 [2]: http://bit.ly/ "bit.ly | Basic | a simple url shortener"
-[3]: http://github.com/avdgaag/tagger "Browse the source code at Github"
+[3]: https://github.com/avdgaag/tagger "Browse the source code at Github"
 [4]: http://tagger.orangecubed.nl "Go to my link tagger tool"
 [5]: http://www.sinatrarb.com "Sinatra is a really simple Ruby web framework"

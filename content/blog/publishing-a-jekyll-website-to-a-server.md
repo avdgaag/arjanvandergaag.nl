@@ -39,4 +39,4 @@ site. Awesome.
 
 You can check out [my `Rakefile` at Github][1].
 
-[1]: http://github.com/avdgaag/arjanvandergaag.nl/blob/cbc47e03d4cf766278f2982bfe79862cb251fd34/Rakefile "View my Rakefile on Github"
+[1]: https://github.com/avdgaag/arjanvandergaag.nl/blob/cbc47e03d4cf766278f2982bfe79862cb251fd34/Rakefile "View my Rakefile on Github"

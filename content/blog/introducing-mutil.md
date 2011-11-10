@@ -69,4 +69,4 @@ Writing a little library is great fun, as you get to explore practical needs, wr
 
 You can find the code for [μtil at github][1], along with documentation and an issue tracker. Please do fork and hack away!
 
-[1]: http://github.com/avdgaag/mutil
+[1]: https://github.com/avdgaag/mutil

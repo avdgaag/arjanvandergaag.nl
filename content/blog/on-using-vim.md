@@ -107,7 +107,7 @@ quite quickly:
 
 Check out [sparkup at Github][sparkup].
 
-[sparkup]: http://github.com/rstacruz/sparkup
+[sparkup]: https://github.com/rstacruz/sparkup
 
 ### Find more
 
@@ -131,7 +131,7 @@ happily stick to one or the other.
 
 [Textmate]: http://macromates.com
 [peepcode]: http://peepcode.com/products/smash-into-vim-i
-[github]: http://github.com/avdgaag/dotfiles
+[github]: https://github.com/avdgaag/dotfiles
 [MacVim]: http://code.google.com/p/macvim/
 [dvorak]: http://old.arjanvandergaag.nl/2008/01/14/learning-dvorak/
 [nvie]: http://nvie.com/posts/how-i-boosted-my-vim/

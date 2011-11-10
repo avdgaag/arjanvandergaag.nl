@@ -58,8 +58,8 @@ You can find [the code at Github][code] and install [the gem from rubygems.org][
 
 *[URL]: Uniform Resource Locator
 
-[code]:     http://github.com/avdgaag/nanoc-cachebuster
+[code]:     https://github.com/avdgaag/nanoc-cachebuster
 [gem]:      http://rubygems.org/gems/nanoc-cachebuster
-[template]: http://github.com/avdgaag/nanoc-template
+[template]: https://github.com/avdgaag/nanoc-template
 [nanoc]:    http://nanoc.stoneship.org
 [yahoo]:    http://developer.yahoo.com/performance/rules.html
