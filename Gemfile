@@ -1,5 +1,8 @@
 source :rubygems
-gem 'nanoc', '~>3.1'
+gem 'nanoc', '~>3.2'
+gem 'mime-types'
+gem 'fssm'
+gem 'rb-fsevent'
 gem 'rake'
 gem 'coderay'
 gem 'nokogiri'
