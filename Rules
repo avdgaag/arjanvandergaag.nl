@@ -37,7 +37,6 @@ compile '/assets/*' do
 end
 
 compile '/blog/*' do
-  @item[:body_class] = 'inside'
   filter :kramdown
   filter :code_swap
   filter :captions
