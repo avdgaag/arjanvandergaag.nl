@@ -6,3 +6,9 @@ Dir['tasks/*.rake'].each { |f| import f }
 def config
   @config ||= YAML.load_file(File.join(File.dirname(__FILE__), 'config.yaml'))
 end
+
+task :push do
+  sh 'git push origin master'
+end
+
+task :'deploy:rsync' => :push
