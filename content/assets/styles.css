@@ -492,7 +492,7 @@
     /*
      * #001.i: Syntax highlighting
      */
-    pre code {
+    pre code, pre code .il {
         color: #111;
     }
     pre code .c {
@@ -503,7 +503,7 @@
         color: #0000FF;
         font-weight: bold;
     }
-    pre code .s, pre code .rx, pre code .sh {
+    pre code .s, pre code .rx, pre code .sh, pre code .idl {
         color: #036A07;
     }
     pre code .lv {
@@ -528,9 +528,6 @@
     pre code .co, pre code .pc {
         color: #585CF6;
         font-weight: bold;
-    }
-    pre code .il {
-        color: #26B31A;
     }
     pre code .ta {
         font-weight: bold;
