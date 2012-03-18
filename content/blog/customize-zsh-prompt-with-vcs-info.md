@@ -70,7 +70,7 @@ This prompt includes:
 : In case of Git, show information about stashes
 
 `%u`
-: Show unchanged changes in the repository
+: Show unstaged changes in the repository
 
 `%c`
 : Show staged changes in the repository
