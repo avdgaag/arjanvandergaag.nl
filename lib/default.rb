@@ -1,5 +1,5 @@
 require 'time'
-require 'nanoc3/cachebuster'
+require 'nanoc/cachebuster'
 
 include Nanoc3::Helpers::Blogging
 include Nanoc3::Helpers::LinkTo
