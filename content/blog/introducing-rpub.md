@@ -67,7 +67,7 @@ That should do it. Compile your ebook:
 Take [the gem][gem] for a spin and report any issues you find on the [Github issues tracker][issues]. Or better yet, [fork it][Rpub] and send it some pull request love.
 
 [gem]:      https://rubygems.org/gems/rpub
-[Rpub]:     https://avdgaag.github.com/rpub
+[Rpub]:     http://avdgaag.github.com/rpub
 [markdown]: http://daringfireball.net/projects/markdown
 [kramdown]: http://kramdown.rubyforge.org
 [quickref]: http://kramdown.rubyforge.org/quickref.html
