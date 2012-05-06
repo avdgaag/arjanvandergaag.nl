@@ -499,14 +499,14 @@
         color: #0066FF;
         font-style: italic;
     }
-    pre code .kw, pre code .r {
+    pre code .kw, pre code .r, pre code .key {
         color: #0000FF;
         font-weight: bold;
     }
     pre code .s, pre code .rx, pre code .sh, pre code .idl {
         color: #036A07;
     }
-    pre code .lv {
+    pre code .lv, pre code .content {
         color: #318495;
     }
     pre code .sy {
