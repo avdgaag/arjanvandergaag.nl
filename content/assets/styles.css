@@ -160,6 +160,7 @@
     pre {
         padding: 0 15px;
         font-size: 12px;
+        line-height: 15px;
         word-wrap: break-word;  /* IE */
     }
     pre, code, kbd, samp {
@@ -492,57 +493,87 @@
     /*
      * #001.i: Syntax highlighting
      */
-    pre code, pre code .il {
-        color: #111;
-    }
-    pre code .c {
-        color: #0066FF;
-        font-style: italic;
-    }
-    pre code .kw, pre code .r, pre code .key {
-        color: #0000FF;
-        font-weight: bold;
-    }
-    pre code .s, pre code .rx, pre code .sh, pre code .idl {
-        color: #036A07;
-    }
-    pre code .lv, pre code .content {
-        color: #318495;
-    }
-    pre code .sy {
-        color: #C5060B;
-        font-weight: bold;
-    }
-    pre code .cr {
-        color: #C5060B;
-        font-weight: bold;
-    }
-    pre code .ke {
-        color: #6D79DE;
-        font-weight: bold;
-    }
-    pre code .vl {
-        color: #06960E;
-        font-weight: bold;
-    }
-    pre code .co, pre code .pc {
-        color: #585CF6;
-        font-weight: bold;
-    }
-    pre code .ta {
-        font-weight: bold;
-        color: #1C02FF;
-    }
-    pre code .an {
-        color: #1C02FF;
-        font-style: italic;
-    }
-    pre code .ty {
-        font-weight: bold;
-    }
-    pre code .cl {
-        font-style: italic;
-    }
+    code .annotation { color:#007 }
+    code .attribute-name { color:#b48 }
+    code .attribute-value { color:#700 }
+    code .binary { color:#509 }
+    code .char .content { color:#D20 }
+    code .char .delimiter { color:#710 }
+    code .char { color:#D20 }
+    code .class { color:#B06; font-weight:bold }
+    code .class-variable { color:#369 }
+    code .color { color:#0A0 }
+    code .comment { color:#777 }
+    code .comment .char { color:#444 }
+    code .comment .delimiter { color:#444 }
+    code .complex { color:#A08 }
+    code .constant { color:#036; font-weight:bold }
+    code .decorator { color:#B0B }
+    code .definition { color:#099; font-weight:bold }
+    code .delimiter { color:black }
+    code .directive { color:#088; font-weight:bold }
+    code .doc { color:#970 }
+    code .doc-string { color:#D42; font-weight:bold }
+    code .doctype { color:#34b }
+    code .entity { color:#800; font-weight:bold }
+    code .error { color:#F00; background-color:#FAA }
+    code .escape  { color:#666 }
+    code .exception { color:#C00; font-weight:bold }
+    code .float { color:#60E }
+    code .function { color:#06B; font-weight:bold }
+    code .global-variable { color:#d70 }
+    code .hex { color:#02b }
+    code .imaginary { color:#f00 }
+    code .include { color:#B44; font-weight:bold }
+    code .inline { background-color: hsla(0,0%,0%,0.07); color: black }
+    code .inline-delimiter { font-weight: bold; color: #666 }
+    code .instance-variable { color:#33B }
+    code .integer  { color:#00D }
+    code .key .char { color: #60f }
+    code .key .delimiter { color: #404 }
+    code .key { color: #606 }
+    code .keyword { color:#080; font-weight:bold }
+    code .label { color:#970; font-weight:bold }
+    code .local-variable { color:#963 }
+    code .namespace { color:#707; font-weight:bold }
+    code .octal { color:#40E }
+    code .operator { }
+    code .predefined { color:#369; font-weight:bold }
+    code .predefined-constant { color:#069 }
+    code .predefined-type { color:#0a5; font-weight:bold }
+    code .preprocessor { color:#579 }
+    code .pseudo-class { color:#00C; font-weight:bold }
+    code .regexp .content { color:#808 }
+    code .regexp .delimiter { color:#404 }
+    code .regexp .modifier { color:#C2C }
+    code .regexp { background-color:hsla(300,100%,50%,0.06); }
+    code .reserved { color:#080; font-weight:bold }
+    code .shell .content { color:#2B2 }
+    code .shell .delimiter { color:#161 }
+    code .shell { background-color:hsla(120,100%,50%,0.06); }
+    code .string .char { color: #b0b }
+    code .string .content { color: #D20 }
+    code .string .delimiter { color: #710 }
+    code .string .modifier { color: #E40 }
+    code .string { background-color:hsla(0,100%,50%,0.05); }
+    code .symbol .content { color:#A60 }
+    code .symbol .delimiter { color:#630 }
+    code .symbol { color:#A60 }
+    code .tag { color:#070 }
+    code .type { color:#339; font-weight:bold }
+    code .value { color: #088; }
+    code .variable  { color:#037 }
+    code .insert { background: hsla(120,100%,50%,0.12) }
+    code .delete { background: hsla(0,100%,50%,0.12) }
+    code .change { color: #bbf; background: #007; }
+    code .head { color: #f8f; background: #505 }
+    code .head .filename { color: white; }
+    code .delete .eyecatcher { background-color: hsla(0,100%,50%,0.2); border: 1px solid hsla(0,100%,45%,0.5); margin: -1px; border-bottom: none; border-top-left-radius: 5px; border-top-right-radius: 5px; }
+    code .insert .eyecatcher { background-color: hsla(120,100%,50%,0.2); border: 1px solid hsla(120,100%,25%,0.5); margin: -1px; border-top: none; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+    code .insert .insert { color: #0c0; background:transparent; font-weight:bold }
+    code .delete .delete { color: #c00; background:transparent; font-weight:bold }
+    code .change .change { color: #88f }
+    code .head .head { color: #f4f }
 }
 
 /*
@@ -654,3 +685,4 @@
         padding: 20px 0;
     }
 }
+
