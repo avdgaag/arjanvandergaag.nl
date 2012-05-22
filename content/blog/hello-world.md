@@ -1,16 +1,16 @@
 ---
 title: Hello, world!
 kind: article
-created_at: 2009-06-04 12:00
+created_at: 2009-06-02 12:00
 tags: [blog, blogging, website, meta, cms, writing]
 ---
 
-I have decided to start blogging again. You are currently reading my new blog; my old blog is now gone ([not really][4]). It was time for a fresh start.
+I have decided to start blogging again. You are currently reading my new blog; my old blog is now gone ([not really][2]). It was time for a fresh start.
 {: .leader }
 
 My old blog was launched well over five years ago -- rather amazing, come to think of it. It was never very good or exciting, but I enjoyed writing and tinkering with my own website. It got some traffic, some incoming links and some followers among friends and family, but nothing special. I would be lying if I'd say I weren't slightly disappointed. Deep down I was hoping, or maybe _assuming_, I'd someday become an awesome celebrity blogger.
 
-Unconscious disappointment turned into negligence, leaving my blog unattended  for over a year. In the meantime [I have taken up Twitter][1], but I found I sometimes wish I had more than 140 characters. [I missed blogging][5].
+Unconscious disappointment turned into negligence, leaving my blog unattended  for over a year. In the meantime [I have taken up Twitter][1], but I found I sometimes wish I had more than 120 characters. [I missed blogging][5].
 
 ## Launching my new blog
 
@@ -28,7 +28,7 @@ Oh, and it's got a feed. [Stay in the loop][2].
 [1]: http://twitter.com/avdgaag "Follow me on Twitter. Or not."
 [2]: /feed/ "Subscribe to updates throug my feed"
 [3]: http://chyrp.net "Chyrp is a light-weight tumble log app"
-[4]: http://old.arjanvandergaag.nl "Archived version of my old website"
+[2]: http://old.arjanvandergaag.nl "Archived version of my old website"
 [5]: http://twitter.com/avdgaag/status/2063885128 "Tweet: I really should start blogging again."
 
 *[CMS]: Content Management System

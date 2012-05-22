@@ -15,7 +15,7 @@ One of my main problems with writing anything non-trivial in Javascript is code 
 
 The most important part is the actual object that represents our class: the _constructor function_. This is the function you will invoke with the `new` keyword to create a new instance.
 
-{: .js }
+{: lang="js" }
     function MyClass() {}
     var instance = new MyClass();
 
@@ -27,7 +27,7 @@ Behind the scenes, the following is happening:
 
 The body of the constructor function is the initializer method, that should take care of setting up a valid object. You can use it to assign properties to the new instance:
 
-{: .js }
+{: lang="js" }
     function MyClass(arg) {
         this.arg = arg;
     }
@@ -38,7 +38,7 @@ The body of the constructor function is the initializer method, that should take
 
 The next step would be adding methods to our class, so all instances can share them. One way would be to define a property as a function in the constructor:
 
-{: .js }
+{: lang="js" }
     function MyClass() {
         this.greet = function() {
             console.log('Hello!');
@@ -53,7 +53,7 @@ We would like all instances to share the same method. This is where the _prototy
 
 Because multiple objects can share a single object as their prototypes, we can define properties on the prototype of our class and have them shared among all instances of our class. Since a function is just an object, we declare our prototype properties on the constructor function itself:
 
-{: .js }
+{: lang="js" }
     function MyClass() {}
     MyClass.prototype.greet = function() {
         console.log('Hello!');
@@ -63,7 +63,7 @@ Because multiple objects can share a single object as their prototypes, we can d
 
 Now our program has only a single copy of the `greet` function, while many instances can use it. Note that `this` refers to the current object in the prototype function, not the prototype object it has been defined on. So we could use it to define and access instance properties:
 
-{: .js }
+{: lang="js" }
     function MyClass(foo) {
         this.foo = foo;
     }
@@ -88,7 +88,7 @@ A closure is simple: it is an execution context that knows about its surrounding
 
 A brief example of a closure and variable visibility:
 
-{: .js }
+{: lang="js" }
     var foo = 'bar';
     function myClosure() {
       var baz = 'qux';
@@ -100,7 +100,7 @@ A brief example of a closure and variable visibility:
 
 A closure is essentially a function, so in order to be able to use variables only inside our class, we need to wrap it in _self-executing anonymous function_:
 
-{: .js }
+{: lang="js" }
     var MyClass = (function() {
         var multiplier = 10;
         function MyClass(n) {
@@ -117,7 +117,7 @@ An added benefit is that the wrapping closure function is a neat way of organizi
 
 To make one class inherit from another class, we could simply assign the parent class as the prototype object of the child class. Normal javascript property lookup will then try to find properties in the child class, and then up the prototype chain into the parent class. The effect is that the child class inherits all the properties of the parent class. It looks good. But note what happens when we do that:
 
-{: .js }
+{: lang="js" }
     function Parent() {
         this.foo = 'bar';
         this.baz = 'qux';
@@ -139,7 +139,7 @@ We can solve this problem by creating an intermediary prototype, a _ghost object
 
 To get this to work, we need a helper function that takes care of the heavy lifting for us:
 
-{: .js }
+{: lang="js" }
     function inherits(child, parent) {
         function ghost() {}
         ghost.prototype = parent.prototype;
@@ -148,7 +148,7 @@ To get this to work, we need a helper function that takes care of the heavy lift
 
 Now, we can apply inheritance as follows:
 
-{: .js }
+{: lang="js" }
     var Parent = (function() {
         function Parent() {
             this.foo = 'bar';
@@ -167,7 +167,7 @@ Now, we can apply inheritance as follows:
 
 There is one problem: if we ask an instance of `Child` about its type using `instanceof`, it will tell us it's an instance of `ghost`, not of `Child`. We don't want that. Luckily, we can explicitly set what should be considered the constructor function in our object:
 
-{: .js }
+{: lang="js" }
     function inherits(child, parent) {
         function ghost() { this.constructor = child; }
         // code omitted...
@@ -181,7 +181,7 @@ When a child class does not implement a property, it will be looked for in the p
 
 We need to set a special property on our child class that refers to the original parent's prototype. We'll do that in our `inherits` function:
 
-{: .js }
+{: lang="js" }
     function inherits(child, parent) {
         function ghost() {}
         ghost.prototype = parent.prototype;
@@ -191,7 +191,7 @@ We need to set a special property on our child class that refers to the original
 
 By setting the `_super` property, the child class can now access its conceptual parent's properties (remember, the technical 'parent' is the ghost object!) using the `_super` property on the constructor function.
 
-{: .js }
+{: lang="js" }
     var Child = (function() {
         function Child() {
             Child._super.constructor.call();
@@ -200,7 +200,7 @@ By setting the `_super` property, the child class can now access its conceptual 
 
 Note that we explicitly name the `Child` class to access its `_super` property. We could use a slightly more obscure but flexible way:
 
-{: .js }
+{: lang="js" }
     this.constructor._super.constructor.call();
 
 ## Class properties
@@ -209,7 +209,7 @@ Our `_super` property has introduced us to what you could call class properties,
 
 In order to implement a no-surprises inheritance model, we need to make sure child classes inherit these properties as well from their parents. We simply need to copy any property of the parent constructor function to the child constructor function. Easy enough:
 
-{: .js }
+{: lang="js" }
     function inherits(child, parent) {
         for(property in parent) {
             if(parent.hasOwnProperty(property)) {
@@ -229,7 +229,7 @@ A good example of this would be the observer pattern. We could want to have mult
 
 Mixing in one object into another is what we're doing when we're copying class properties from the parent to the child, so we can abstract that into a separate function a re-use it:
 
-{: .js }
+{: lang="js" }
     function mixin(child, parent) {
         for(property in parent) {
             if(parent.hasOwnProperty(property)) {
@@ -247,7 +247,7 @@ Mixing in one object into another is what we're doing when we're copying class p
 
 This allows us to enhance an individual object with new properties. Such a collection is usually called a _module_, but in javascript it is just another object. Say we have a module for making any object capable of saying 'Hello, world!':
 
-{: .js }
+{: lang="js" }
     var hello_module = {
         speak: function() {
             alert('Hello, world!');
@@ -256,13 +256,13 @@ This allows us to enhance an individual object with new properties. Such a colle
 
 We could mix this into any object we've got individually:
 
-{: .js }
+{: lang="js" }
     var inst = new MyClass();
     mixin(inst, hello_module);
 
 Since our constructor function prototype is also just an object, we could mix it into that to have the module mixed into any instance of our class:
 
-{: .js }
+{: lang="js" }
     var MyClass = (function() {
         mixin(MyClass.prototype, hello_module);
         function MyClass() {}
@@ -276,7 +276,7 @@ One problem I often experience when trying to do object-oriented javascript with
 
 The solution is to bind a function to a particular context. This is easily done with a little helper function:
 
-{: .js }
+{: lang="js" }
     function bind(context, fn) {
         return function() {
             return fn.apply(context, arguments);
@@ -287,7 +287,7 @@ The `bind` function gives us a new function, that when called, calls the origina
 
 We use it as follows:
 
-{: .js }
+{: lang="js" }
     var ExampleClass = (function() {
         function ExampleClass() {
             this.foo = 'bar';
@@ -308,7 +308,7 @@ So, with only three helper methods and some convention, we have built a fully-fu
 
 Here are the three helper methods, slightly rewritten:
 
-{: .js }
+{: lang="js" }
     function mixin(c, p) {
         for(k in p) if(p.hasOwnProperty(k)) c[k] = p[k];
     }
@@ -326,7 +326,7 @@ Here are the three helper methods, slightly rewritten:
 
 Drop these into your script somewhere and you're ready to go (I've actually created a little library called [OO.js][oo] with these functions for easy re-use). Here's a quick example of all the features discussed here:
 
-{: .js }
+{: lang="js" }
     var Car = (function() {
         function Car(seats, wheels) {
             this.seats = seats;

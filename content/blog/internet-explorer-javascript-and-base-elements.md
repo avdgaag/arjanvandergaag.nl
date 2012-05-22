@@ -9,14 +9,14 @@ title: Internet Explorer and base elements
 ---
 Internet Explorer treats the base element a bit diffently from other browser. I ran into the issue when trying to change the current page's hash through javascript:
 
-{: .js }
+{: lang="js" }
     window.location.hash = 'some_value';
 
 Internet explorer took the entire base URL and prepended it to the hash, resulting in an URL like `http://domain.tld/http://domain.tld/#some_value`. That's clearly not my intention.
 
 The trick lies in the `href` attribute for links. This actually points to the faulty long url, while its actual attribute value is only the hash:
 
-{: .html }
+{: lang="html" }
     <a id="link" href="#some_value">...</a>
     <script>
     // IE: http://domain.tld/#some_value
@@ -26,12 +26,12 @@ The trick lies in the `href` attribute for links. This actually points to the fa
 
 The trick is to replace anything before the pound when reading the `href` value, like so:
 
-{: .js }
+{: lang="js" }
     $('#link').attr('href').replace(/^.*(?=#)/, '');
 
 And when trying to find links pointing at `#some_value` to not be too restrictive with your selector:
 
-{: .js }
+{: lang="js" }
     // finds 1 in other browsers, nothing in IE
     $('a[href="#some_value"]')
     // works like expected in all browsers; Note the *

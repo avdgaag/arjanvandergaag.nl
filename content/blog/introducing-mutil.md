@@ -37,7 +37,7 @@ I'll still be using bigger frameworks of course, but on some cases μtil will su
 
 Here's a quick code sample from the project README to show off:
 
-{:.js}
+{: lang="js" }
     // on page load
     $(function() {
 

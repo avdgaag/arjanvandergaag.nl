@@ -1,163 +1,45 @@
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.
-text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml' ]
+text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml', 'coffee' ]
 
 # The path to the directory where all generated files will be written to. This
 # can be an absolute path starting with a slash, but it can also be path
 # relative to the site directory.
 output_dir: output
 
+# Set domain for use in feeds
+base_url: http://arjanvandergaag.nl
+title: 'arjanvandergaag.nl'
+author_name: 'Arjan van der Gaag'
+author_uri: 'http://arjanvnadergaag.nl'
+
+deploy:
+  public:
+    kind: rsync
+    dst: webfaction:~/webapps/jekyllblog
+    options: ['-gpPrtvz', '--delete-after']
+
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
-# “index.hml”, but depending on the web server, this may be something else,
+# “index.html”, but depending on the web server, this may be something else,
 # such as “default.htm”. This list is used by nanoc to generate pretty URLs.
 index_filenames: [ 'index.html' ]
-
-# Configuration of deployment targets using rsync.
-deploy:
-  default:
-    dst: "webfaction:~/webapps/jekyllblog"
-    options: ['-glpPrtvz', '--delete']
-
-# Collection of site metadata
-site:
-  # Tacking code for Google Analytics
-  ga_tracking_code: "UA-80284-1"
-
-  # Tracking code for Observer
-  observer_tracking_code: "4c9491ee68b726ea7a002ce8"
-
-  # The website title
-  title: "The online home of Arjan van der Gaag"
-
-  # Default keywords
-  keywords: "Arjan van der Gaag, Arjan, van der Gaag, website, AG Webdesign"
-
-  # Default description
-  description: 'The personal website of web developer, historian and all-round geek Arjan van der Gaag.'
-
-  # Big tagline on the front page
-  tagline: 'I’m <strong>Arjan van der Gaag</strong> and this is my website about me, code, food, photography and more. If you like, we can <a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;">get in touch</a>.'
-
-  # Author name in the meta-tag
-  author: Arjan van der Gaag
-
-  # Author e-mail address
-  author_email: arjan@arjanvandergaag.nl
-
-  # Copyright line in the meta-tag
-  copyright: "© copyright 1995–2011 Arjan van der Gaag unless noted otherwise."
-
-# Links to personal profiles on social media websites
-elsewhere:
-  -
-    url: "http://twitter.com/avdgaag"
-    title:
-    text: "Twitter"
-  -
-    url: "http://linkedin.com/avdgaag"
-    title:
-    text: "LinkedIn"
-  -
-    url: "https://github.com/avdgaag"
-    title:
-    text: "Github"
-  -
-    url: "http://last.fm/user/surtur"
-    title:
-    text: "Last.fm"
-
-# Links to my other sites and pages of interest
-other_sites:
-  -
-    url: "http://border-none.com"
-    title: "Practical screencasts to make you a better web developer"
-    text: "border:none;"
-  -
-    url: "http://pasttense.nl/"
-    title:
-    text: "the Past Tense"
-  -
-    url: "http://orangecubed.nl/"
-    title:
-    text: "orange • cubed"
-  -
-    url: "http://yummyinmytummy.nl/"
-    title:
-    text: "Yummy in my Tummy!"
-  -
-    url: "http://library.arjanvandergaag.nl/"
-    title:
-    text: "My Library"
-
-# The path on the base URL users should be sent to when accessing the feed.
-# This gets rewritten to point at your feedburner_url option, which will
-# in turn know the location of the real URL.
-feed_url: /feed/
-feedburner_url: http://arjanvandergaag.nl/atom.xml
-
-# Configure the robots.txt file for this site.
-# Setting 'default' to true-ish will use sensible defaults. If you
-# wish to customize it, you can list paths to allow and to disallow.
-# Finally, you could manually set the path to the sitemap file.
-#
-# You can customize the robots file fairly well like this, but you
-# can always manually create a content file with the exact contents
-# you need.
-robots:
-  default: true # disallow assets, allow assets/images and point at sitemap
-  # disallow:
-  #   - '/tag'
-  #   - '/newsletter'
-  # allow:
-  #   - '/tag/foo'
-  # sitemap: '/site-map.txt'
-
-# Set up authentication files for various webmaster tools (or something
-# similar). This simply creates a plain text file when generating the site.
-#
-# identifier: identifier of the output file, e.g. '/google12345/'
-# content: content of the file, e.g. 'aoa8202ns001'
-# extension: extension of the output file, e.g. 'html' or 'xml'
-webmaster_tools:
-  -
-    identifier: 'google6a204bd2a3818764'
-    content:    'google-site-verification: google6a204bd2a3818764.html'
-    extension:  'html'
-
-# Should Nanoc generate some standard asset files for you, or skip them
-# completely?
-#
-# This currently controls the generation of robots.txt, sitemap.xml,
-# sitemap.xml.gz and webmaster tools authentication files.
-output_generated_assets: true
-
-# Set up URL redirects in the .htacccess file to point old URLs to a new
-# location, thereby keeping your SEO-mojo intact and visitors happy.
-redirects:
-  - from: /feed
-    to:   http://feeds.feedburner.com/avdgaag
-  - from: /code/javascript/2010/02/08/introducing-mutil.html
-    to:   http://arjanvandergaag.nl/blog/introducing-mutil.html
-  - from: /code/jekyll/2009/06/16/creating-new-jekyll-posts.html
-    to:   http://arjanvandergaag.nl/blog/creating-new-jekyll-posts.html
-  - from: /code/jekyll/2009/06/13/publishing-a-jekyll-website-to-a-server.html
-    to:   http://arjanvandergaag.nl/blog/publishing-a-jekyll-website-to-a-server.html
-  - from: /code/jekyll/2009/06/10/rake-task-to-ping-google.html
-    to:   http://arjanvandergaag.nl/blog/rake-task-to-ping-google.html
-  - from: /code/jekyll/2009/06/07/using-jekyll-to-create-websites.html
-    to:   http://arjanvandergaag.nl/blog/using-jekyll-to-create-websites.html
-  - from: /meta/2009/06/04/hello-world.html
-    to:   http://arjanvandergaag.nl/blog/hello-world.html
-
-# Base URL for the site for use in the XML sitemap
-base_url: http://arjanvandergaag.nl
 
 # Whether or not to generate a diff of the compiled content when compiling a
 # site. The diff will contain the differences between the compiled content
 # before and after the last site compilation.
 enable_output_diff: false
+
+prune:
+  # Whether to automatically remove files not managed by nanoc from the output
+  # directory. For safety reasons, this is turned off by default.
+  auto_prune: true
+
+  # Which files and directories you want to exclude from pruning. If you version
+  # your output directory, you should probably exclude VCS directories such as
+  # .git, .svn etc.
+  exclude: [ '.git', '.hg', '.svn', 'CVS' ]
 
 # The data sources where nanoc loads its data from. This is an array of
 # hashes; each array element represents a single data source. By default,
@@ -179,3 +61,29 @@ data_sources:
     # The path where layouts should be mounted. The layouts root behaves the
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
+
+    # Whether to allow periods in identifiers. When turned off, everything
+    # past the first period is considered to be the extension, and when
+    # turned on, only the characters past the last period are considered to
+    # be the extension. For example,  a file named “content/about.html.erb”
+    # will have the identifier “/about/” when turned off, but when turned on
+    # it will become “/about.html/” instead.
+    allow_periods_in_identifiers: false
+
+# Configuration for the “watch” command, which watches a site for changes and
+# recompiles if necessary.
+watcher:
+  # A list of directories to watch for changes. When editing this, make sure
+  # that the “output/” and “tmp/” directories are _not_ included in this list,
+  # because recompiling the site will cause these directories to change, which
+  # will cause the site to be recompiled, which will cause these directories
+  # to change, which will cause the site to be recompiled again, and so on.
+  dirs_to_watch: [ 'content', 'layouts', 'lib' ]
+
+  # A list of single files to watch for changes. As mentioned above, don’t put
+  # any files from the “output/” or “tmp/” directories in here.
+  files_to_watch: [ 'config.yaml', 'Rules' ]
+
+  # When to send notifications (using Growl or notify-send).
+  notify_on_compilation_success: true
+  notify_on_compilation_failure: true

@@ -1,14 +1,14 @@
 ---
 title: "The Productive Macs bundle"
 kind: article
-created_at: 2011-05-18 8:45
+created_at: 2011-05-18 8:25
 tags: [Mac OS X, software]
 tldr: "The Productive Macs bundle is worth buying, even if only for TextExpander and Mail Act-On."
 ---
 There is yet another software bundle out for indie Mac OS X applications. This time, it is called the [productivity software bundle][1] and it features eight productivity-related applications.
 {: .leader }
 
-I found this bundle [via Shawn Blanc][2], and I was was rather excited at first. There are some notable apps in this bundle, such as [TextExpander][3], [Path Finder][4] and [Mail Act-On][5] — software I have heard a lot about.
+I found this bundle [via Shawn Blanc][2], and I was was rather excited at first. There are some notable apps in this bundle, such as [TextExpander][3], [Path Finder][2] and [Mail Act-On][5] — software I have heard a lot about.
 
 ## What's in the bundle?
 
@@ -18,7 +18,7 @@ As with all similar bundles, there are big names in there that sell the bundle, 
 :   Text macros application: type an abbreviation anywhere, and it gets
     expanded to a full snippet of text. A highly-recommended time saver.
 
-[Path Finder][4]
+[Path Finder][2]
 :   Replacement application for the finder, featuring tabs, dual pane
     browser, terminal and more advanced stuff. Some people swear by it, so I
     was keen to give it a try. It's not bad, but I cannot get used to
@@ -72,7 +72,7 @@ I still think bundles like this are a good thing. As a customer, I get some nice
 
 ## To buy or not to buy?
 
-The [Productive Macs bundle][1] is a good purchase. I was just about to pay to full price for TextExpander, which is $34.95 on its own. At $29.99, this bundle is worth buying even if only for TextExpander. Considering you also get Mail Act-On, **this really is a steal** — even if takes some time to install, try and then uninstall all the other apps.
+The [Productive Macs bundle][1] is a good purchase. I was just about to pay to full price for TextExpander, which is $32.95 on its own. At $29.99, this bundle is worth buying even if only for TextExpander. Considering you also get Mail Act-On, **this really is a steal** — even if takes some time to install, try and then uninstall all the other apps.
 
 [1]: http://www.productivemacs.com
 
@@ -82,7 +82,7 @@ The [Productive Macs bundle][1] is a good purchase. I was just about to pay to f
 [3]: http://www.smilesoftware.com/TextExpander
      "TextExpander: Mac Typing Shortcut Utility Saves You Time!"
 
-[4]: http://www.cocoatech.com
+[2]: http://www.cocoatech.com
      "Path Finder 5 by Cocoatech"
 
 [5]: http://www.indev.ca/MailActOn.html

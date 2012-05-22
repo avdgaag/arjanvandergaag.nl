@@ -17,7 +17,7 @@ Here's a simplified example for routes matching an arbitrary level of nested dir
       constraints: ExistingFilesConstraint.new
     get '/*directories' => 'browser#show',
       constraints: ExistingFilesConstraint.new
-{: .ruby }
+{: lang="ruby" }
 
 The constraints object would look like this, returning a boolean value from the `#matches?` method:
 
@@ -41,7 +41,7 @@ The constraints object would look like this, returning a boolean value from the 
         # ...
       end
     end
-{: .ruby }
+{: lang="ruby" }
 
 Here's my first attempt at testing these routes using simple [Rspec routing matchers][routing], leaving the constraints logic as an implementation detail:
 
@@ -55,7 +55,7 @@ Here's my first attempt at testing these routes using simple [Rspec routing matc
          )
       end
     end
-{: .ruby }
+{: lang="ruby" }
 
 ## A little too dummy
 
@@ -93,7 +93,7 @@ The solution was to use a slightly different method to access the params: `#path
         # ...
       end
     end
-{: .ruby }
+{: lang="ruby" }
 
 With this little change, the routes worked like a charm. 
 
@@ -131,7 +131,7 @@ The only thing left to do was to properly test the routes. In hindsight, it is a
 
       it { should_not be_routable }
     end
-{: .ruby }
+{: lang="ruby" }
 
 So, creating custom constraint objects allows you to neatly separate routing logic into testable objects, as long a you keep a few nasty gotchas in mind.
 

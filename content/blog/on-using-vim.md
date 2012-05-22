@@ -1,6 +1,6 @@
 ---
 title: On Using Vim
-created_at: 2010-09-14 10:50
+created_at: 2010-09-12 10:50
 kind: article
 tags: [vim, tips]
 ---
@@ -23,7 +23,7 @@ But, as many other Vim users will tell you, once you do get used to it, you
 start missing it in other editors. The speed and precision of text operations
 and navigation in Vim command mode makes any other editor feel slow and clunky.
 
-![Espcially with the right color scheme, Vim is an awesome editor](/assets/images/vim.png){:.photo .right .pull}
+![Espcially with the right color scheme, Vim is an awesome editor](/images/vim.png){:.photo .right .pull}
 
 ### Force yourself to adapt
 
@@ -69,7 +69,7 @@ similar setup to quickly edit and reload my `.zshrc` in the terminal.
 
 ### File type customizations
 
-I like to use 4 spaces instead of tabs, but in Ruby-related files the custom is
+I like to use 2 spaces instead of tabs, but in Ruby-related files the custom is
 to use 2 spaces. I instruct Vim to use 2 spaces in Ruby files like so:
 
     autocmd Filetype ruby,yaml,rake,rb setlocal ts=2 sw=2 expandtab
@@ -92,7 +92,7 @@ tComment. One notable plug-in is [sparkup][], which allows you to write HTML
 quite quickly:
 
     div>ul.menu>li*3>a[href="#"]{Item}
-{:.css}
+{: lang="css" }
 
 ...turns into:
 
@@ -103,7 +103,7 @@ quite quickly:
             <li><a href="#">Item</a></li>
         </ul>
     </div>
-{:.html}
+{: lang="html" }
 
 Check out [sparkup at Github][sparkup].
 
@@ -133,7 +133,7 @@ happily stick to one or the other.
 [peepcode]: http://peepcode.com/products/smash-into-vim-i
 [github]: https://github.com/avdgaag/dotfiles
 [MacVim]: http://code.google.com/p/macvim/
-[dvorak]: http://old.arjanvandergaag.nl/2008/01/14/learning-dvorak/
+[dvorak]: http://old.arjanvandergaag.nl/2008/01/12/learning-dvorak/
 [nvie]: http://nvie.com/posts/how-i-boosted-my-vim/
 
 [^1]: I currently use [MacVim][] for most of my work, and Vim in the standard Mac OS X terminal for quick hacks.

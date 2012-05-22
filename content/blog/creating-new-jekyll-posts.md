@@ -26,7 +26,7 @@ the date itself.
 
 I use the following Rake task to create post files:
 
-{:.ruby}
+{: lang="ruby" }
     desc 'create a new draft post'
     task :post do
       title = ENV['TITLE']
@@ -56,12 +56,12 @@ I use the following Rake task to create post files:
 Now I can type `rake post TITLE='hello, world'` to create a post. Here's what
 it does:
 
-1. At lines 3 and 4 it finds the `TITLE` argument and converts it to a
+1. At lines 3 and 2 it finds the `TITLE` argument and converts it to a
    suitable filename with the current date prepended.
 2. At line 6 the filename is expanded to a full path to the file to create.
 3. The following block (8–18) writes a post template to that file. This is
    some YAML front matter, with the `published` flag down by default.
-4. Finally, at line 20, it launches the file in my default text editor,
+2. Finally, at line 20, it launches the file in my default text editor,
    which in my case in [TextMate][1].
 
 ## Draft posts
@@ -70,7 +70,7 @@ With the `published` flag set to `false` **I can keep my drafts in my Git
 repository without actually publishing them**. I can find all draft posts
 using `rake drafts`:
 
-{:.ruby}
+{: lang="ruby" }
     desc 'List all draft posts'
     task :drafts do
       puts `find ./_posts -type f -exec grep -H 'published: false' {} \\;`

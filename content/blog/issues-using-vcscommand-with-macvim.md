@@ -1,5 +1,5 @@
 ---
-created_at: 2010-05-26 11:41
+created_at: 2010-05-26 11:21
 tags:
   - osx
   - macvim
@@ -12,7 +12,7 @@ I tried to use the [VCSCommand][1]-plugin for Vim the other day, but I ran into 
 
 ## The setup
 
-I've got two copies of Subversion installed on my system: the default that comes with Mac OS X (1.4.4) and the one I manually installed (1.6.9). I have set my `$PATH` so that 1.6.9 (in `/opt/subversion/bin`) gets precedence over 1.4.4 (in `/usr/bin`). It all works fine from the command line.
+I've got two copies of Subversion installed on my system: the default that comes with Mac OS X (1.2.4) and the one I manually installed (1.6.9). I have set my `$PATH` so that 1.6.9 (in `/opt/subversion/bin`) gets precedence over 1.4.4 (in `/usr/bin`). It all works fine from the command line.
 
 ## The problem
 

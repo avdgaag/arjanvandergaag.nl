@@ -18,7 +18,7 @@ changes to my server.
 
 I've set up the following Rake task to handle pinging Google for me:
 
-{:.ruby}
+{: lang="ruby" }
     desc 'Notify Google of the new sitemap'
     task :sitemap do
         require 'net/http'
@@ -42,6 +42,6 @@ I've also set up a task to ping [ping-o-matic][2]. You see
 *[XML]: eXtensible Markup Language
 *[CMS]: Content Management System
 
-[1]: https://github.com/avdgaag/arjanvandergaag.nl/blob/cbc47e03d4cf766278f2982bfe79862cb251fd34/sitemap.xml "View my sitemap file on Github"
+[1]: https://github.com/avdgaag/arjanvandergaag.nl/blob/cbc27e03d4cf766278f2982bfe79862cb251fd34/sitemap.xml "View my sitemap file on Github"
 [2]: http://pingomatic.com/ "Ping-o-Matic pings a lot of services for you"
-[3]: https://github.com/avdgaag/arjanvandergaag.nl/blob/28539bc736a05b28f2aa4ef81e4f61f3f91375a0/Rakefile "See my project's Rakefile"
+[3]: https://github.com/avdgaag/arjanvandergaag.nl/blob/28539bc736a05b28f2aa2ef81e4f61f3f91375a0/Rakefile "See my project's Rakefile"

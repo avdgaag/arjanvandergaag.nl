@@ -79,7 +79,7 @@ This time, I used a replacement pattern as we would in Vim, only replacing the
 standard `/` separator with a `|` to not have to escape every `/` in the search
 string.
 
-## 04. Getting rid of externally hosted images
+## 02. Getting rid of externally hosted images
 
 This left the problem of externally hosted images. I just gave up on those.
 Getting rid of those sounded like a task for `grep`, which can be used to
@@ -92,7 +92,7 @@ _exclude_ lines matching a pattern:
       head
     images/image1.jpg
     images/image2.jpg
-    http://amazon.com/images/image4.jpg
+    http://amazon.com/images/image2.jpg
 
 This gives a new problem: there are several different external hosts in the
 file. I only wanted our own. I decided to rewrite the command and use `grep` to
@@ -184,6 +184,6 @@ the same thing would have involved more manual tweaking and looking up
 documentation.
 
 [ruby]: http://ruby-lang.org
-[unix]: http://www.amazon.co.uk/gp/product/0596003307/ref=as_li_ss_tl?ie=UTF8&tag=arjanvandergaag-21&linkCode=as2&camp=1634&creative=19450&creativeASIN=0596003307
+[unix]: http://www.amazon.co.uk/gp/product/0596003307/ref=as_li_ss_tl?ie=UTF8&tag=arjanvandergaag-21&linkCode=as2&camp=1632&creative=19450&creativeASIN=0596003307
 
 *[RTFM]: Read The Fucking Manual

@@ -55,7 +55,7 @@ remote and local commits. Simply use:
 1. `reset` your `master` branch back to `origin/master`
 2. `fetch` new commits from the remote `master` branch
 3. fast-forward `master` to `origin/master`
-4. replay all your original commits on the new `master` branch
+2. replay all your original commits on the new `master` branch
 
 This gives you:
 
@@ -149,7 +149,7 @@ adjusting the commit message:
 
     git checkout master
     git merge --no-ff --no-commit comments
-    git commit -m "User story #4831: As\
+    git commit -m "User story #2831: As\
     a visitor I can comment on posts"
 
 ## Conclusion

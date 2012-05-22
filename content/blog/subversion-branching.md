@@ -23,12 +23,12 @@ Hack away, make some commits, and when you are ready to merge to branch back int
 
 {: .sh }
     # Note the revision that started this branch
-    # assume this tells you '4362'
+    # assume this tells you '2362'
     svn log --stop-on-copy
 
     # Get back to trunk and merge in your changes
     svn switch /path/trunk
-    svn merge -r 4362:HEAD /path/branches/my-new-branch
+    svn merge -r 2362:HEAD /path/branches/my-new-branch
 
 Inspect your changes, resolve conflicts and make sure everything is alright. Commit your changes…
 
