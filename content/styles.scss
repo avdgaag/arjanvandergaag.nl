@@ -1,0 +1,254 @@
+@import 'bourbon';
+@import 'rocks';
+
+@include reset;
+
+$color-blue: #0071BC;
+
+// Elements
+body {
+    font-size: $size-text;
+    line-height: $line;
+    font-family: $helvetica;
+    color: #444;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, pre {
+    @include surrounding-lines;
+}
+
+h1, h2 {
+    font-family: $georgia;
+}
+
+h1 {
+    line-height: lines(1.5);
+    font-size: 24px;
+    color: $color-blue;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+h4 {
+    font-size: 12px;
+    margin: 0 0 lines(-1) 0;
+}
+
+pre {
+    text-shadow: -1px -1px 1px #fff;
+    white-space: pre;
+    background-color: #f3f3f3;
+    font-size: 12px;
+    line-height: 16px;
+    @include outset(10px);
+    @include voutset(10px);
+    @include border-radius(3px);
+}
+
+a {
+    @include link-colors-lighten($color-blue);
+
+    &:hover, &:focus {
+        -webkit-transition: color .2s linear;
+        -moz-transition: color .2s linear;
+        -o-transition: color .2s linear;
+        -ms-transition: color .2s linear;
+        transition: color .2s linear;
+    }
+}
+
+[role="complementary"] {
+    @extend small;
+}
+
+small {
+    color: #777;
+    font-size: 12px;
+
+    a {
+        @include link-colors-lighten(#999);
+    }
+
+}
+
+ul {
+    list-style: disc outside none;
+}
+
+ol {
+    list-style: decimal outside none;
+}
+
+aside ul {
+    list-style: none;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: $grid-margin;
+}
+
+// Layout
+body {
+    margin: 0 $grid-margin;
+}
+
+@media screen and (min-width: 800px) {
+    #content {
+        @include rcontainer;
+    }
+}
+
+[role="banner"] {
+    border-top: lines(.5) solid $color-blue;
+    border-bottom: 1px solid #eee;
+    margin: 0 ($grid-margin * -1) $line;
+    padding: 0 $grid-margin;
+}
+
+[role="main"] {
+    max-width: 60em;
+    min-width: 20em;
+    margin-left: columns(4);
+    margin-right: columns(1);
+
+    @media screen and (max-width: 800px) {
+        margin: 0;
+    }
+}
+
+[role="complementary"] {
+    @include rcolumn(3);
+
+    @media screen and (max-width: 800px) {
+        float: none;
+        display: block;
+        width: auto;
+        margin: 0 0 lines(2);
+        padding-bottom: lines(1);
+        border-bottom: 1px solid #eee;
+        padding-left: columns(1);
+
+        img {
+            width: 48px;
+            height: 48px;
+            margin: 0 0 0 columns(-1);
+            float: left;
+        }
+
+        h4 {
+            display: none;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+
+            li {
+                display: inline;
+            }
+        }
+    }
+
+    :first-child {
+        margin-top: 0;
+    }
+}
+
+[role="contentinfo"] {
+    @extend small;
+    margin-top: lines(2);
+    border-top: 1px solid #f6f6f6;
+
+}
+
+// Modules
+.title {
+    @include link-colors-lighten($color-blue);
+    @include link-hover;
+    display: block;
+    font-weight: bold;
+    line-height: lines(2);
+}
+
+p.leader {
+    font-size: 16px;
+    color: #777;
+}
+
+article footer {
+    @extend small;
+    margin: lines(-.5) 0 0 0;
+
+    .date, .tags {
+        display: inline;
+    }
+
+    .date {
+        border-right: 1px solid #ddd;
+        padding-right: 10px;
+        margin-right: 5px;
+    }
+}
+
+aside img {
+    border: 1px solid #111;
+    width: 128px;
+    height: 128px;
+}
+
+form {
+    @include position(absolute, $line $grid-margin 0 0);
+}
+
+.articles {
+    @include list-plain;
+
+    li {
+        @include outdent('time', 50px);
+
+        time {
+            @extend small;
+        }
+    }
+}
+
+.footnotes {
+    @extend small;
+
+    p {
+        margin: 0;
+    }
+
+    &:before {
+        content: '.';
+        text-indent: -999em;
+        height: 0;
+        display: block;
+        border-top: 1px solid #ccc;
+        width: 30%;
+    }
+}
+
+img.photo {
+    display: block;
+    margin: $line $grid-margin;
+}
+
+img.right {
+    @include float(right);
+    margin-right: 0;
+}

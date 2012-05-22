@@ -36,14 +36,14 @@ Usage is simple, as you only need to install the gem:
 
 ...and `require` the gem and include the helpers to get going:
 
-{: .ruby }
+{: lang="ruby" }
     # in default.rb
     require 'nanoc3/cachebuster'
     include Nanoc3::Helpers::CacheBusting
 
 You can now use the `#fingerprint` method in your routing rules:
 
-{: .ruby }
+{: lang="ruby" }
     route '/assets/styles/' do
       item.identifier.chop + fingerprint(item) + '.' + item[:identifier]
     end

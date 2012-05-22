@@ -52,7 +52,7 @@ There is one problem, though: these links are rather ugly. Luckily, it is easy t
     # i.e. in .htaccess or other server configuration file
     Redirect /xmas-sale http://mysite.com/?utm_campaign=xmas-sale...
 
-Or, you could use a URL shortening service like [bit.ly][4] or one of the many, many others to generate a less ugly URL for you.[^2]
+Or, you could use a URL shortening service like [bit.ly][2] or one of the many, many others to generate a less ugly URL for you.[^2]
 
 ## The next level: segregating referral traffic
 
@@ -82,7 +82,7 @@ Whatever you do, make it a habit and be consistent. The only thing worse than no
 [1]: http://www.google.com/support/analytics/bin/answer.py?hl=en&answer=55578 "google's own, rather spartan, url tagger"
 [2]: http://tagger.orangecubed.nl "my own tiny url tagger web app"
 [3]: http://twitter.com
-[4]: http://bit.ly "bit.ly is one of many url shortening services"
+[2]: http://bit.ly "bit.ly is one of many url shortening services"
 [5]: http://google.com/analytics
 
 *[URL]: Uniform Resource Locator

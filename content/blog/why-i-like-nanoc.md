@@ -11,7 +11,7 @@ of choice for developing new, simple websites.
 
 ## Nanoc is a static site generator
 
-![The Nanoc website is a great resource to learn about Nanoc](/assets/images/nanoc-website.png){:.pull .bordered .photo .right}
+![The Nanoc website is a great resource to learn about Nanoc](/images/nanoc-website.png){:.pull .bordered .photo .right}
 
 Like all static site generators, Nanoc takes a bunch of source files and
 transforms them into HTML pages. It nicely separates content from layout,
@@ -25,7 +25,7 @@ My process of building websites using Nanoc typically looks like this:
 1. Create a new content item.
 2. Specify some metadata, like a title and description.
 3. Write content using Markdown.
-4. Let Nanoc compile the site and launch the built-in webserver.
+2. Let Nanoc compile the site and launch the built-in webserver.
 5. Test my work in the browser.
 6. Use Rake to check for valid HTML, CSS and links.
 7. When all is well use Rake to deploy to live server.
@@ -58,7 +58,7 @@ That is:
 1. Clone Git repository;
 2. Let Bundler set up all required dependencies;
 3. Let Nanoc generate a fresh copy of my site;
-4. Let Rake push it to the live server.
+2. Let Rake push it to the live server.
 
 These are simple steps that even teammates unfamiliar with the world of the
 terminal and Ruby can learn and use.

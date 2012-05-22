@@ -14,7 +14,7 @@ Before HTML5 we _could_ wrap, say, a `<div>` with an `<a >`, but it was consider
 
 Given a typical 'story' element, where a headline, thumbnail and short introduction text would link the user to a full article, here's the effect you'd want to achieve:
 
-{:.html}
+{: lang="html" }
     <div class="article">
         <a href="/story"><img src="pic.jpg" alt="Story thumbnail"></a>
         <h3><a href="/story">Story title</a></h3>
@@ -26,7 +26,7 @@ Given a typical 'story' element, where a headline, thumbnail and short introduct
 
 That sort of markup is terrible to write -- let alone maintain. Javascript-solutions were concocted to keep markup clean, but still make the entire story-element respond to user clicks:
 
-{:.html}
+{: lang="html" }
     <div class="article">
         <img src="pic.jpg" alt="Story thumbnail">
         <h3>Story title</h3>
@@ -36,7 +36,7 @@ That sort of markup is terrible to write -- let alone maintain. Javascript-solut
 
 And the script:
 
-{:.js}
+{: lang="js" }
     // dummy javascript code
     $('.bigtarget').parent('div').click(function() {
         document.location = $('.bigtarget', this).attr('href');
@@ -46,7 +46,7 @@ And the script:
 
 With HTML5 it is now considered alright to do the following:
 
-{:.html}
+{: lang="html" }
     <div class="article">
         <a href="/story">
             <img src="pic.jpg" alt="Story thumbnail">
@@ -62,7 +62,7 @@ However, doing so introduces a problem with styles, as we probably don't want ou
 
 **First**, I introduce a class name to designate this is a special kind of anchor element:
 
-{:.html}
+{: lang="html" }
     <div class="article">
         <a href="/story" class="block">
             <img src="pic.jpg" alt="Story thumbnail">
@@ -74,7 +74,7 @@ However, doing so introduces a problem with styles, as we probably don't want ou
 
 Using the `block` class, I can now reset the anchor's contents styles. I could do so manually for maximum compatibility, but if you target only modern browsers[^1] you could use `inherit`:
 
-{:.css}
+{: lang="css" }
     a.block { display: block; }
     a.block, a.block * {
         text-decoration: inherit;
@@ -87,7 +87,7 @@ Using the `block` class, I can now reset the anchor's contents styles. I could d
 
 I only want to style part of the story as a link, but I'm not sure which part. Maybe a "read more"-line at the bottom, or the heading… Since this might differ from case to case, I chose to use a generic class to indicate the link target:
 
-{:.html}
+{: lang="html" }
     <div class="article">
         <a href="/story" class="block">
             <img src="pic.jpg" alt="Story thumbnail">
@@ -101,7 +101,7 @@ I could just add the `target` class to any of the other elements as well.
 
 I style the target-element the same as my regular links:
 
-{:.css}
+{: lang="css" }
     a.block .target {
         color: #009;
         text-decoration: underline;
@@ -111,7 +111,7 @@ Now, the block looks like traditional content with a simple link at the bottom, 
 
 Of course, you could also implement this same effect using just descendent selectors, like so:
 
-{:.css}
+{: lang="css" }
     div.article a:first-child {
         display: block;
     }

@@ -1,77 +1,54 @@
 #!/usr/bin/env ruby
 
-preprocess do
-  create_feed
-  create_robots_txt
-  create_webmaster_tools_authentications
-  create_sitemap
+SASS_LOAD_PATHS = [
+  File.join(`bundle show bourbon`.chomp, *%w[app assets stylesheets]),
+  File.join(`bundle show rocks`.chomp,   *%w[app assets stylesheets])
+]
+
+compile '/styles/' do
+  filter :sass, syntax: :scss, load_paths: SASS_LOAD_PATHS
 end
 
-compile %r{^/assets/(lib|styles)/} do
-  filter :erb
-  filter :concat
-  filter :cache_buster
-  filter :minify
-end
-
-compile %r{^/(404)/$} do
-  filter :erb
-  filter :kramdown if item[:extension] == 'md'
-  filter :typogruby
-  layout 'simple'
-  filter :cache_buster
-end
-
-compile %r{^/(google|sitemap|htaccess|cv|resume)} do
-  filter :erb
-  filter :cache_buster
-end
-
-compile '/sitemap/', :rep => 'gzip' do
-  filter :erb
-  filter :shellcmd, :cmd => 'gzip'
-end
-
-compile '/assets/*' do
-  # do nothing
+compile '/script/' do
+  filter :coffeescript
 end
 
 compile '/blog/*' do
-  filter :kramdown
-  filter :code_swap
-  filter :captions
+  filter :kramdown, auto_ids: false, coderay_line_numbers: nil, coderay_tab_width: 2
   filter :typogruby
-  filter :colorize_syntax
-  layout 'blog_post'
+  layout 'post'
   layout 'default'
-  filter :cache_buster
+end
+
+compile '/feed/' do
+  filter :erb
 end
 
 compile '*' do
-  filter :erb
-  layout 'default' if item[:extension] == 'html'
-  filter :cache_buster
+  unless item.binary?
+    filter :erb
+    layout 'default'
+  end
 end
 
-route '/htaccess/' do
-  '/.htaccess'
+route '/styles/' do
+  '/styles.css'
 end
 
-route '/sitemap/', :rep => 'gzip' do
-  '/sitemap.xml.gz'
+route '/script/' do
+  '/script.js'
 end
 
 route '/' do
   '/index.html'
 end
 
-route %r{^/(assets/.*|sitemap|robots|atom)/$} do
-  cb = cachebust?(item) ? fingerprint(item[:filename]) : ''
-  item.identifier.chop + cb + '.' + item[:extension]
-end
-
-route '*' do
+route '/blog/*' do
   item.identifier.chop + '.html'
 end
 
-layout '*', :erb
+route '*' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
+layout '*', :haml, format: :html5

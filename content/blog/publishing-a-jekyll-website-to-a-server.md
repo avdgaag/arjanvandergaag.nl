@@ -24,7 +24,7 @@ The `avz` flags tell it to be verbose, and both archive and compress the data.
 Remembering and typing that `rsync` line every time I want to publish my site
 is not a good idea, so I dropped the whole thing in a Rake task:
 
-{:.ruby}
+{: lang="ruby" }
     desc 'rsync the contents of ./_site to the server'
     task :sync do
       puts '* Publishing files to live server'
@@ -39,4 +39,4 @@ site. Awesome.
 
 You can check out [my `Rakefile` at Github][1].
 
-[1]: https://github.com/avdgaag/arjanvandergaag.nl/blob/cbc47e03d4cf766278f2982bfe79862cb251fd34/Rakefile "View my Rakefile on Github"
+[1]: https://github.com/avdgaag/arjanvandergaag.nl/blob/cbc27e03d4cf766278f2982bfe79862cb251fd34/Rakefile "View my Rakefile on Github"

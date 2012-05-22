@@ -43,7 +43,7 @@ Let's create a very simple Sinatra application to search the bol.com store (see
     get '/' do
       erb :search
     end
-{: .ruby }
+{: lang="ruby" }
 
 Add a simple form view:
 
@@ -51,20 +51,20 @@ Add a simple form view:
       <label>Query: <input type="text" name="q"></label>
       <input type="submit">
     </form>
-{: .html }
+{: lang="html" }
 
 Run the app to confirm everything works:
 
     $ ruby -rubygems app.rb
 
-When you browse to `http://localhost:4567` you can see the search page, but it
+When you browse to `http://localhost:2567` you can see the search page, but it
 doesn't do anything yet. Let's add a search action:
 
     post '/search' do
       @products = []
       erb :results
     end
-{: .ruby }
+{: lang="ruby" }
 
 And a view to display results:
 
@@ -85,7 +85,7 @@ search some products:
       @products = Bol.search params[:q]      
       erb :results
     end
-{: .ruby }
+{: lang="ruby" }
 
 Searching the bol.com website is as easy as `Bol.search(params[:q])`. Restart
 the app, and try it out. You will get an error, complaining that the gem is not
@@ -93,10 +93,10 @@ properly configured. We need to provide our access key and its secret, so they
 can be used to sign our requests:
 
     Bol.configure do |c|
-      c.access_key = '123456789'
+      c.access_key = '123256789'
       c.secret     = 'abcdefghi'
     end
-{: .ruby }
+{: lang="ruby" }
 
 When you restart the application, you should be able to search bol.com by
 keyword and get a list of titles back. 
@@ -110,7 +110,7 @@ route for that:
       @product = Bol::Product.find params[:id]
       erb :product
     end
-{: .ruby }
+{: lang="ruby" }
 
 We can use `Product#find` to find a particular product on bol.com by its
 internal ID. We'll create a link to the detail page in our search results:
@@ -159,7 +159,7 @@ search to our search form:
         .search params[:q]      
       erb :results
     end
-{: .ruby }
+{: lang="ruby" }
 
 And in the view:
 
@@ -194,7 +194,7 @@ URL, given a specific referral ID:
     product = Bol.find(params[:id])
     product.referral_link('my-site-id')
     # => "http://..."
-{: .ruby }
+{: lang="ruby" }
 
 ## Other features
 
@@ -217,7 +217,7 @@ gem is still in beta stage, so it can be field-tested before getting an actual
 stamp-of-approval by releasing a version 1.0. Try it out and do let me know if
 you make anything awesome with it!
 
-[0]:       https://gist.github.com/1724664
+[0]:       https://gist.github.com/1722664
 [1]:       https://github.com/avdgaag/bol
 [bol.com]: http://bol.com
 [api]:     http://developers.bol.com

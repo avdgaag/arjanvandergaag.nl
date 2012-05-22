@@ -18,14 +18,14 @@ One scenario that keeps coming up is wanting to link to an object. Rather than
 constructing your own using `link_to`, the decorated model should know how to
 generate a link to itself:
 
-{: .ruby }
+{: lang="ruby" }
     post = PostDecorator.decorate(post)
     post.link # => "<a href='...'>...</a>"
 
 This does not seem all that special for regular objects, but consider nested
 resources or date-based archives requiring complex arguments:
 
-{: .ruby }
+{: lang="ruby" }
     class PostDecorator < ApplicationDecorator
       def link
         h.link_to title_with_comments, post_path(post, archive_params)
@@ -43,7 +43,7 @@ resources or date-based archives requiring complex arguments:
 This logic is best kept out of your view template. It is also better suited for
 a decorator than a generic helper method. Compare:
 
-{: .ruby }
+{: lang="ruby" }
     post.link
     archive_post_link_to(post)
 
@@ -63,7 +63,7 @@ This becomes extra helpful when using delegation:
 
     post = PostDecorator.decorate(post)
     post.author_link # => '<a href="/authors/1">Arjan</a>'
-{: .ruby }
+{: lang="ruby" }
 
 It is a good convention to always have every model be able to generate a
 sensible link to itself.
@@ -75,7 +75,7 @@ attribute, like applying `number_to_currency` to a `product.price` method.
 
 It is easy to write a simple macro for that in the base decorator:
 
-{: .ruby }
+{: lang="ruby" }
     class ApplicationDecorator < Draper::Base
       def self.filter_attributes(*args)
         options = args.extract_options!
@@ -89,7 +89,7 @@ It is easy to write a simple macro for that in the base decorator:
 
 This allows you to write a decorator like so:
 
-{: .ruby }
+{: lang="ruby" }
     class ProductDecorator < ApplicationDecorator
       filter_attributes :price, :with => :number_to_currency
       filter_attributes :created_at,
@@ -113,7 +113,7 @@ Attributes commonly contain values that need to be localized, like a status
 column (e.g. 'published', 'draft', etc.). A decorator method would then usually
 look like this:
 
-{: .ruby }
+{: lang="ruby" }
     class PostDecorator < ApplicationDecorator
       def state
         h.t('activerecord.attributes.post.states').fetch state.to_sym
@@ -123,7 +123,7 @@ look like this:
 This is pretty tedious. A macro would help clarify intent, so we can create
 something like the following:
 
-{: .ruby }
+{: lang="ruby" }
     class ApplicationDecorator < Draper::Base
       def self.translate_attributes(translations = {})
         translations.each do |attribute, key|
@@ -136,7 +136,7 @@ something like the following:
 
 This allows us to declare that an attribute value should be translated:
 
-{: .ruby }
+{: lang="ruby" }
     class PostDecorator < ApplicationDecorator
       translate_attributes {
           :state => 'activerecord.attributes.post.states'
@@ -145,7 +145,7 @@ This allows us to declare that an attribute value should be translated:
 
 With the accompanying translation file:
 
-{: .yaml }
+{: lang="yaml" }
     nl:
       activerecord:
         attributes:

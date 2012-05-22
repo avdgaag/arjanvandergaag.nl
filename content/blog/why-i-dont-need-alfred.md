@@ -2,13 +2,13 @@
 title: Why I don't need Alfred App
 kind: article
 tags: [productivity, software]
-created_at: 2011-05-24 11:00
+created_at: 2011-05-22 11:00
 tldr: I use global keyboard shortcuts in a bunch of other apps, so I have no need for a dedicated utility like Alfred, Quicksilver or Launchbar.
 ---
 "Install [Quicksilver][]" was the first advice many people gave me when I first switched to a Mac. These days it's [Launchbar][] or [Alfred][]. These applications are supposedly critical for Mac power users, so I tried them all. But I use none of them.
 {: .leader }
  
-![Alfred quick web search](/assets/images/alfred.jpg){: .photo .right .pull }
+![Alfred quick web search](/images/alfred.jpg){: .photo .right .pull }
 
 Let's focus on [Alfred][] as an example. It's a productivity application that lets you open a command prompt with a global keyboard shortcut, so you can type commands to open files, browse the web, control iTunes and so on. It looks nice, is light-weight and works as advertised.
 
@@ -18,7 +18,7 @@ I have installed it several times, but never actually used it. Not because I don
 
 ### Spotlight
 
-![Spotlight folder search](/assets/images/spotlight.png){: .photo .right .pull }
+![Spotlight folder search](/images/spotlight.png){: .photo .right .pull }
 
 I use Mac OS X's own Spotlight feature both for file search and as an application launcher. It is both quick and accurate enough, assuming I use keyword-based search filters. It is quickly activated with `⌘ Space` or `⌘⌥ Space` for expanded mode.
 
@@ -35,7 +35,7 @@ When I am looking for preference panes or just applications, I just start typing
 
 ### CoverSutra
 
-![CoverSutra album search](/assets/images/coversutra.png){: .photo .right .pull }
+![CoverSutra album search](/images/coversutra.png){: .photo .right .pull }
 
 I use [CoverSutra][] to control iTunes and search my iTunes library. I have set up `⌘~` to activate the search box, in which I can use tab to filter my search results to artists, albums or songs.
 
@@ -49,7 +49,7 @@ The latter is especially useful when going through mail: having a message select
 
 ### Events
 
-![Adding event with Fantastical](/assets/images/fantastical.png){: .photo .right .pull }
+![Adding event with Fantastical](/images/fantastical.png){: .photo .right .pull }
 
 I recently started using [Fantastical][], which is a wonderful little app that you can use to manage your iCal calendars. After invocation with `⌃⇧ Space` you can enter your appointment details using natural language, which Fantastical will parse and add to your calendar for you.
 

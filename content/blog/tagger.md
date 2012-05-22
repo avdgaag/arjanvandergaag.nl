@@ -8,20 +8,20 @@ tldr: "I created a tool for tagging links with some templates and automatic URL 
 Tagging with campaign variables is a good practice when sharing links to your website. It allows you to track the traffic you receive from that link, so you can do all sorts of awesome analyses. But there's a problem.
 {:.leader}
 
-![Using custom source and medium in Google Analytics](/assets/images/sources.png){:.photo .right .pull .bordered}
+![Using custom source and medium in Google Analytics](/images/sources.png){:.photo .right .pull .bordered}
 
 Or rather, there are two problems with tagging URL's:
 
 * **Tagging links is too much work**: you have to Google for [Google's URL builder tool][1], figure out what values you want to use for your campaign, and then copy the URL it spits out.
 * **Tagged URLs are ugly**: It's not very nice to send someone a link like `http://mysite.com/mypage?utm_campaign=x&utm_source=y&utm_medium=z`.
 
-So, I wanted an easier way to tag my links — and I created [a tiny Sinatra application][4] ([source code][3]) to do it. All the cool kids create tiny [Sinatra][5] applications to do stuff, right?
+So, I wanted an easier way to tag my links — and I created [a tiny Sinatra application][2] ([source code][3]) to do it. All the cool kids create tiny [Sinatra][5] applications to do stuff, right?
 
-[![](/assets/images/tagger.png){:.photo .right .pull .bordered}][4]
+[![](/images/tagger.png){:.photo .right .pull .bordered}][2]
 
 ## Templates
 
-[My Tagger tool][4][^1] looks much the same as Google's original, but it can take some of the work of entering values by hand off your hands. It let's you pick a set of predefined values — a template, if you will — and specify only the values that matter.
+[My Tagger tool][2][^1] looks much the same as Google's original, but it can take some of the work of entering values by hand off your hands. It let's you pick a set of predefined values — a template, if you will — and specify only the values that matter.
 
 So, you can use a pretty form to pick "social media" as your medium and "twitter" as your source. All you have to do is specify your campaign title. The point is, you no longer have to remember if you previously tagged your social media campaigns with "social_media", "social-media" or "socialmedia" as your medium.
 
@@ -55,5 +55,5 @@ Oh, so many ideas, so little time… Maybe someone [will fork the project on Git
 [1]: http://www.google.com/support/analytics/bin/answer.py?hl=en&answer=55578
 [2]: http://bit.ly/ "bit.ly | Basic | a simple url shortener"
 [3]: https://github.com/avdgaag/tagger "Browse the source code at Github"
-[4]: http://tagger.orangecubed.nl "Go to my link tagger tool"
+[2]: http://tagger.orangecubed.nl "Go to my link tagger tool"
 [5]: http://www.sinatrarb.com "Sinatra is a really simple Ruby web framework"

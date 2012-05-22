@@ -1,0 +1,13 @@
+%article
+  %h1= Typogruby.improve @item[:title]
+  %footer
+    .date= attribute_to_time(@item[:created_at]).strftime '%d-%m-%Y'
+    - if @item[:tags] && @item[:tags].any?
+      .tags
+        Tagged
+        = @item[:tags].join(', ')
+    - if @item[:tldr] && @item[:tldr] =~ /\S/
+      .tldr
+        TLDR:
+        = @item[:tldr]
+  = yield

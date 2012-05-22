@@ -1,0 +1,56 @@
+!!! 5
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %title= @item[:title]
+    %link{ rel: 'stylesheet', href: '/styles.css' }
+    - if @item[:tldr] && @item[:tldr] =~ /\S/
+      %meta{ name: 'description', value: @item[:tldr] }
+    - else
+      %meta{ name: 'description', value: 'The personal website of web developer, historian and all-round geek Arjan van der Gaag.' }
+    - if @item[:tags] && @item[:tags].any?
+      %meta{ name: 'keywords', value: @item[:tags].join(', ') }
+    %link{ rel: 'openid.server', href: 'http://www.myopenid.com/server' }
+    %link{ rel: 'openid.delegate', href: 'avdgaag.myopenid.com' }
+    %link{ rel: 'openid2.local_id', href: 'avdgaag.myopenid.com' }
+    %link{ rel: 'openid2.provider', href: 'http://www.myopenid.com/server' }
+    %meta{ :'http-equiv' => 'X-XRDS-Location', content: 'http://www.myopenid.com/xrds?username: avdgaag.myopenid.com' }
+    %link{ rel: 'alternate', title: 'arjanvandergaag.nl Atom feed', type: 'application/atom+xml', href: '/feed.xml' }
+    %meta{ name: 'viewport', content: 'width=device-width' }
+    :javascript
+      var _gaq = [['_setAccount', 'UA-80284-1'], ['_trackPageview']];
+      (function(d, t) {
+          var g = d.createElement(t),
+              s = d.getElementsByTagName(t)[0];
+          g.async = true;
+          g.src = '//www.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+  %body
+    #page
+      %header{ role: 'banner' }
+        %a.title{ href: '/', rel: 'home' } arjanvandergaag.nl
+        %form{ action: 'http://www.google.com/cse', id: 'cse-search-box' }
+          %input{ type: 'hidden', name: 'cx', value: '013424593838246409070:wnaxfzkihdk' }
+          %input{ type: 'hidden', name: 'ie', value: 'UTF-8' }
+          %input{ type: 'search', placeholder: 'Search site', name: 'q', size: '31', id: 'google-search-box' }
+      #content
+        %aside{ role: 'complementary' }
+          :md
+            ![Arjan van der Gaag](http://arjanvandergaag.nl/assets/avatar-cbcc5f4b558.png)
+
+            Arjan van der Gaag is a twentysomething web developer, historian
+            and all-round geek. This is his blog about Ruby, Rails, javascript,
+            software and the web.
+
+            #### Follow me
+
+            * [Github](https://github.com/avdgaag)
+            * [Twitter](http://twitter.com/avdgaag)
+            * [LinkedIn](http://www.linkedin.com/profile/view?id=5180777)
+            * [Feed](/feed.xml)
+        %section{ role: 'main' }
+          = yield
+      %footer{ role: 'contentinfo' }
+        %p &copy; copyright #{Time.now.year} Arjan van der Gaag.
+    %script{ src: '/script.js' }

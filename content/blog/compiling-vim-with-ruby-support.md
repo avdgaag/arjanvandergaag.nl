@@ -21,7 +21,7 @@ I decided to compile both against my system Ruby (1.8.7) as that is the least li
 
     $ rbenv shell system
     $ ruby -v
-    ruby 1.8.7 (2010-01-10 patchlevel 249) [universal-darwin11.0]
+    ruby 1.8.7 (2010-01-10 patchlevel 229) [universal-darwin11.0]
 
 ## Compiling Vim
 

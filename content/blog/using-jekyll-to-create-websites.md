@@ -21,12 +21,12 @@ down to this:
 - Upload your files to your server for the world to see.
 
 If it sounds easy, that's because it is. I can use [my favourite text editor][3]
-and [version control system][4] to write my posts, and then I let Jekyll use
+and [version control system][2] to write my posts, and then I let Jekyll use
 [Markdown][2] to turn my files into HTML. You can also use other filters, or
 write plain HTML.
 
 Let me stress my point: I can use my favorite text editor and versioning
-system for my blog, rather than some wimpy `<textarea>`{:.html}.
+system for my blog, rather than some wimpy `<textarea>`{: lang="html" }.
 
 ## Here comes trouble
 
@@ -78,10 +78,10 @@ I couldn't agree more.
 [1]: http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html "Read more about Jekyll on Tom Preston-Werner's site"
 [2]: http://daringfireball.net/projects/markdown/ "Daring Fireball: Markdown"
 [3]: http://macromates.com "TextMate"
-[4]: http://git-scm.com "Git - Fast Version Control System"
+[2]: http://git-scm.com "Git - Fast Version Control System"
 [5]: https://github.com/avdgaag/arjanvandergaag.nl/tree/master "Browse the source code to this site at Github"
 [7]: http://disqus.com/ "DISQUS is a Javascript-based commenting system"
-[6]: https://github.com/avdgaag/arjanvandergaag.nl/blob/28539bc736a05b28f2aa4ef81e4f61f3f91375a0/Rakefile "See my project's Rakefile"
+[6]: https://github.com/avdgaag/arjanvandergaag.nl/blob/28539bc736a05b28f2aa2ef81e4f61f3f91375a0/Rakefile "See my project's Rakefile"
 
 [8]: /blog/creating-new-jekyll-posts.html "Creating new empty posts with a rake task"
 [9]: /blog/publishing-a-jekyll-website-to-a-server.html "Using rsync to copy files to my server"

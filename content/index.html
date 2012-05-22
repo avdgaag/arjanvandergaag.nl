@@ -1,16 +1,14 @@
 ---
-title: Welcome
+title: Home
 ---
-<% with_articles do |articles| %>
-<h2 class="inverted">Recent <strong>blog posts</strong></h2>
-<ul class="posts">
-    <% articles.each do |article| %><li><%= link_to article[:title], article %> <time><%= published_at(article) %></time></li>
+<% articles_by_year.each do |year, articles| %>
+    <h2><%= year %></h2>
+    <ol class='articles'>
+    <% articles.each do |article| %>
+        <li>
+            <time datetime='<%= article[:created_at] %>'><%= attribute_to_time(article[:created_at]).strftime('%d %b') %></time>
+            <%= link_to article[:title], article %>
+        </li>
     <% end %>
-</ul>
+    </ol>
 <% end %>
-
-<h2 class="inverted">More about <strong>Arjan van der Gaag</strong></h2>
-
-<img src="assets/avatar.png" width="64" height="64" alt="Arjan van der Gaag" title="That’s me!" class="avatar">
-
-<p>I’m a twentysomething web developer and historian from the Netherlands. My hobbies include photography, cooking, music and snooker. I currently live in Helmond, the Netherlands. You can contact me at <a href="mailto:&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;">&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x40;&#x61;&#x72;&#x6A;&#x61;&#x6E;&#x76;&#x61;&#x6E;&#x64;&#x65;&#x72;&#x67;&#x61;&#x61;&#x67;&#x2E;&#x6E;&#x6C;</a>. See <a href="cv.html" title="Curriculum Vitae of Arjan van der Gaag">my resume (CV)</a>.</p>
