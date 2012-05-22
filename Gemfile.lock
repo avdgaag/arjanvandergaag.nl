@@ -28,6 +28,7 @@ GEM
       sass (>= 3.1)
     rubypants (0.2.0)
     sass (3.1.18)
+    systemu (2.5.0)
     typogruby (1.0.15)
       rubypants
 
@@ -49,4 +50,5 @@ DEPENDENCIES
   nokogiri (~> 1.5)
   rocks (~> 0.0.3)
   sass (~> 3.1)
+  systemu
   typogruby (~> 1.0)

@@ -14,6 +14,12 @@ title: 'arjanvandergaag.nl'
 author_name: 'Arjan van der Gaag'
 author_uri: 'http://arjanvnadergaag.nl'
 
+deploy:
+  public:
+    kind: rsync
+    dst: webfaction:~/webapps/jekyllblog
+    options: ['-gpPrtvz', '--delete-after']
+
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
 # “index.html”, but depending on the web server, this may be something else,
