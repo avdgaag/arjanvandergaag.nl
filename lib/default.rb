@@ -12,3 +12,12 @@ def articles_by_year
     output
   end
 end
+
+def page_title
+  title_format = case @item[:kind]
+                 when 'article' then '%s by Arjan van der Gaag'
+                 else
+                   '%s'
+                 end
+  Typogruby.improve(title_format % @item[:title])
+end

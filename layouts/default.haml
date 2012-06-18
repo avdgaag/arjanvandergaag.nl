@@ -2,7 +2,7 @@
 %html{ lang: 'en' }
   %head
     %meta{ charset: 'utf-8' }
-    %title= @item[:title]
+    %title= page_title
     %link{ rel: 'stylesheet', href: '/styles.css' }
     - if @item[:tldr] && @item[:tldr] =~ /\S/
       %meta{ name: 'description', value: @item[:tldr] }
