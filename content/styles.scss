@@ -29,6 +29,7 @@ h1 {
 }
 
 h2 {
+    @include leading(2);
     font-size: 18px;
 }
 
