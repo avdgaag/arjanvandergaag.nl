@@ -8,7 +8,7 @@ tags:
 created_at: 2012-06-20 21:00
 tldr: patterns and anti-patterns for the FactoryGirl library
 ---
-[FactoryGirl][1] is an awesome fixture replacement library that gives you a lot of power and flexibility, at the cost of more code to maintain and increaed mental overhead. It pays get to know it, so you can wield its flexibility to improve your tests and your productivity.
+[FactoryGirl][1] is an awesome fixture replacement library that gives you a lot of power and flexibility, at the cost of more code to maintain and increased mental overhead. It pays get to know it, so you can wield its flexibility to improve your tests and your productivity.
 {: .leader }
 
 ## Get the most out of FactoryGirl
