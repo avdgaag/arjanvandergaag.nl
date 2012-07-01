@@ -5,7 +5,7 @@ gem 'adsf',          '~> 1.1',   require: false
 gem 'fssm',          '~> 0.2',   require: false
 gem 'mime-types',    '~> 1.18',  require: false
 gem 'bourbon',       '~> 2.1',   require: false
-gem 'rocks',         '~> 0.0.3', require: false
+gem 'rocks',         '~> 0.0.5', require: false
 gem 'builder',       '~> 3.0'
 gem 'sass',          '~> 3.1'
 gem 'haml',          '~> 3.1'
