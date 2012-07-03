@@ -17,7 +17,32 @@ Typogruby is a simple Ruby gem that provides a set of text filters to handle som
 
 ## [rocks][] -- Sass mixins library for modular stylesheets
 
-[rocks]:     http://avdgaag.github.com/rocks
-[bol]:       http://avdgaag.github.com/bol
-[rpub]:      http://avdgaag.github.com/rpub
-[typogruby]: http://avdgaag.github.com/typogruby
+In order to keep stylesheets of non-trivial size maintainable, you need conventions and modularity, so you can stop worrying about the mundane and focus and what's special. Rocks is a little library of mixins for commonly used layouts and styles that can help DRY up your stylesheets.
+
+# Presentations
+
+* [Getting started with ruby][getting-started-with-ruby]: Lightning talk on the ruby program and some of its options.
+
+# Minor projects and frivolous things
+
+I keep some more stuff lying around in [my Github account][github]:
+
+* [pivot][] is a sensible command-line client for the Pivotal Tracker API. Its functional, but rough around the edges.
+* [dotfiles][] contains my collection of configuration files to set up my shell environment how I like it.
+* [oo][] is a little Javascript library to make working with classes and modules a little easier.
+* [nanoc-cachebuster][] is a plugin for the static site compiler Nanoc, providing asset fingerprinting for optimal client-side caching.
+* [subtrigger][] provides a DSL for writing hook scripts for Subversion repositories.
+* [mutil][] is a tiny Javascript library for simple DOM manipulation and OOP.
+
+[rocks]:             http://avdgaag.github.com/rocks
+[bol]:               http://avdgaag.github.com/bol
+[rpub]:              http://avdgaag.github.com/rpub
+[typogruby]:         http://avdgaag.github.com/typogruby
+[pivot]:             https://github.com/avdgaag/pivot
+[dotfiles]:          https://github.com/avdgaag/dotfiles
+[oo]:                https://github.com/avdgaag/oo
+[nanoc-cachebuster]: http://avdgaag.github.com/nanoc-cachebuster/
+[subtrigger]:        http://avdgaag.github.com/subtrigger/
+[mutil]:             http://avdgaag.github.com/mutil/
+[github]:            http://github.com/avdgaag
+[getting-started-with-ruby]: https://speakerdeck.com/u/avdgaag/p/getting-started-with-ruby
