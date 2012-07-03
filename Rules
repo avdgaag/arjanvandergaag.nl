@@ -24,6 +24,12 @@ compile '/feed/' do
   filter :erb
 end
 
+compile '/projects/' do
+  filter :kramdown, auto_ids: false, coderay_line_numbers: nil, coderay_tab_width: 2
+  filter :typogruby
+  layout 'default'
+end
+
 compile '*' do
   unless item.binary?
     filter :erb
@@ -48,7 +54,9 @@ route '/blog/*' do
 end
 
 route '*' do
-  item.identifier.chop + '.' + item[:extension]
+  extension = item[:extension]
+  extension = 'html' if extension == 'md'
+  item.identifier.chop + '.' + extension
 end
 
 layout '*', :haml, format: :html5
