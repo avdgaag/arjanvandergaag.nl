@@ -34,7 +34,7 @@ I keep some more stuff lying around in [my Github account][github]:
 * [subtrigger][] provides a DSL for writing hook scripts for Subversion repositories.
 * [mutil][] is a tiny Javascript library for simple DOM manipulation and OOP.
 
-[rocks]:             http://avdgaag.github.com/rocks
+[rocks]:             https://github.com/avdgaag/rocks
 [bol]:               http://avdgaag.github.com/bol
 [rpub]:              http://avdgaag.github.com/rpub
 [typogruby]:         http://avdgaag.github.com/typogruby
