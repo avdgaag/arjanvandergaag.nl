@@ -77,6 +77,14 @@ If [Haml][] is more your cup of tea, you could write:
       %h2= post.title
 {: lang="haml" }
 
+If you are not dealing with instances of `ActiveRecord::Base`, you can still
+use these helpers by defining some extra methods on your objects, as these
+classes and IDs are generated as `"#{object.param_key}_#{object.to_key}"`. Take
+a look at [`ActiveModel::Naming`][naming] and
+[`ActionController::RecordIdentifier`][record_identifier] for details.
+
+## Object inheritence
+
 You will usually find yourself needing to go one step further and apply
 object inheritence: a post can take many different forms on your site,
 ranging from full articles, excerpts in an index or links in a sidebar.
@@ -332,3 +340,5 @@ If you have any other tips, [let me know on Twitter][twitter]!
 [Sass]: http://sass-lang.com
 [twitter]: http://twitter.com/avdgaag
 [Haml]: http://haml.info
+[record_identifier]: http://api.rubyonrails.org/classes/ActionController/RecordIdentifier.html
+[naming]: http://api.rubyonrails.org/classes/ActiveModel/Naming.html
