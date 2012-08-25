@@ -27,22 +27,24 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
 
 I keep some more stuff lying around in [my Github account][github]:
 
-* [pivot][] is a sensible command-line client for the Pivotal Tracker API. Its functional, but rough around the edges.
+* [Nawl][] is a silly little Gem for applying the null object-pattern to Rails models.
+* [rupt][] is a sensible command-line client for the Pivotal Tracker API. Its functional, but rough around the edges.
 * [dotfiles][] contains my collection of configuration files to set up my shell environment how I like it.
 * [oo][] is a little Javascript library to make working with classes and modules a little easier.
 * [nanoc-cachebuster][] is a plugin for the static site compiler Nanoc, providing asset fingerprinting for optimal client-side caching.
 * [subtrigger][] provides a DSL for writing hook scripts for Subversion repositories.
 * [mutil][] is a tiny Javascript library for simple DOM manipulation and OOP.
 
-[rocks]:             https://github.com/avdgaag/rocks
+[rocks]:             http://avdgaag.github.com/rocks
 [bol]:               http://avdgaag.github.com/bol
 [rpub]:              http://avdgaag.github.com/rpub
 [typogruby]:         http://avdgaag.github.com/typogruby
-[pivot]:             https://github.com/avdgaag/pivot
+[rupt]:              http://avdgaag.github.com/pivot
 [dotfiles]:          https://github.com/avdgaag/dotfiles
 [oo]:                https://github.com/avdgaag/oo
 [nanoc-cachebuster]: http://avdgaag.github.com/nanoc-cachebuster/
 [subtrigger]:        http://avdgaag.github.com/subtrigger/
 [mutil]:             http://avdgaag.github.com/mutil/
+[nawl]:              https://avdgaag.github.com/avdgaag/nawl/
 [github]:            http://github.com/avdgaag
 [getting-started-with-ruby]: https://speakerdeck.com/u/avdgaag/p/getting-started-with-ruby
