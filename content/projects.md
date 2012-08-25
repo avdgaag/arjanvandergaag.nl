@@ -39,12 +39,12 @@ I keep some more stuff lying around in [my Github account][github]:
 [bol]:               http://avdgaag.github.com/bol
 [rpub]:              http://avdgaag.github.com/rpub
 [typogruby]:         http://avdgaag.github.com/typogruby
-[rupt]:              http://avdgaag.github.com/pivot
+[rupt]:              http://avdgaag.github.com/rupt
 [dotfiles]:          https://github.com/avdgaag/dotfiles
 [oo]:                https://github.com/avdgaag/oo
 [nanoc-cachebuster]: http://avdgaag.github.com/nanoc-cachebuster/
 [subtrigger]:        http://avdgaag.github.com/subtrigger/
 [mutil]:             http://avdgaag.github.com/mutil/
-[nawl]:              https://avdgaag.github.com/avdgaag/nawl/
+[nawl]:              https://github.com/avdgaag/nawl/
 [github]:            http://github.com/avdgaag
 [getting-started-with-ruby]: https://speakerdeck.com/u/avdgaag/p/getting-started-with-ruby
