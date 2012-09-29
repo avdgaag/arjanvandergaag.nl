@@ -27,6 +27,8 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
 
 I keep some more stuff lying around in [my Github account][github]:
 
+* [ExampleGroupTimer][] is an RSpec formatter to find slow example groups in your spec suite.
+* [Gista][] is a command-line Gist client and Ruby library.
 * [Nawl][] is a silly little Gem for applying the null object-pattern to Rails models.
 * [rupt][] is a sensible command-line client for the Pivotal Tracker API. Its functional, but rough around the edges.
 * [dotfiles][] contains my collection of configuration files to set up my shell environment how I like it.
@@ -47,4 +49,6 @@ I keep some more stuff lying around in [my Github account][github]:
 [mutil]:             http://avdgaag.github.com/mutil/
 [nawl]:              https://github.com/avdgaag/nawl/
 [github]:            http://github.com/avdgaag
+[ExampleGroupTimer]: https://github.com/avdgaag/example_group_timer
+[Gista]:             http://avdgaag.github.com/gista
 [getting-started-with-ruby]: https://speakerdeck.com/u/avdgaag/p/getting-started-with-ruby
