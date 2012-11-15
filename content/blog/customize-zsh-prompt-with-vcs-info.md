@@ -46,7 +46,7 @@ First, set the general format string of your `vcs_info_msg_0` variable:
 
 This is, admittedly, a little hairy. Let's remove the color codes:
 
-    zstyle ':vcs_info:git*' formats "%s  %r/%S %b %m%u%c% "
+    zstyle ':vcs_info:git*' formats "%s  %r/%S %b %m%u%c "
 
 That's a lot clearer. This would look like this:
 
@@ -77,7 +77,7 @@ This prompt includes:
 
 There's a special format string for 'actions' -- which in practice means a special format for when Git is currently performing a merge or rebase. Mine is identical to the normal format, but with the action string added:
 
-    zstyle ':vcs_info:git*' formats "%s  %r/%S %b (%a) %m%u%c% "
+    zstyle ':vcs_info:git*' formats "%s  %r/%S %b (%a) %m%u%c "
 
 Which would result in something like:
 
