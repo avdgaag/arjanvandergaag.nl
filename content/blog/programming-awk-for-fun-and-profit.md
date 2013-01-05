@@ -15,6 +15,9 @@ pipelines consisting of `sed`, `grep`, `cut`, `wc` and `tr`. It offers a
 concise language for text processing that makes it easier to use than Perl or
 Ruby. And above all, Awk is so small, it is easy to learn.
 
+Awk's main purpose is to extract information from structured text, and report
+it in newly combined or aggregated ways.
+
 ## The components of an Awk program
 
 ### Records and fields
@@ -57,14 +60,18 @@ By boolean expression: `$2 ~ /foo/`
 
 By boolean expression: `NR % 2`
 : Matches all uneven records (lines), because `NR` is a special variable
-containing the current record number and `0` is falsy.
+  containing the current record number and `0` is falsy.
 
 By range: `/foo/, /bar/`
 : Using the comma notation, this matches every record from the first to contain
-`foo` up to and including the next that contains `bar`.
+  `foo` up to and including the next that contains `bar`. For example, you can
+  print a table definition from a Ruby on Rails db/schema.rb file using
+  `awk '/create_table "users"/, /^  end/' db/schema.rb`.
 
 `BEGIN` and `END`
-: run a block of code before or after looping over all the input.
+: Run a block of code before or after looping over all the input. This is
+  useful for setting up arrays, modifying special variables and presenting
+  aggregated results.
 
 ### Actions
 
@@ -150,6 +157,83 @@ programs in an executable file. In a file called `usernames.awk`:
 
 Make the file executable with `chmod +x usernames.awk` and invoke it with
 `./usernames.awk /etc/passwd`.
+
+## Example program
+
+Here is an example (prettified) script that parses some server log files,
+containing information about products fetched from a remote server and the
+total amount of time that took. We want to create a histogram showing time
+intervals and the total number of products in that category. The logs contain
+some lines that look like this:
+
+    [CatalogItem] Retrieved 12 product, expected 46 (1837.8ms)
+
+This program is composed of several Awk scripts piped together, with a `sort`
+thrown in as well.
+
+    $ awk -F '[ ()]|ms' '
+      # Construct an array of categories of average request times
+      # and the number of products in that category.
+      /\[CatalogItem\] Retrieved/ {
+        number_of_products = $6
+        total_request_time = $8
+        average_response_time = nummber_of_products / total_request_time
+        categories[int(average_response_time)] += number_of_products
+      }
+
+      # When all lines have been read, print the results
+      END {
+        for(label in categories) {
+          print label, categories[l]
+        }
+      }
+      ' production.log
+      |
+      awk '
+        BEGIN {
+          max = 0
+        }
+        # Loop over all records to find the highest frequency
+        # in the histogram
+        {
+          if($2 > max) {
+            max = $2
+          }
+          categories[$1] = $2
+        }
+        # Print the histogram again, but relate all frequencies to the
+        # maximum we found
+        END {
+          for(label in categories) {
+            printf("%5d %d\n", label, categories[label] / max)
+          }
+        }
+      '
+      |
+      awk '
+        {
+          # Construct a visual bar sized by the histogram frequency
+          # in the second column. Note that Awk's string concatenation
+          # operator is the space.
+          bar = ""
+          size = $2
+          while(size-- > 0) {
+            bar = bar "#"
+          }
+
+          # Print the original histogram labels and the generated bar.
+          printf("%6d %s\n", $1, bar)
+        }
+      '
+      |
+      sort -n
+
+This program will output something like:
+
+         0 ##
+       100 ######
+       200 ###############
+       300 #########
 
 ## Conclusion
 
