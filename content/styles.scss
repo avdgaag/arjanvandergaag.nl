@@ -52,9 +52,9 @@ pre {
     background-color: #f3f3f3;
     font-size: 12px;
     line-height: 16px;
+    border-radius: 3px;
     @include outset(10px);
     @include voutset(10px);
-    @include border-radius(3px);
 }
 
 a {
