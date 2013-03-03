@@ -15,7 +15,7 @@ author_name: 'Arjan van der Gaag'
 author_uri: 'http://arjanvnadergaag.nl'
 
 deploy:
-  public:
+  default:
     kind: rsync
     dst: webfaction:~/webapps/jekyllblog
     options: ['-gpPrtvz', '--delete-after']
