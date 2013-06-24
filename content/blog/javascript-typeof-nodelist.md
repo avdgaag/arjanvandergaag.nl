@@ -8,14 +8,14 @@ title: Javascript typeof Nodelist
 ---
 Beware of Javascript’s quirky `typeof`:
 
-{: lang="js" }
+{: .language-js }
     typeof document.getElementsByTagName('p')
 
 This will return `'function'`, which I did not expect. What _is_ returned is a `NodeList`, which behaves like an array, identifies itself as a function, but really is neither.
 
 If you want to detect a `NodeList` you're better off with feature detection:
 
-{: lang="js" }
+{: .language-js }
     var isNodelist = (typeof myvar.length != 'undefined' &&
       typeof myvar.item != 'undefined')
 

@@ -11,13 +11,13 @@ There's a problem with Rails resourceful routes. It is very easy to generate sta
 Matching fancy _incoming_ routes is easy enough:
 
     get '/posts/:year/:month/:id' => 'posts#show'
-{: lang="ruby" }
+{: .language-ruby }
 
 Our application will now correctly match URLs like `/posts/2011/3/1-hello-world`, but see what happens when we try to generate a polymorphic route:
 
     link_to(post.title, post)
     # => <a href="/posts/1">hello, world</a>
-{: lang="ruby" }
+{: .language-ruby }
 
 This is _not_ what we want. Of course, we could set `:year` and `:month` parameters manually, but that's not very DRY. We could also try to override the `post_url` and `post_path` methods, but  this does not cover all use cases.
 
@@ -32,7 +32,7 @@ Ideally, we would like to return a hash of parameters for the `to_param` method:
           id: id }
       end
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 Rails would then have to interpolate these params into the generated URL. Alas, this doesn't work.
 
@@ -54,7 +54,7 @@ We can hack around it, tough, by overriding `url_for`:
       end
       helper_method :url_for
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 This works fine for the most part -- despite being a terrible hack. The `helper_method :url_for` line does, however, override `ActionView`'s normal behaviour of generating only paths instead of full URLs. To get around this, we can create a new helper method that uses the controller method:
 
@@ -66,13 +66,13 @@ This works fine for the most part -- despite being a terrible hack. The `helper_
         )
       end
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 Now all URLs are properly generated:
 
     link_to post.title, post
     # => <a href="/2011/2/1-hello,world">Hello, world</a>
-{: lang="ruby" }
+{: .language-ruby }
 
 ## A note of warning
 

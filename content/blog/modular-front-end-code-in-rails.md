@@ -44,7 +44,7 @@ The modularized front-end revolves around identifying the building blocks of you
         <%= markdown post.body %>
       </div>
     <% end %>
-{: lang="erb" }
+{: .language-erb }
 
 This might generate the following output:
 
@@ -60,7 +60,7 @@ This might generate the following output:
         <p>baz qux</p>
       </div>
     </article>
-{: lang="html" }
+{: .language-html }
 
 Rails gives us a convention for naming and identifying objects. You would
 typically provide styles for the `.post` class, and attach javascript
@@ -75,7 +75,7 @@ If [Haml][] is more your cup of tea, you could write:
 
     %div[post]
       %h2= post.title
-{: lang="haml" }
+{: .language-haml }
 
 If you are not dealing with instances of `ActiveRecord::Base`, you can still
 use these helpers by defining some extra methods on your objects, as these
@@ -93,14 +93,14 @@ Rails can still help us:
     <%- content_tag_for(:article, @posts, :excerpt) do |post| %>
       ...
     <% end %>
-{: lang="erb" }
+{: .language-erb }
 
 Will give us:
 
     <article id="excerpt_post_123" class="excerpt_post">
       ...
     </article>
-{: lang="html" }
+{: .language-html }
 
 Although I would have preferred dashes insteads of underscores, Rails still
 makes a trivial decision on how to name stuff for us, so let's stick with it.
@@ -114,7 +114,7 @@ stylesheet. It is now trivial to render an excerpt post object anywere in
 your application:
 
     <%= render partial: 'posts/excerpt_post', collection: @posts %>
-{: lang="erb" }
+{: .language-erb }
 
 Should you create custom Ruby objects — such as decorated models or
 presenters that group multiple persistence objects into a single business
@@ -127,12 +127,12 @@ render them:
         'posts/article_post'
       end
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 Which would allow you to render an instance of `ArticlePresenter` like so:
 
     <%= render article_presenter %>
-{: lang="erb" }
+{: .language-erb }
 
 …and have it use the `posts/_article_post.html.erb` template.
 
@@ -146,7 +146,7 @@ stylesheet, or you could use `ActiveRecord::Base#becomes`:
     <%= content_tag_for(:div, @post.becomes(Node)) do %>
       <h2><%= @post.title %></h2>
     <% end %>
-{: lang="erb" }
+{: .language-erb }
 
 `becomes` will give you a new `Node` object with all the attributes of the
 `@post` object, so you will end up with the proper `.node` class on your
@@ -154,7 +154,7 @@ object. You can also use this trick to render child class using the partial
 that would have been used for the parent class:
 
     <%= render @posts.map { |p| p.becomes(Node) } %>
-{: lang="erb" }
+{: .language-erb }
 
 See the [documentation on `#becomes`][becomes] and read [Henrik Nyh]'s notes on [using `becomes` with form helpers][using-becomes].
 
@@ -175,7 +175,7 @@ Now you've got your `.post` object and various sub types, such as `.excerpt_post
         margin: 0;
       }
     }
-{: lang="css" }
+{: .language-css }
 
 Which would result in something like:
 
@@ -186,7 +186,7 @@ Which would result in something like:
     .excerpt_post h2 {
       margin: 0;
     }
-{: lang="css" }
+{: .language-css }
 
 With Sass 3.2, you might even keep the base `.post` class from the final style sheet — since you will most probably never use it on its own. Just use a placeholder selector:
 
@@ -201,7 +201,7 @@ With Sass 3.2, you might even keep the base `.post` class from the final style s
       @extend %post;
       font-size: 14px;
     }
-{: lang="css" }
+{: .language-css }
 
 This leads to the base class not being output, only the extensions:
 
@@ -214,7 +214,7 @@ This leads to the base class not being output, only the extensions:
     .article_post {
       font-size: 14px;
     }
-{: lang="css" }
+{: .language-css }
 
 ## Catches
 
@@ -223,7 +223,7 @@ Much like object-oriented programming, we can define generic styles for all post
     <li id="link_<%= post.id -%>" class="link">
       <%= link_to post.title, post %>
     </li>
-{: lang="erb" }
+{: .language-erb }
 
 This is a nuisance, but it would be trivial to write a helper method for it.
 I haven't come across it much in practice.
@@ -244,7 +244,7 @@ share styles across object types:
     .link_comment {
       @include sidebar_link;
     }
-{: lang="css" }
+{: .language-css }
 
 ## Organising your files
 
@@ -294,7 +294,7 @@ include them all in one fell swoop, rather than importing each by hand in the
      * in app/assets/stylesheets/application.css
      * require_tree .
      */
-{: lang="css" }
+{: .language-css }
 
 Done! But Sprockets, alas, will first compile every file and _then_ concatenate
 them together. Now Sass will no longer be able to use mixins and variables from
@@ -305,7 +305,7 @@ handle the importing for your:
 
     // in app/assets/stylesheets/application.css.scss
     @import "modules/**/*"
-{: lang="css" }
+{: .language-css }
 
 This approach imports your modules sorted alphabetically, which is a great way
 to foce yourself to write truly independent modules that do not depend on the

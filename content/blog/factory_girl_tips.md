@@ -25,7 +25,7 @@ more natural and flexible way of sharing common behaviour.
 For example, say you have a `Post` and a `Page` object that both have a
 publication date. You could use inheritance to create various combinations:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :post do
         title 'New post'
@@ -57,7 +57,7 @@ publication date. You could use inheritance to create various combinations:
 
 The repetition should be obvious. Traits can make this DRY:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :post do
         title 'New post'
@@ -95,7 +95,7 @@ attributes and callbacks, which do get to access them.
 
 Consider an example of a blog post with comments:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :comment do
         author 'Anonymous'
@@ -119,7 +119,7 @@ It is trivial to create a post with three comments by applying the
 `with_comments` trait to a factory invocation. But what if we wanted to adjust
 the number of comments? We can use an ignored attribute:
 
-{: lang="ruby" }
+{: .language-ruby }
     trait :with_comments do
       ignore do
         number_of_comments 3
@@ -134,7 +134,7 @@ Note that a special second argument is passed to the callback block, the
 evaluator, which knows about the ignored attributes. Now you can simply pass in
 the ignored attribute like you do a regular attribute:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.create :post, :with_comments, :number_of_comments => 4
 
 Make trivial variations possible with ignored attributes removes the need for
@@ -158,7 +158,7 @@ class. While normally FactoryGirl can infer the factory name from the
 association name, in this case it will look for a `author` factory in vain. So,
 alias your `user` factory:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :user, :aliases => [:author] do
         username 'anonymous'
@@ -178,7 +178,7 @@ made about it. This might be a sign of bad design, but could very well be
 unavoidable. In case of the latter, consider creating traits and factories that
 preload such associations for you, as with the example of a post with comments:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :post do
         title 'New post'
@@ -202,7 +202,7 @@ One common pattern is to use a fake data library (like [Faker][2] or
 for names, email addresses or telephone numbers, but it serves no real purpose.
 Creating unique values is simple enough with sequences:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       sequence(:title) { |n| "Example title #{n}" }
     
@@ -246,7 +246,7 @@ else (i.e. you, four weeks from now) changing the default factory values. When
 you are testing, you want to test for explicit values your test controls. A
 test like this is silly:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :post do
         title { Forgery(:lorem_ipsum).words(5) }
@@ -266,7 +266,7 @@ a phrase that also happens to occur somewhere else on the page? If your test
 value is random or outside your control, how can you prove something about it?
 Consider this improved example and its increased readability:
 
-{: lang="ruby" }
+{: .language-ruby }
     it 'should show the post title on the page' do
       post = FactoryGirl.create :post, :title => 'My example post'
       visit '/blog'
@@ -282,7 +282,7 @@ Dynamic attribute values are evaluated on invocation time rather than
 evaluation time. This allows you to use, for example, the current time in your
 factories:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :post do
         created_at Time.now # => will be the same for every object
@@ -293,7 +293,7 @@ factories:
 This does not mean, however, that you should alway use dynamic attribute values
 when a simple static value will do fine:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :post do
         title { 'My new post' } # silly!
@@ -311,7 +311,7 @@ attributes between the static attributes.
 When using Rails, FactoryGirl is smart enough to know how to set up
 associations for you. So don't do this:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :comment do
         post { FactoryGirl.create :post }
@@ -321,7 +321,7 @@ associations for you. So don't do this:
 Usually you can just use another factory name as an attribute, or use the
 `association` method to customise it:
 
-{: lang="ruby" }
+{: .language-ruby }
     FactoryGirl.define do
       factory :comment do
         post

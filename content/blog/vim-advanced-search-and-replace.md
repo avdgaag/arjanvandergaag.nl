@@ -99,7 +99,7 @@ equivalent to the following program:
       end
       print $_
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 Finally, the regular expression range syntax (also known as the [flip-flop
 operator][flipflop]) is one of those awesome Ruby tricks few people know:
@@ -118,7 +118,7 @@ with an incrementing number. I wanted to turn this:
     <p>Lorem ipsum</p>
     <h3>Heading 2</h3>
     <p>Lorem ipsum</p>
-{: lang="html" }
+{: .language-html }
 
 …into this:
 
@@ -126,7 +126,7 @@ with an incrementing number. I wanted to turn this:
     <p>Lorem ipsum</p>
     <h3>2. Heading 2</h3>
     <p>Lorem ipsum</p>
-{: lang="html" }
+{: .language-html }
 
 I accomplished it with Vim's search-and-replace capabilities and a little
 vimscript, taking advantage of `\=`, which allows us to [use an expression in
@@ -163,7 +163,7 @@ end result:
     <p>Lorem ipsum</p>
     <h3>1Heading 2</h3>
     <p>Lorem ipsum</p>
-{: lang="html" }
+{: .language-html }
 
 Vim has inserted the same value of `i` on every match. Here's why: `%s` is a
 _single_ operation on a range (`%`) that includes the entire document. If only
@@ -181,7 +181,7 @@ the pattern from the global command. Miraculously, it works:
     <p>Lorem ipsum</p>
     <h3>2Heading 2</h3>
     <p>Lorem ipsum</p>
-{: lang="html" }
+{: .language-html }
 
 We just need to add a little extra text to the substitution string:
 
@@ -194,7 +194,7 @@ As you can see, we can concatenate the string `". "` to our counter using the
     <p>Lorem ipsum</p>
     <h3>2. Heading 2</h3>
     <p>Lorem ipsum</p>
-{: lang="html" }
+{: .language-html }
 
 Another great success!
 

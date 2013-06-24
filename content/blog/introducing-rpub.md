@@ -54,7 +54,7 @@ Then create a new directory for your project, write your next great novel in a `
     subject: History
     rights: copyright 2012. All rights reserved.
     description: My awesome history thesis.
-{: lang="yaml" }
+{: .language-yaml }
 
 That should do it. Compile your ebook:
 

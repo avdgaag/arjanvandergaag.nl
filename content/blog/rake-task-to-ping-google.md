@@ -18,7 +18,7 @@ changes to my server.
 
 I've set up the following Rake task to handle pinging Google for me:
 
-{: lang="ruby" }
+{: .language-ruby }
     desc 'Notify Google of the new sitemap'
     task :sitemap do
         require 'net/http'

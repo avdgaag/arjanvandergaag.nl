@@ -8,7 +8,7 @@ title: Quick text manipulation with Ruby
 ---
 Here's a nice trick I like to use to quickly transform some random piece of text using Ruby and Textmate:
 
-{: lang="ruby" }
+{: .language-ruby }
     string = DATA.read
     # do stuff here...
     __END__
@@ -20,7 +20,7 @@ I use this all the time to transform plain text into HTML, crunch some numbers o
 
 Here's a quick example to convert ugly plain-text fractions in an HTML page to pretty entities:
 
-{: lang="ruby" }
+{: .language-ruby }
     input = DATA.read
     {
       '1/2' => '&frac12;',

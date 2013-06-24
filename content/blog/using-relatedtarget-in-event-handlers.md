@@ -16,7 +16,7 @@ Now you can check for the target element and do all kinds of nifty stuff, and ge
 
 Example jQuery code:
 
-{: lang="js" }
+{: .language-js }
     $('nav a').mouseout(function(e) {
         var submenu = $('.submenu', this.parentNode);
         if(e.relatedTarget != submenu) {

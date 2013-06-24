@@ -26,7 +26,7 @@ the date itself.
 
 I use the following Rake task to create post files:
 
-{: lang="ruby" }
+{: .language-ruby }
     desc 'create a new draft post'
     task :post do
       title = ENV['TITLE']
@@ -70,7 +70,7 @@ With the `published` flag set to `false` **I can keep my drafts in my Git
 repository without actually publishing them**. I can find all draft posts
 using `rake drafts`:
 
-{: lang="ruby" }
+{: .language-ruby }
     desc 'List all draft posts'
     task :drafts do
       puts `find ./_posts -type f -exec grep -H 'published: false' {} \\;`

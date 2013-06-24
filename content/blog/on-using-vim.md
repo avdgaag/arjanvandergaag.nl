@@ -92,7 +92,7 @@ tComment. One notable plug-in is [sparkup][], which allows you to write HTML
 quite quickly:
 
     div>ul.menu>li*3>a[href="#"]{Item}
-{: lang="css" }
+{: .language-css }
 
 ...turns into:
 
@@ -103,7 +103,7 @@ quite quickly:
             <li><a href="#">Item</a></li>
         </ul>
     </div>
-{: lang="html" }
+{: .language-html }
 
 Check out [sparkup at Github][sparkup].
 

@@ -43,7 +43,7 @@ Let's create a very simple Sinatra application to search the bol.com store (see
     get '/' do
       erb :search
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 Add a simple form view:
 
@@ -51,7 +51,7 @@ Add a simple form view:
       <label>Query: <input type="text" name="q"></label>
       <input type="submit">
     </form>
-{: lang="html" }
+{: .language-html }
 
 Run the app to confirm everything works:
 
@@ -64,7 +64,7 @@ doesn't do anything yet. Let's add a search action:
       @products = []
       erb :results
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 And a view to display results:
 
@@ -85,7 +85,7 @@ search some products:
       @products = Bol.search params[:q]      
       erb :results
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 Searching the bol.com website is as easy as `Bol.search(params[:q])`. Restart
 the app, and try it out. You will get an error, complaining that the gem is not
@@ -96,7 +96,7 @@ can be used to sign our requests:
       c.access_key = '123256789'
       c.secret     = 'abcdefghi'
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 When you restart the application, you should be able to search bol.com by
 keyword and get a list of titles back. 
@@ -110,7 +110,7 @@ route for that:
       @product = Bol::Product.find params[:id]
       erb :product
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 We can use `Product#find` to find a particular product on bol.com by its
 internal ID. We'll create a link to the detail page in our search results:
@@ -159,7 +159,7 @@ search to our search form:
         .search params[:q]      
       erb :results
     end
-{: lang="ruby" }
+{: .language-ruby }
 
 And in the view:
 
@@ -194,7 +194,7 @@ URL, given a specific referral ID:
     product = Bol.find(params[:id])
     product.referral_link('my-site-id')
     # => "http://..."
-{: lang="ruby" }
+{: .language-ruby }
 
 ## Other features
 
