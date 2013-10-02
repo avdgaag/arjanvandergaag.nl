@@ -40,7 +40,7 @@ I keep some more stuff lying around in [my Github account][github]:
 * [mutil][] is a tiny Javascript library for simple DOM manipulation and OOP.
 
 [rocks]:             http://avdgaag.github.com/rocks
-[rocks]:             https://github.com/avdgaag/arrate
+[Arrate]:            https://github.com/avdgaag/arrate
 [bol]:               http://avdgaag.github.com/bol
 [rpub]:              http://avdgaag.github.com/rpub
 [typogruby]:         http://avdgaag.github.com/typogruby
