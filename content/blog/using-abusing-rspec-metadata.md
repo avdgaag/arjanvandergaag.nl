@@ -218,7 +218,7 @@ method that would make the altered context of the example explicit:
       end
 
       when_signed_in_as :jack do
-        it 'changes my username', signed_in_as: :jack do
+        it 'changes my username' do
           # ...
         end
       end
