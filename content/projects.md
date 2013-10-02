@@ -27,6 +27,8 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
 
 I keep some more stuff lying around in [my Github account][github]:
 
+* [Bitten][] is a simple experiment for bit field attributes for Ruby objects.
+* [Arrate][] is a set of custom templates to make better use of Rails generators.
 * [ExampleGroupTimer][] is an RSpec formatter to find slow example groups in your spec suite.
 * [Gista][] is a command-line Gist client and Ruby library.
 * [Nawl][] is a silly little Gem for applying the null object-pattern to Rails models.
@@ -38,6 +40,7 @@ I keep some more stuff lying around in [my Github account][github]:
 * [mutil][] is a tiny Javascript library for simple DOM manipulation and OOP.
 
 [rocks]:             http://avdgaag.github.com/rocks
+[rocks]:             https://github.com/avdgaag/arrate
 [bol]:               http://avdgaag.github.com/bol
 [rpub]:              http://avdgaag.github.com/rpub
 [typogruby]:         http://avdgaag.github.com/typogruby
@@ -51,4 +54,5 @@ I keep some more stuff lying around in [my Github account][github]:
 [github]:            http://github.com/avdgaag
 [ExampleGroupTimer]: https://github.com/avdgaag/example_group_timer
 [Gista]:             http://avdgaag.github.com/gista
+[Bitten]:            http://avdgaag.github.com/bitten
 [getting-started-with-ruby]: https://speakerdeck.com/u/avdgaag/p/getting-started-with-ruby
