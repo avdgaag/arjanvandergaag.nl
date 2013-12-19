@@ -3,6 +3,22 @@ title: Projects
 ---
 # Projects
 
+## [Seasoned Git][] -- Practical recipes for the intermediate Git user
+
+With over 80 practical recipes for real-world scenarios, Seasoned Git will help
+you get out of confusing situations, understand what’s going on, and improve
+your workflow. Seasoned Git will be sold as an ebook suited for iPad, Kindle and
+desktop reading.
+
+<div class="createsend-button" style="height:27px;display:inline-block;"
+data-listid="r/F3/209/408/5D17605DCE003CAF">
+</div><script type="text/javascript">(function () { var e =
+document.createElement('script'); e.type = 'text/javascript'; e.async = true;
+e.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+'://btn.createsend1.com/js/sb.min.js?v=2'; e.className = 'createsend-script';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e,
+s); })();</script>
+
 ## [bol][] -- Ruby gem for the bol.com API
 
 The bol gem is a wrapper around the bol.com developer API, allowing you to query their webshop for products and retrieve all sorts of product details and imagery, and list popular products by category. It integrates with their affiliate marketing program.
@@ -56,3 +72,4 @@ I keep some more stuff lying around in [my Github account][github]:
 [Gista]:             http://avdgaag.github.com/gista
 [Bitten]:            http://avdgaag.github.com/bitten
 [getting-started-with-ruby]: https://speakerdeck.com/u/avdgaag/p/getting-started-with-ruby
+[Seasoned Git]:      http://seasonedgit.com
