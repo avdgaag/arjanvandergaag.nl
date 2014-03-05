@@ -10,11 +10,6 @@
       %meta{ name: 'description', value: 'The personal website of web developer, historian and all-round geek Arjan van der Gaag.' }
     - if @item[:tags] && @item[:tags].any?
       %meta{ name: 'keywords', value: @item[:tags].join(', ') }
-    %link{ rel: 'openid.server', href: 'http://www.myopenid.com/server' }
-    %link{ rel: 'openid.delegate', href: 'http://avdgaag.myopenid.com' }
-    %link{ rel: 'openid2.local_id', href: 'http://avdgaag.myopenid.com' }
-    %link{ rel: 'openid2.provider', href: 'http://www.myopenid.com/server' }
-    %meta{ :'http-equiv' => 'X-XRDS-Location', content: 'http://www.myopenid.com/xrds?username: avdgaag.myopenid.com' }
     %link{ rel: 'alternate', title: 'arjanvandergaag.nl Atom feed', type: 'application/atom+xml', href: '/feed.xml' }
     %meta{ name: 'viewport', content: 'width=device-width' }
     :javascript
