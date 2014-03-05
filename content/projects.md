@@ -37,7 +37,12 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
 
 # Presentations
 
-* [Getting started with ruby][getting-started-with-ruby]: Lightning talk on the ruby program and some of its options.
+* [Getting started with ruby][getting-started-with-ruby]: Lightning talk on the
+  ruby program and some of its options.
+* [Say Hello to Elixir][elixir-presentation]: a talk I gave at [The Guild][]
+  about Elixir and learning from functional programming.
+* I organise [The Guild][], an event for the agile software community in
+  Eindhoven.
 
 # Minor projects and frivolous things
 
@@ -73,3 +78,5 @@ I keep some more stuff lying around in [my Github account][github]:
 [Bitten]:            http://avdgaag.github.com/bitten
 [getting-started-with-ruby]: https://speakerdeck.com/u/avdgaag/p/getting-started-with-ruby
 [Seasoned Git]:      http://seasonedgit.com
+[elixir-presentation]: https://speakerdeck.com/avdgaag/say-hello-to-elixir
+[The Guild]:         http://theguild.nl
