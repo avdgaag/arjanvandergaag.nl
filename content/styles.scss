@@ -9,7 +9,7 @@ $color-blue: #0071BC;
 body {
     font-size: $size-text;
     line-height: $line;
-    font-family: $helvetica;
+    font-family: 'clear_sans_lightregular', $helvetica;
     color: #444;
 }
 
@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, dl, pre {
 }
 
 h1, h2 {
-    font-family: $georgia;
+    font-family: 'clear_sansbold', $helvetica;
 }
 
 h1 {
@@ -39,6 +39,7 @@ h2 {
 
 h3 {
     font-size: 14px;
+    font-family: 'clear_sansregular', $helvetica;
 }
 
 h4 {
@@ -96,7 +97,7 @@ aside ul {
 }
 
 dt {
-    font-weight: bold;
+    font-family: 'clear_sansbold', $helvetica;
 }
 
 dd {
@@ -185,12 +186,13 @@ body {
     @include link-colors-lighten($color-blue);
     @include link-hover;
     display: block;
-    font-weight: bold;
+    font-family: 'clear_sansbold', $helvetica;
     line-height: lines(2);
 }
 
 p.leader {
     font-size: 16px;
+    font-family: 'clear_sansregular', $helvetica;
     color: #777;
 }
 
@@ -213,6 +215,7 @@ aside img {
     border: 1px solid #111;
     width: 128px;
     height: 128px;
+    border-radius: 50%;
 }
 
 form {

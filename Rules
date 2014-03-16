@@ -5,6 +5,8 @@ SASS_LOAD_PATHS = [
   File.join(`bundle show rocks`.chomp,   *%w[app assets stylesheets])
 ]
 
+passthrough '/assets/*'
+
 compile '/styles/' do
   filter :sass, syntax: :scss, load_paths: SASS_LOAD_PATHS
 end
