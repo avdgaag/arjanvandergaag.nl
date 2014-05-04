@@ -46,9 +46,9 @@ First, set the general format string of your `vcs_info_msg_0` variable:
 
 This is, admittedly, a little hairy. Let's remove the color codes:
 
-    zstyle ':vcs_info:git*' formats "%s  %r/%S %b %m%u%c "
+    zstyle ':vcs_info:git*' actionformats "%s  %r/%S %b %m%u%c "
 
-That's a lot clearer. This would look like this:
+That's a lot clearer. This would look like this[^1]:
 
     git my_project/. master %
 
@@ -99,3 +99,6 @@ The `vcs_info` format string, especially with lots of color codes, is not all th
 
 [vcs_info]: http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
 [ZSH]: http://www.zsh.org
+
+[^1]: Note that in order to use colours in your prompts, you'll also need the
+      line  `autoload -U colors && colors` in your `.zshrc`.
