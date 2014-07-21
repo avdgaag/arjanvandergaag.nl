@@ -185,7 +185,86 @@ meaningful names for your factories and traits. I've found this effect very
 helpful, as they have the unintended side effect of also clarifying my unit
 tests.
 
+## 4. Time travelling scenarios
+
+Sometimes, your scenarios are dependent on a particular date and time. For
+example, you might develop a calendar system and want to test the colouring of
+"yesterday" -- whatever that may be. Rails 4 ships with some good helper methods
+for stubbing `Time` (see[ActiveSupport::Testing::TimeHelpers][time_helpers]) and
+for earlier versions and non-Rails projects there's [Timecop][]. You can use
+these easily in a step:
+
+{: .language-ruby }
+    Given(/^the current date is (.+)$/) do |time_string|
+      travel_to(Time.parse(time_string))
+    end
+
+So far, so good. We can use a step like `Given the current date is 2014-04-23`
+and our tests run as if that is the current date. But we need to remember to
+travel back to the _actual_ date and time, so as not to influence other tests.
+We might use Cucumber's `After` hook:
+
+{: .language-ruby }
+    After do
+      travel_back
+    end
+
+...but to more explicit, let's use tags to indicate that this particular
+scenario uses time travelling:
+
+{: .language-ruby }
+    After('@time_travel') do
+      travel_back
+    end
+
+Now we can write a scenario like:
+
+    @time_travel
+    Scenario: Time-dependent test
+      Given the current date is 2014-04-23
+      ...
+
+## 5. Switch between multiple sessions
+
+Capybara supports multiple sessions. You could use this to simulate logging in
+as two users at the same time, so that one user sees another user's changes
+appearing in his browser in real time (just to name an example). The API is
+simple: just assign a session name:
+
+{: .language-ruby }
+    Capybara.session_name = 'John'
+
+Now you are in session "John". Assign "Graham" and you're in session "Graham".
+Translating this to a Cucumber step is easy:
+
+{: .language-ruby }
+    When(/^I am in (.*) browser$/) do |name|
+      Capybara.session_name = name
+    end
+
+But switching explicitly is kind of awkward, so we can use compound steps --
+where one step completely contains another:
+
+{: .language-ruby }
+    When(/^(?!I am in)(.*(?= in)) in (.*) browser$/) do |other_step, name|
+      step("I am in #{name} browser")
+      step(other_step)
+    end
+
+This step matches anything _not_ starting with `I am in` (our original browser
+step) but ending with `in <name> browser`. Anything that comes before it, is
+called as another step. For example:
+
+    When I log in as admin in John's browser
+    And I log in as customer in Graham's browser
+
+These two steps both run the `I log in as <role>` steps but in different
+Capybara sessions. I took this tip from [Collective Idea][].
+
 [chronic]:         https://github.com/mojombo/chronic
 [content_tag_for]: http://api.rubyonrails.org/classes/ActionView/Helpers/RecordTagHelper.html#method-i-content_tag_for
 [FactoryGirl]:     https://github.com/thoughtbot/factory_girl
 [transforms]:      https://github.com/cucumber/cucumber/wiki/Step-Argument-Transforms
+[Collective Idea]: http://collectiveidea.com/blog/archives/2011/08/04/simultaneous-capybara-sessions-in-cucumber/
+[time_helpers]:    https://github.com/rails/rails/blob/cee2c85b07317524861ba14b51d8e7e9b34966ba/activesupport/lib/active_support/testing/time_helpers.rb
+[Timecop]:         https://github.com/travisjeffery/timecop
