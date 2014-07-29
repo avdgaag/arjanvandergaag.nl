@@ -219,7 +219,7 @@ aside img {
 }
 
 form {
-    @include position(absolute, $line $grid-margin 0 0);
+    @include position(absolute, $line $grid-margin 0 auto);
 }
 
 .articles {
