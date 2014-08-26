@@ -26,7 +26,7 @@ serialised to a single text column in JSON format:
 {: .language-ruby }
     class Product < ActiveRecord::Base
       store :properties,
-            acessors: %i(color size available_on),
+            accessors: %i(color size available_on),
             coder: JSON
     end
 
