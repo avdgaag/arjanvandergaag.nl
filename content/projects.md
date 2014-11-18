@@ -19,9 +19,18 @@ e.src = ('https:' == document.location.protocol ? 'https' : 'http') +
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e,
 s); })();</script>
 
+## [Beat Impostor Syndrome][beat]
+
+A website with background information, links and resources around dealing with
+impostor syndrome as software developer, built as a companion site to my [2014
+ArrrrCamp presentation about Impostor Syndrome][impostor].
+
 ## [bol][] -- Ruby gem for the bol.com API
 
-The bol gem is a wrapper around the bol.com developer API, allowing you to query their webshop for products and retrieve all sorts of product details and imagery, and list popular products by category. It integrates with their affiliate marketing program.
+The bol gem is a wrapper around the bol.com developer API, allowing you to query
+their webshop for products and retrieve all sorts of product details and
+imagery, and list popular products by category. It integrates with their
+affiliate marketing program.
 
 ## [rpub][] -- Ruby gem for generating ebooks from plain text files
 
@@ -37,6 +46,9 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
 
 # Presentations
 
+* [Beat Impostor
+  Syndrome][impostor] ([slides][impostor-slides]): talk at the ArrrrCamp 2014
+  conference on dealing with impostor syndrome as a software developer.
 * [Getting started with ruby][getting-started-with-ruby]: Lightning talk on the
   ruby program and some of its options.
 * [Say Hello to Elixir][elixir-presentation]: a talk I gave at [The Guild][]
@@ -60,23 +72,26 @@ I keep some more stuff lying around in [my Github account][github]:
 * [subtrigger][] provides a DSL for writing hook scripts for Subversion repositories.
 * [mutil][] is a tiny Javascript library for simple DOM manipulation and OOP.
 
-[rocks]:             http://avdgaag.github.com/rocks
-[Arrate]:            https://github.com/avdgaag/arrate
-[bol]:               http://avdgaag.github.com/bol
-[rpub]:              http://avdgaag.github.com/rpub
-[typogruby]:         http://avdgaag.github.com/typogruby
-[rupt]:              http://avdgaag.github.com/rupt
-[dotfiles]:          https://github.com/avdgaag/dotfiles
-[oo]:                https://github.com/avdgaag/oo
-[nanoc-cachebuster]: http://avdgaag.github.com/nanoc-cachebuster/
-[subtrigger]:        http://avdgaag.github.com/subtrigger/
-[mutil]:             http://avdgaag.github.com/mutil/
-[nawl]:              https://github.com/avdgaag/nawl/
-[github]:            http://github.com/avdgaag
-[ExampleGroupTimer]: https://github.com/avdgaag/example_group_timer
-[Gista]:             http://avdgaag.github.com/gista
-[Bitten]:            http://avdgaag.github.com/bitten
+[rocks]:                     http://avdgaag.github.com/rocks
+[Arrate]:                    https://github.com/avdgaag/arrate
+[bol]:                       http://avdgaag.github.com/bol
+[rpub]:                      http://avdgaag.github.com/rpub
+[typogruby]:                 http://avdgaag.github.com/typogruby
+[rupt]:                      http://avdgaag.github.com/rupt
+[dotfiles]:                  https://github.com/avdgaag/dotfiles
+[oo]:                        https://github.com/avdgaag/oo
+[nanoc-cachebuster]:         http://avdgaag.github.com/nanoc-cachebuster/
+[subtrigger]:                http://avdgaag.github.com/subtrigger/
+[mutil]:                     http://avdgaag.github.com/mutil/
+[nawl]:                      https://github.com/avdgaag/nawl/
+[github]:                    http://github.com/avdgaag
+[ExampleGroupTimer]:         https://github.com/avdgaag/example_group_timer
+[Gista]:                     http://avdgaag.github.com/gista
+[Bitten]:                    http://avdgaag.github.com/bitten
 [getting-started-with-ruby]: https://speakerdeck.com/u/avdgaag/p/getting-started-with-ruby
-[Seasoned Git]:      http://seasonedgit.com
-[elixir-presentation]: https://speakerdeck.com/avdgaag/say-hello-to-elixir
-[The Guild]:         http://theguild.nl
+[Seasoned Git]:              http://seasonedgit.com
+[elixir-presentation]:       https://speakerdeck.com/avdgaag/say-hello-to-elixir
+[The Guild]:                 http://theguild.nl
+[impostor]:                  http://www.confreaks.com/videos/4804-arrrrcamp2014-debugging-facades-dealing-with-imposter-syndrome-as-a-developer
+[impostor-slides]:           https://speakerdeck.com/avdgaag/beat-impostor-syndrome
+[beat]:                      http://beatimpostorsyndrome.net
