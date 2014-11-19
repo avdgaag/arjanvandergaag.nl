@@ -47,7 +47,7 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
 # Presentations
 
 * [Beat Impostor
-  Syndrome][impostor] ([slides][impostor-slides]): talk at the ArrrrCamp 2014
+  Syndrome][impostor]: talk at the ArrrrCamp 2014
   conference on dealing with impostor syndrome as a software developer.
 * [Getting started with ruby][getting-started-with-ruby]: Lightning talk on the
   ruby program and some of its options.
@@ -92,6 +92,5 @@ I keep some more stuff lying around in [my Github account][github]:
 [Seasoned Git]:              http://seasonedgit.com
 [elixir-presentation]:       https://speakerdeck.com/avdgaag/say-hello-to-elixir
 [The Guild]:                 http://theguild.nl
-[impostor]:                  http://www.confreaks.com/videos/4804-arrrrcamp2014-debugging-facades-dealing-with-imposter-syndrome-as-a-developer
-[impostor-slides]:           https://speakerdeck.com/avdgaag/beat-impostor-syndrome
+[impostor]:                  /impostor-syndrome.html
 [beat]:                      http://beatimpostorsyndrome.net

@@ -15,6 +15,11 @@ compile '/script/' do
   filter :coffeescript
 end
 
+compile '/impostor-syndrome' do
+  filter :typogruby
+  layout 'landing'
+end
+
 compile '/blog/*' do
   filter :kramdown, auto_ids: false, coderay_line_numbers: nil, coderay_tab_width: 2
   filter :typogruby

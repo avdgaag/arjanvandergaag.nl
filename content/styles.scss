@@ -30,16 +30,51 @@ h1 {
     &:first-child {
         margin-top: 0;
     }
+
+    .landing & {
+        font-size: 48px;
+        line-height: lines(2);
+        margin-bottom: 0;
+        margin-top: lines(2);
+    }
 }
 
 h2 {
     @include leading(2);
     font-size: 18px;
+
+    .landing & {
+        font-weight: 300;
+        font-size: 36px;
+        width: 70%;
+        line-height: lines(3);
+        margin-top: lines(1);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: lines(1);
+        color: #666;
+    }
 }
 
 h3 {
     font-size: 14px;
     font-family: 'clear_sansregular', $helvetica;
+
+    .landing & {
+        font-family: Georgia, serif;
+        font-size: 18px;
+        font-weight: normal;
+        margin: lines(1) 0;
+        font-style: italic;
+        color: #666;
+        margin-bottom: lines(3);
+    }
+
+    .landing & em {
+      font-style: normal;
+      font-weight: bold;
+      font-family: 'clear_sansregular', $helvetica;
+    }
 }
 
 h4 {
@@ -130,6 +165,11 @@ body {
 
     @media screen and (max-width: 800px) {
         margin: 0;
+    }
+
+    .landing & {
+        margin: 0 auto;
+        text-align: center;
     }
 }
 
@@ -259,4 +299,28 @@ img.photo {
 img.right {
     @include float(right);
     margin-right: 0;
+}
+
+.landing .row {
+    overflow: hidden;
+
+    .column {
+        float: left;
+        margin-left: 20px;
+    }
+
+    .column:first-child {
+      margin-left: 0;
+    }
+
+    iframe {
+        margin-left: 0;
+    }
+}
+
+.landing p {
+  font-size: 18px;
+  line-height: lines(1.5);
+  width: 75%;
+  margin: lines(2) auto;
 }
