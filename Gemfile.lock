@@ -44,7 +44,7 @@ GEM
     thor (0.19.1)
     tilt (2.0.1)
     timers (1.1.0)
-    typogruby (1.0.16)
+    typogruby (1.0.18)
       rubypants
 
 PLATFORMS

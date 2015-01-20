@@ -14,10 +14,11 @@ def articles_by_year
 end
 
 def page_title
-  title_format = case @item[:kind]
-                 when 'article' then '%s by Arjan van der Gaag'
-                 else
-                   '%s'
-                 end
-  Typogruby.improve(title_format % @item[:title])
+  title_format =
+    case @item[:kind]
+    when 'article' then '%s by Arjan van der Gaag'
+    else
+      '%s'
+    end
+  Typogruby.smartypants(title_format % @item[:title])
 end
