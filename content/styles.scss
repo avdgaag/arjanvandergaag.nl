@@ -274,6 +274,10 @@ form {
     }
 }
 
+.comments {
+    @extend small;
+}
+
 .footnotes {
     @extend small;
 
