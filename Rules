@@ -11,10 +11,6 @@ compile '/styles/' do
   filter :sass, syntax: :scss, load_paths: SASS_LOAD_PATHS
 end
 
-compile '/script/' do
-  filter :coffeescript
-end
-
 compile '/impostor-syndrome' do
   filter :typogruby
   layout 'landing'
@@ -46,10 +42,6 @@ end
 
 route '/styles/' do
   '/styles.css'
-end
-
-route '/script/' do
-  '/script.js'
 end
 
 route '/' do
