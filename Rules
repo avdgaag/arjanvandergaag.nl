@@ -1,14 +1,9 @@
 #!/usr/bin/env ruby
 
-SASS_LOAD_PATHS = [
-  File.join(`bundle show bourbon`.chomp, *%w[app assets stylesheets]),
-  File.join(`bundle show rocks`.chomp,   *%w[app assets stylesheets])
-]
-
 passthrough '/assets/*'
 
 compile '/styles/' do
-  filter :sass, syntax: :scss, load_paths: SASS_LOAD_PATHS
+  # nothing
 end
 
 compile '/impostor-syndrome' do
@@ -17,7 +12,13 @@ compile '/impostor-syndrome' do
 end
 
 compile '/blog/*' do
-  filter :kramdown, auto_ids: false, coderay_line_numbers: nil, coderay_tab_width: 2
+  filter :kramdown,
+    auto_ids: false,
+    syntax_highlighter_opts: {
+      css: :class,
+      line_numbers: false,
+      tab_width: 2
+    }
   filter :typogruby
   layout 'post'
   layout 'default'
@@ -28,7 +29,13 @@ compile '/feed/' do
 end
 
 compile '/projects/' do
-  filter :kramdown, auto_ids: false, coderay_line_numbers: nil, coderay_tab_width: 2
+  filter :kramdown,
+    auto_ids: false,
+    syntax_highlighter_opts: {
+      css: :class,
+      line_numbers: false,
+      tab_width: 2
+    }
   filter :typogruby
   layout 'default'
 end

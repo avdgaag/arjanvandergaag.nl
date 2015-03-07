@@ -1,7 +1,7 @@
 ---
 title: Projects
 ---
-# Projects
+# My Projects
 
 ## [Seasoned Git][] -- Practical recipes for the intermediate Git user
 

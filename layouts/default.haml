@@ -25,27 +25,17 @@
     #page
       %header{ role: 'banner' }
         %a.title{ href: '/', rel: 'home' } arjanvandergaag.nl
-        %form{ action: 'http://www.google.com/cse', id: 'cse-search-box' }
-          %input{ type: 'hidden', name: 'cx', value: '013424593838246409070:wnaxfzkihdk' }
-          %input{ type: 'hidden', name: 'ie', value: 'UTF-8' }
-          %input{ type: 'search', placeholder: 'Search site', name: 'q', size: '31', id: 'google-search-box' }
       #content
         %aside{ role: 'complementary' }
           :md
-            ![Arjan van der Gaag](/images/avatar.png)
-
             Arjan van der Gaag is a thirtysomething software developer,
             historian and all-round geek. This is his blog about Ruby, Rails,
-            Javascript, Git, CSS, software and the web.
-
-            See [my projects](/projects.html).
-
-            #### Follow me
-
-            * [Github](https://github.com/avdgaag)
-            * [Twitter](http://twitter.com/avdgaag)
-            * [LinkedIn](http://www.linkedin.com/profile/view?id=5180777)
-            * [Feed](/feed.xml)
+            Javascript, Git, CSS, software and the web. See [more projects](/projects.html) or
+            follow Arjan at
+            [Github](https://github.com/avdgaag),
+            [Twitter](http://twitter.com/avdgaag),
+            [LinkedIn](http://www.linkedin.com/profile/view?id=5180777) or via his
+            [feed](/feed.xml).
         %section{ role: 'main' }
           = yield
       %footer{ role: 'contentinfo' }

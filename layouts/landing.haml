@@ -20,10 +20,6 @@
     #page
       %header{ role: 'banner' }
         %a.title{ href: '/', rel: 'home' } arjanvandergaag.nl
-        %form{ action: 'http://www.google.com/cse', id: 'cse-search-box' }
-          %input{ type: 'hidden', name: 'cx', value: '013424593838246409070:wnaxfzkihdk' }
-          %input{ type: 'hidden', name: 'ie', value: 'UTF-8' }
-          %input{ type: 'search', placeholder: 'Search site', name: 'q', size: '31', id: 'google-search-box' }
       #content
         %section{ role: 'main' }
           = yield

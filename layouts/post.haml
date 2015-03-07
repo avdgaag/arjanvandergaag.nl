@@ -1,15 +1,12 @@
 %article
   %h1= Typogruby.improve @item[:title]
   %footer
-    .date= attribute_to_time(@item[:created_at]).strftime '%d-%m-%Y'
+    Written on
+    %span.date= attribute_to_time(@item[:created_at]).strftime('%d %b %Y').downcase
     - if @item[:tags] && @item[:tags].any?
-      .tags
-        Tagged
-        = @item[:tags].join(', ')
-    - if @item[:tldr] && @item[:tldr] =~ /\S/
-      .tldr
-        TLDR:
-        = @item[:tldr]
+      %span.tags
+        and tagged
+        = Typogruby.improve(@item[:tags].join(', '))
   = preserve do
     = yield
   .comments
