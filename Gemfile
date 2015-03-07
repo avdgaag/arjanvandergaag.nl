@@ -4,7 +4,6 @@ gem 'adsf',    require: false
 gem 'listen'
 gem 'rb-fsevent'
 gem 'builder'
-gem 'haml'
 gem 'kramdown'
 gem 'typogruby'
 gem 'coderay'

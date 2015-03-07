@@ -65,4 +65,4 @@ route '*' do
   item.identifier.chop + '.' + extension
 end
 
-layout '*', :haml, format: :html5
+layout '*', :erb

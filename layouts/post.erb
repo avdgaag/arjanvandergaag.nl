@@ -1,0 +1,17 @@
+<article>
+  <h1><%= Typogruby.improve @item[:title] %></h1>
+  <footer>
+    Written on
+    <span class="date"><%= attribute_to_time(@item[:created_at]).strftime('%d %b %Y').downcase %></span>
+    <% if @item[:tags] && @item[:tags].any? %>
+      <span class="tags">
+        and tagged
+        <%= Typogruby.improve(@item[:tags].join(', ')) %>
+      </span>
+    <% end %>
+  </footer>
+  <%= yield %>
+  <div class="comments">
+    <p>You cannot leave comments on my site, but you can always tweet questions or comments at me: <a href="https://twitter.com/avdgaag">@avdgaag</a>.</p>
+  </div>
+</article>

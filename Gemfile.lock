@@ -11,8 +11,6 @@ GEM
     cri (2.6.1)
       colored (~> 1.2)
     ffi (1.9.3)
-    haml (4.0.5)
-      tilt
     kramdown (1.6.0)
     listen (2.7.9)
       celluloid (>= 0.15.2)
@@ -30,7 +28,6 @@ GEM
       ffi (>= 0.5.0)
     rubypants (0.2.0)
     systemu (2.6.4)
-    tilt (2.0.1)
     timers (1.1.0)
     typogruby (1.0.18)
       rubypants
@@ -42,7 +39,6 @@ DEPENDENCIES
   adsf
   builder
   coderay
-  haml
   kramdown
   listen
   mime-types

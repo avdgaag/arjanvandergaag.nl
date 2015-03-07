@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <title><%= page_title %></title>
+    <link rel='stylesheet' href='/styles.css'>
+    <meta name='description' value='The personal website of web developer, historian and all-round geek Arjan van der Gaag.'>
+    <link rel='alternate' title='arjanvandergaag.nl Atom feed' type='application/atom+xml' href='/feed.xml'>
+    <meta name='viewport' content='width=device-width'>
+    <script type="text/javascript">
+      var _gaq = [['_setAccount', 'UA-80284-1'], ['_trackPageview']];
+      (function(d, t) {
+          var g = d.createElement(t),
+              s = d.getElementsByTagName(t)[0];
+          g.async = true;
+          g.src = '//www.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+    </script>
+  </head>
+  <body class="landing">
+    <div id="page">
+      <header role="banner">
+        <a class="title" href='/' rel='home'>arjanvandergaag.nl</a>
+      </header>
+      <div id="content">
+        <section role='main'>
+          <%= yield %>
+        </section>
+      </div>
+      <footer role="contentinfo">
+        <p>&copy; copyright <%= Time.now.year %> Arjan van der Gaag.</p>
+      </footer>
+    </div>
+  </body>
+</html>
