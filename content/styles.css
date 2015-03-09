@@ -32,8 +32,11 @@ body {
   color: #444;
 }
 
+footer[role=contentinfo],
+aside[role=complementary] p,
+a.title,
 section[role=main] {
-  width: 750px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -48,7 +51,6 @@ a.title {
   text-decoration: none;
   display: block;
   margin: 0 auto;
-  width: 750px;
   font-family: 'Clear Sans', Helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
@@ -97,12 +99,6 @@ aside[role=complementary] a:focus {
 .footnotes a:active,
 aside[role=complementary] a:active {
   color: hsl(204, 50%, 65%);
-}
-
-footer[role=contentinfo],
-aside[role=complementary] p {
-  margin: 0 auto;
-  width: 750px;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
