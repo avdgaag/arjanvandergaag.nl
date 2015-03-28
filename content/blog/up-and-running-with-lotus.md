@@ -23,6 +23,9 @@ clear, well-structured code, but this post will help you through the basics.
 **Note**: I will try to keep this article and the example repository up to date,
 but do consider this is written against version 0.3.0 of Lotus.
 
+**Update**: Luca Guidi was kind enough to provide feedback on the first version
+of this article; I have updated it accordingly.
+
 ## The example application
 
 I've put up a very (_very_) simple application on Github at
@@ -125,9 +128,12 @@ end
 ~~~
 
 Lotus comes with `spec/features_helper.rb` that sets you up for testing with
-[Minitest][] and [Capybara][]. Implementing these tests is easy enough; the new
-application comes with a default action, view and template. All you need to do is
-uncomment the default route:
+[Minitest][] and [Capybara][]. If you prefer RSpec over Minitest, you can
+generate your initial application with the `--test=rspec` option.
+
+Implementing these tests is easy enough; the new application comes with a
+default action, view and template. All you need to do is uncomment the default
+route:
 
 ~~~ruby
 # apps/web/config/routes.rb
@@ -139,20 +145,25 @@ and bathe in the glory of your first Lotus application at [http://localhost:2300
 
 Note that Lotus is in no way bound to any particular testing framework, nor does
 it come with special test helpers or libraries. You'll do fine with Minitest,
-and that's what I will use here --- but you could just as easily use RSpec.
+and that's what I will use here --- but you could just as easily have used RSpec
+by adding the `--test=rspec` option to the application generator.
 
 ## 02. Loading some data
 
 Let's load some articles from a database to show on the page. We'll need to
-prepare our database and set up some data access infrastructure.
+prepare our database and set up some data access infrastructure. Lotus::Model
+support various kinds of adapters, one of which is a schema-less filesystem
+adapter (based on Ruby's `Marshal`) which is nice for rapid prototyping --- but
+for demonstration purposes I'll stick to a conventional PostgreSQL database.
 
 ### Creating a database table with a Sequel migration
 
 I'm going to assume you have a database set up (if not, look into Postgres'
 `createdb` command). You could manually maintain your database schema, but
 migrations under source control are much better. Lotus itself does not come with
-schema management functionality, but since Lotus::Model uses [Sequel][] under
-the covers, we get [its database migrations][sequel-migrations] for free.
+schema management functionality yet (but it is in the works), but since
+Lotus::Model uses [Sequel][] under the covers, we get [its database
+migrations][sequel-migrations] for free.
 
 Let's write a migration using Sequel's migrations DSL in
 `./db/migations/001_create_articles.rb`. The filename is important: it is
@@ -277,7 +288,7 @@ We've got an index that lists _all_ articles; now let's create a view for a
 single article. We'll need a new action for that, along with a view, template
 and accompanying tests. Luckily, Lotus has a generator that does just that:
 
-    % lotus generate action web articles/show
+    % lotus generate action web articles#show
 
 Making this work is mostly re-using the same concepts as were used in building
 the `Index` action, so refer to [e9342ff][] for the full diff.
@@ -289,7 +300,7 @@ them into our templates. We can use `Lotus::Helpers::RoutingHelper` (from in
 to generate our URLs:
 
 ~~~ruby
-# aps/web/config/routes.rb
+# apps/web/config/routes.rb
 get '/articles/:id', to: 'articles#show', as: 'article'
 
 # apps/web/templates/home/index.html.erb
@@ -327,8 +338,11 @@ see how methods defined in a view are automatically available for the template.
 This commit also demonstrates (through its use of the `load_paths`
 configuration) something else I like about Lotus: it does not do fancy
 autoloading like Rails does. Instead, it loads all it needs to load at launch
---- which is undeniably slower in big applications, but also much easier to
-reason about.
+--- which is undeniably slower in big applications, but is consistent across
+environments. Lotus does, however, take care to load as little code as possible:
+everything is loaded when you launch a server or console, while only the
+framework and its configuration are loaded when you run unit tests. This allows
+you to have simplicity _and_ speedy tests.
 
 One thing you might have noticed in the example application is the use of
 `Web::Action` and `Web::View` constants, which are not explicitly defined
@@ -340,14 +354,14 @@ time, without interference.
 
 ## 04. Implementing comments
 
-A blog is not a bog without comments, and a web application is not a web
+A blog is not a blog without comments, and a web application is not a web
 application when it doesn't write data. The article show page can contain a form
 to post comments to the article through a new action (no form builders here,
-just plain HTML!). Rather than rendering a view, our action will redirect back
-to the article page. Using the action generator, we can generate a
-`comments#create` action:
+just plain HTML --- although form builders are under development). Rather than
+rendering a view, our action will redirect back to the article page. Using the
+action generator, we can generate a `comments#create` action:
 
-    % lotus generate action web comments/create
+    % lotus generate action web comments#create
 
 This will give us a view and template which we have no need for, so delete them.
 The generator will create a `GET` route, so let's replace it with a nicer `POST`
@@ -427,8 +441,7 @@ module Web::Controllers::Articles
   class Show
     include Web::Action
 
-    expose :article
-    expose :comments
+    expose :article, :comments
 
     def call(params)
       @article = Demo::ArticleRepository.find(params[:id])
@@ -509,7 +522,8 @@ now this will do. See [455fc58][] for my implementation of comment validation.
 Now we have added validations, it would be useful to provide the user with some
 feedback when his comment was (or wasn't) added. Lotus provides the "flash"
 pattern we know from Rails, whereby we can store information in the session for
-the next (and _only_ the next) request.
+the next (and _only_ the next) request. This feature is technically still
+private, so be advised it might change in the future.
 
 For this to work, we need to enable sessions in our application configuration:
 
@@ -542,13 +556,13 @@ work. Our views (and therefore our templates) know nothing about the flash. This
 is, after all, purely a controller concern. To make the `flash` method available
 in the view layer, we'll need to `expose` it. To always expose the flash to any
 view, we can modify our application configuration, which contains a
-`controller.to_prepare` block. This block will be included in our custom
+`controller.prepare` block. This block will be included in our custom
 `Web::Action` module, and will therefore be available in every controller
 action. Let's expose our flash there:
 
 ~~~ruby
 # apps/web/application.rb
-controller.to_prepare do
+controller.prepare do
   expose :flash
 end
 ~~~
@@ -599,7 +613,9 @@ where it belongs. You can review the full changeset in [877e608][].
 The last few commits in the repository add some CSS and documentation, so gloss
 over them if you like. Note that although there is a
 [Lotus::Assets][lotus-assets] framework, with support for asset precompilation,
-it does not come preconfigured with Lotus yet. 
+it does not come preconfigured with Lotus yet. In the meantime, Lotus _will_
+simply render static files from an app's `public` directory (e.g.
+`apps/web/public`).
 
 If you've come this far, you've seen the most important aspects of building web
 applications with Lotus, including data access, schema migrations, dealing with
