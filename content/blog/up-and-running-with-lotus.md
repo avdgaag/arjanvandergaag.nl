@@ -98,10 +98,9 @@ compared to a Rails application.
   [Mustache][] does. You are encouraged to put logic in the view object (such as
   `./apps/web/views/home/index.rb`) and your markup in a template file (i.e.
   `./apps/web/templates/home/index.html.erb`).
-* Lotus currently has fewer Rake tasks and generators, nor does it provide
-  database migrations out of the box. But, as you can tell from the generated
-  directory structure, it is ready for test-driven development from the
-  get-go.
+* Lotus currently has fewer Rake tasks and generators, although some interesting
+  work is happening on this front. But, as you can tell from the generated
+  directory structure, it is ready for test-driven development from the get-go.
 
 Keep these points in mind and you'll find Lotus holds few other surprises.
 
@@ -161,8 +160,8 @@ for demonstration purposes I'll stick to a conventional PostgreSQL database.
 I'm going to assume you have a database set up (if not, look into Postgres'
 `createdb` command). You could manually maintain your database schema, but
 migrations under source control are much better. Lotus itself does not come with
-schema management functionality yet (but it is in the works), but since
-Lotus::Model uses [Sequel][] under the covers, we get [its database
+schema management functionality yet (it's scheduled for the next release), but
+since Lotus::Model uses [Sequel][] under the covers, we get [its database
 migrations][sequel-migrations] for free.
 
 Let's write a migration using Sequel's migrations DSL in
