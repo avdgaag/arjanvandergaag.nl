@@ -10,7 +10,7 @@ I am writing a book. A little book, but a book nonetheless. And when I started w
 
 [Rpub][] is a very simple Ruby gem for converting a set of [markdown][] input files into an ebook in `.epub` format. It is simple because it doesn't do much:
 
-* it converts the markdown files to HTML using [Kramdown][];
+* it converts the markdown files to HTML using [kramdown][];
 * it combines the HTML files together with any referenced images and fonts into a `.zip` archive, together with some XML boilerplate files.
 
 Additionally, it provides some helper functions to make life a little easier:
@@ -28,14 +28,14 @@ The gem comes with default HTML and CSS files for layout, but you can easily ove
 
 ## Secret features
 
-Because markdown files are converted using [Kramdown][], we get a few nice extra features:
+Because markdown files are converted using [kramdown][], we get a few nice extra features:
 
 * footnotes
 * syntax highlighting of code samples
 * automatic header ids
 * abbreviations
 
-Find out more about those in the [Kramdown documentation][quickref].
+Find out more about those in the [kramdown documentation][quickref].
 
 ## Getting started
 
