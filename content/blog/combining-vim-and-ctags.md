@@ -154,7 +154,7 @@ to date. Go forth and navigate!
 
 [Ctags]:              http://en.wikipedia.org/wiki/Ctags
 [exuberant ctags]:    http://ctags.sourceforge.net
-[My ctags]:           https://github.com/avdgaag/dotfiles/tree/master/home/.ctags
+[My ctags file]:      https://github.com/avdgaag/dotfiles/tree/master/home/.ctags
 [CtrlP]:              https://github.com/kien/ctrlp.vim
 [tpope-ctags]:        http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
 [gem-ctags]:          https://github.com/tpope/gem-ctags
