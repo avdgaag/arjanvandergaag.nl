@@ -10,6 +10,10 @@ kind: article
 Test code is code like any other code, which needs to be maintained. It therefore needs to be readable and DRY. With RSpec, writing custom matchers can help you write better tests that are both easier to read and easier to write.
 {: .leader }
 
+**Update**: an updated version of this article was published as a Semaphore
+community tutorial, titled
+[How to Use Custom RSpec Matchers to Specify Behaviour](https://semaphoreci.com/community/tutorials/how-to-use-custom-rspec-matchers-to-specify-behaviour).
+
 ## Example: matching XML to Xpath expression
 
 Let's say we have an API that responds in an XML format. We want to assert that sensitive information is omitted from the XML for  unauthorised users. We could write such a test like so:
