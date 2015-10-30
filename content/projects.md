@@ -53,8 +53,6 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
   ruby program and some of its options.
 * [Say Hello to Elixir][elixir-presentation]: a talk I gave at [The Guild][]
   about Elixir and learning from functional programming.
-* I organise [The Guild][], an event for the agile software community in
-  Eindhoven.
 
 # Minor projects and frivolous things
 

@@ -11,6 +11,11 @@ compile '/impostor-syndrome' do
   layout 'landing'
 end
 
+compile '/about' do
+  filter :typogruby
+  layout 'landing'
+end
+
 compile '/blog/*' do
   filter :kramdown,
     auto_ids: false,
