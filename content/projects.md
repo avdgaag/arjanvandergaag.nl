@@ -46,6 +46,12 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
 
 # Presentations
 
+* [Web development that hurts even less: taking lessons from Rails][rails-hurts]: talk at DomCode 2015
+* [Ruby Acting up: How Celluloid implements the actor model][celluloid]
+* [Ecto: a database wrapper and language integrated query for Elixir][ecto]
+* [Using Awk: and old school text processing tool with surprising versatility][awk]
+* [Lotus: because sometimes you need to reinvent the wheel][lotus]
+* [Mikado Method: a structured method for significant changes in complex code][mikado]
 * [Beat Impostor
   Syndrome][impostor]: talk at the ArrrrCamp 2014
   conference on dealing with impostor syndrome as a software developer.
@@ -53,6 +59,13 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
   ruby program and some of its options.
 * [Say Hello to Elixir][elixir-presentation]: a talk I gave at [The Guild][]
   about Elixir and learning from functional programming.
+
+[rails-hurts]: https://speakerdeck.com/avdgaag/web-development-that-hurts-even-less-taking-lessons-from-rails
+[celluloid]: https://speakerdeck.com/avdgaag/ruby-acting-up-a-look-at-how-celluloid-implements-the-actor-model-for-concurrency-in-ruby
+[ecto]: https://speakerdeck.com/avdgaag/ecto-a-database-wrapper-and-language-integrated-query-for-elixir
+[awk]: https://speakerdeck.com/avdgaag/using-awk-an-old-school-text-processing-tool-with-surprising-versatility
+[lotus]: https://speakerdeck.com/avdgaag/lotus-because-sometimes-you-need-to-reinvent-the-wheel
+[mikado]: https://speakerdeck.com/avdgaag/mikado-method-a-structured-method-for-significant-changes-in-complex-code
 
 # Minor projects and frivolous things
 
