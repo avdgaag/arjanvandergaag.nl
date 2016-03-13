@@ -46,7 +46,7 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
 
 # Presentations
 
-* [Web development that hurts even less: taking lessons from Rails][rails-hurts]: talk at DomCode 2015
+* [Web development that hurts even less: taking lessons from Rails][rails-hurts-video]: talk at DomCode 2015 ([slides][rails-hurts], [video][rails-hurts-video])
 * [Ruby Acting up: How Celluloid implements the actor model][celluloid]
 * [Ecto: a database wrapper and language integrated query for Elixir][ecto]
 * [Using Awk: and old school text processing tool with surprising versatility][awk]
@@ -61,6 +61,7 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
   about Elixir and learning from functional programming.
 
 [rails-hurts]: https://speakerdeck.com/avdgaag/web-development-that-hurts-even-less-taking-lessons-from-rails
+[rails-hurts-video]: https://www.youtube.com/watch?v=MGPnkZsthCI&list=PL2CYqew9GBOy2yQnSFFsUgzJzkNSMaD3c&index=7
 [celluloid]: https://speakerdeck.com/avdgaag/ruby-acting-up-a-look-at-how-celluloid-implements-the-actor-model-for-concurrency-in-ruby
 [ecto]: https://speakerdeck.com/avdgaag/ecto-a-database-wrapper-and-language-integrated-query-for-elixir
 [awk]: https://speakerdeck.com/avdgaag/using-awk-an-old-school-text-processing-tool-with-surprising-versatility
