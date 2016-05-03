@@ -46,6 +46,7 @@ In order to keep stylesheets of non-trivial size maintainable, you need conventi
 
 # Presentations
 
+* [Hanami: because sometimes, you need to re-invent the wheel][hanami]: talk at Utrecht.rb
 * [Web development that hurts even less: taking lessons from Rails][rails-hurts-video]: talk at DomCode 2015 ([slides][rails-hurts], [video][rails-hurts-video])
 * [Ruby Acting up: How Celluloid implements the actor model][celluloid]
 * [Ecto: a database wrapper and language integrated query for Elixir][ecto]
@@ -106,3 +107,4 @@ I keep some more stuff lying around in [my Github account][github]:
 [The Guild]:                 http://theguild.nl
 [impostor]:                  /impostor-syndrome.html
 [beat]:                      http://beatimpostorsyndrome.net
+[hanami]:                    https://speakerdeck.com/avdgaag/hanami-because-sometimes-you-need-to-re-invent-the-wheel
