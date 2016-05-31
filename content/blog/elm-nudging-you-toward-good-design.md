@@ -11,7 +11,7 @@ Elm is a functional programming language that compiles to javascript. I have fou
 
 ## The best of functional programming in your browser
 
-Elm promises to deliver fast, virtual DOM-based HTML apps with no runtime exceptions. The Elm compiler is pretty great at finding errors in your code, and explaining to you what’s wrong. Elm has immutable data structures, static typing, some pretty great tooling and (last but not least) it looks nice.
+[Elm][] promises to deliver fast, virtual DOM-based HTML apps with no runtime exceptions. The Elm compiler is pretty great at finding errors in your code, and explaining to you what’s wrong. Elm has immutable data structures, static typing, some pretty great tooling and (last but not least) it looks nice.
 
 Here’s a simple Elm “hello, world!” application:
 
@@ -112,3 +112,4 @@ If you’re looking to write single-page web applications, definitely give Elm a
 [todomvc]: https://github.com/evancz/elm-todomvc
 [result]: http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Result#Result
 [maybe]: http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Maybe#Maybe
+[Elm]: http://elm-lang.org
