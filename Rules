@@ -19,11 +19,7 @@ end
 compile '/blog/*' do
   filter :kramdown,
     auto_ids: false,
-    syntax_highlighter_opts: {
-      css: :class,
-      line_numbers: false,
-      tab_width: 2
-    }
+    syntax_highlighter: 'rouge'
   filter :typogruby
   layout 'post'
   layout 'default'
