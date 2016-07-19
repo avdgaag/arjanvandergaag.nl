@@ -17,7 +17,7 @@ Selecta extracts the fuzzy matching part into its own utility, leaving whatever 
 
 When you have a bunch of branches in your Git repository, make switching between them easier using a shell alias:
 
-    git branch --all --remotes | cut -c 3- | rev | cut -d "/" -f 1 | rev | selecta | xargs git checkout
+    git branch --all | cut -c 3- | rev | cut -d "/" -f 1 | rev | sort -u | selecta | xargs git checkout
 
 ## 2. Terminal-based fuzzy file finder
 
