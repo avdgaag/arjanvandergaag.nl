@@ -29,29 +29,29 @@ publication date. You could use inheritance to create various combinations:
     FactoryGirl.define do
       factory :post do
         title 'New post'
-    
+
         factory :draft_post do
           published_at nil
         end
-    
+
         factory :published_post do
           published_at Date.new(2012, 12, 3)
-            end
-          end
-    
+        end
+      end
+
       factory :page do
         title 'New page'
-        
+
         factory :draft_page do
           published_at nil
         end
-    
+
         factory :published_page do
           published_at Date.new(2012, 12, 3)
         end
       end
     end
-    
+
     FactoryGirl.create :draft_page
     FactoryGirl.create :published_post
 
@@ -62,20 +62,20 @@ The repetition should be obvious. Traits can make this DRY:
       factory :post do
         title 'New post'
       end
-    
+
       factory :page do
         title 'New page'
       end
-    
+
       trait :published do
         published_at Date.new(2012, 12, 3)
       end
-    
+
       trait :draft do
         published_at nil
       end
     end
-    
+
     FactoryGirl.create :post, :published
     FactoryGirl.create :page, :draft
 
@@ -103,11 +103,11 @@ Consider an example of a blog post with comments:
         approved_at Date.new(2012, 3, 6)
         post
       end
-    
+
       factory :post do
         title 'New post'
       end
-    
+
       trait :with_comments do
         after :create do |post|
           FactoryGirl.create_list :comment, 3, :post => post
@@ -124,7 +124,7 @@ the number of comments? We can use an ignored attribute:
       ignore do
         number_of_comments 3
       end
-      
+
       after :create do |post, evaluator|
         FactoryGirl.create_list :comment, evaluator.number_of_comments, :post => post
       end
@@ -163,7 +163,7 @@ alias your `user` factory:
       factory :user, :aliases => [:author] do
         username 'anonymous'
       end
-    
+
       factory :post do
         author # => populated with the user factory
       end
@@ -183,14 +183,14 @@ preload such associations for you, as with the example of a post with comments:
       factory :post do
         title 'New post'
       end
-    
+
       trait :with_comments do
         after :create do |post|
           FactoryGirl.create_list :comment, 3, :post => post
         end
       end
     end
-    
+
     FactoryGirl.create :post, :with_comments
 
 ## Common pitfalls when creating factories
@@ -205,12 +205,12 @@ Creating unique values is simple enough with sequences:
 {: .language-ruby }
     FactoryGirl.define do
       sequence(:title) { |n| "Example title #{n}" }
-    
+
       factory :post do
         title
       end
     end
-    
+
     FactoryGirl.create(:post).title # => 'Example title 1'
 
 Your randomised data might at some stage trigger unexpected results in your
@@ -252,7 +252,7 @@ test like this is silly:
         title { Forgery(:lorem_ipsum).words(5) }
       end
     end
-    
+
     describe 'Blog' do
       it 'should show the post title on the page' do
         post = FactoryGirl.create :post
@@ -326,11 +326,11 @@ Usually you can just use another factory name as an attribute, or use the
       factory :comment do
         post
       end
-    
+
       factory :user do
         username 'anonymous'
       end
-    
+
       factory :post do
         association :author, :factory => :user, :username => 'admin'
       end
