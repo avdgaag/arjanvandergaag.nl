@@ -1,0 +1,23 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    kramdown (1.13.2)
+    rake (12.0.0)
+    rouge (1.8.0)
+    rubypants (0.6.0)
+    sass (3.4.23)
+    typogruby (1.0.18)
+      rubypants
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  kramdown
+  rake
+  rouge (~> 1.8.0)
+  sass
+  typogruby
+
+BUNDLED WITH
+   1.13.6

@@ -1,0 +1,49 @@
+<% front_matter = @converter.options[:front_matter] %>
+<!doctype html>
+<html lang="en">
+  <head>
+    <% if @converter.root.options[:encoding] %>
+      <meta charset="<%= @converter.root.options[:encoding] %>">
+    <% end %>
+    <title><%= front_matter.fetch('title', 'Home') %> by Arjan van der Gaag</title>
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="alternate" type="application/atom+xml" title="Atom feed" href="/feed.xml">
+  </head>
+  <body>
+    <% if front_matter.any? %>
+      <article>
+        <footer>
+          <img src="http://arjanvandergaag.nl/images/avatar.png" alt="Arjan van der Gaag" width="48" height="48" class="avatar">
+          <p>
+            By <a href="http://arjanvandergaag.nl" rel="me">Arjan van der Gaag</a>
+            on <%= Time.parse(front_matter.fetch('created_at')).strftime('%b %e %Y') %>.<br>
+            Tagged <%= front_matter.fetch('tags').join(', ') %>.
+          </p>
+        </footer>
+        <a href="/" rel="up" class="up">&larr; back to all talks and articles</a>
+        <h1><%= front_matter.fetch('title') %></h1>
+        <%= @body %>
+        <header>
+          <ul class="tags">
+            <% front_matter.fetch('tags').each do |tag_name| %>
+              <li><%= tag_name %></li>
+            <% end %>
+          </ul>
+          <img src="http://arjanvandergaag.nl/images/avatar.png" alt="Arjan van der Gaag" width="48" height="48" class="avatar">
+          <div class="cols">
+            <div class="col">
+              <h4>Arjan van der Gaag</h4>
+              <p>A thirtysomething software developer, historian and all-round geek. This is his blog about Ruby, Rails, Javascript, Git, CSS, software and the web. Back to <a href="/" rel="up">all talks and articles</a>?</p>
+            </div>
+            <div class="col">
+              <h4>Discuss</h4>
+              <p>You cannot leave comments on my site, but you can always tweet questions or comments at me: <a href="https://twitter.com/avdgaag" rel="external">@avdgaag</a>.</p>
+            </div>
+          </div>
+        </header>
+      </article>
+    <% else %>
+      <%= @body %>
+    <% end %>
+  </body>
+</html>
