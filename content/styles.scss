@@ -126,7 +126,9 @@ footer a {
 }
 
 .masthead {
-  padding-right: 100px;
+  @include desktop {
+    padding-right: 100px;
+  }
 }
 
 .portrait {
