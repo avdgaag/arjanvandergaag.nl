@@ -54,7 +54,7 @@ I, personally, very much prefer the original full-length code example. I find it
 
 Here's snippet I have set up in my editor (currently [Emacs][emacs-snippet], but I also had this in [Vim][vim-snippet]):
 
-![Animation of snippet expansion](/assets/snippet.gif)
+![Animation of snippet expansion](/images/snippet.gif)
 
 The snippet is triggered using the `class` keyword in Ruby files, and does a couple of things:
 
@@ -102,7 +102,7 @@ The Slim template is definitely fewer characters. But is it easier to read? I ac
 
 But writing Slim is so much easier than writing HTML! All those extra characters are such a chore! Again, editors are your friend. The structured nature of HTML makes it rather easy to edit; any half-decent editor has facilities for removing tags, wrapping selections in tags, changing tags (both opening and closing tags) and so forth. An editor is also perfectly capably of automatically inserting closing tags for you, and indenting your code. And with an extension like [Emmet][], available for many editors, even writing HTML code is easy:
 
-![Emmet demo](/assets/html.gif)
+![Emmet demo](/images/html.gif)
 
 Emmet allows you to write a CSS-style selector and generate HTML code from it, additionally supporting repeating, attributes and text values.
 
@@ -153,7 +153,7 @@ How about transpiling ES6 using Babel to JavaScript then? I'm fine with that, fo
 
 Finally, back to Ruby and Rails in particular. Consider the case of gems such as [ActiveAdmin][]: they aim to provide an out-of-the-box administration interface to your application data. It is a highly configurable library that helps you avoid the tedious effort of writing the same old CRUD-interfaces over and over again. I hope that by now, you will not be surprised by my stance towards libraries like this: you are better off writing this code yourself.
 
-![ActiveAdmin DSL](/assets/activeadmin.png)
+![ActiveAdmin DSL](/images/activeadmin.png)
 
 Note how libraries like ActiveAdmin help you avoid writing the same old CRUD-interfaces over and over again. It saves you time because you have to _write_ less code. But _writing_ code isn't that hard or time-consuming; understanding and maintaining it _is_. With ActiveAdmin, you introduce a complex DSL and configurable sub-application into your own application to do something so simple, it's boring to do it yourself. But the dichotomy between boring and magic complexity is a false one. Remember, if there is one thing in the world that a framework like Ruby on Rails is particularly well suited for, it's generating extensive, boring CRUD-applications: `rails generate scaffold`, anyone?
 

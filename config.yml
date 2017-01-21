@@ -10,6 +10,7 @@
   :port: 8000
 :static_files:
   - png
+  - gif
   - jpg
   - txt
   - html
