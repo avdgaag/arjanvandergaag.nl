@@ -104,7 +104,12 @@ end
 
 rule '.xml' => map('%X.rb') do |t|
   warn "compile #{t.name}"
-  @pages = INPUT_FILES.grep(/\.md$/).map { |p| Page.from_file(p) }
+  @pages = INPUT_FILES
+    .grep(/\.md$/)
+    .map { |p| Page.from_file(p) }
+    .sort_by(&:created_at)
+    .reverse
+    .first(15)
   require 'rss'
   rss = instance_eval(File.read(t.prerequisites.last), t.prerequisites.last, 1)
   File.open(t.name, 'wb') do |f|
