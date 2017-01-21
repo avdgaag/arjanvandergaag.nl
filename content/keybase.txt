@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/avdgaag
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://arjanvandergaag.nl
+  * I am avdgaag (https://keybase.io/avdgaag) on keybase.
+  * I have a public key with fingerprint 4F42 6A06 0AD7 FB17 65C7  F164 7109 F6F2 67B5 C31C
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.3"
+        },
+        "key": {
+            "fingerprint": "4f426a060ad7fb1765c7f1647109f6f267b5c31c",
+            "host": "keybase.io",
+            "key_id": "7109f6f267b5c31c",
+            "uid": "4a05b1273e7e1e4225084babea93d400",
+            "username": "avdgaag"
+        },
+        "service": {
+            "hostname": "arjanvandergaag.nl",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1435822206,
+    "expire_in": 157680000,
+    "prev": "4bef3872f0848ff1f16bc46207bfe28d5e5d939a8742ed0ca76a4a44d7ad3ab2",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Comment: GPGTools - https://gpgtools.org
+
+owFtkl1IFFEUx3f9WHNjw0AlSFqbF1uRZb5ndyP1oYhIQxEfDGm9M3NnnXV3Zpsd
+t0ytLCTLyrAe7Ckka6kwlPShoDD78MFWsac13EILMROyEPsiba4oFHSfLuf8zv+c
+/7n3ii3ZZDWnDc8fuBDN7DSPPmV5U+W1uZONGK+KDZinERMCMlR0dFNAEGIerA42
+8CAMnbKaq6gidPrDuetMARaBWlhWFYPCnS4nhTUXIBwVS7Lig1pIk5EWRks0yQKc
+xYHISTzBsYzASQRLcwTulliJZDmeEShCMCRr1bD+T1dsTdMri0b0P3z9WoIGOMMT
+JEdBDhKQJkkGd9E84CFwUyKN4wgMQ23dEoiIPgB8aFwjGJEFiEZGnTcAzQ+UCFBE
+qCHQqQQMgZCm6qqgBox8ra6HPKhcbwgh/hjkvetKXl5WRMP839shDFLQZSRN0BTj
+IkkSZwsweDwka9ArI4LhWBduHNQGRpAjHkqUiyMlw4hLkghjXbxAsyTO8RIkXSID
+GdFNuYGLo0ko4gLgWEADmhY5IFKAJzHk7aiiYh63MaZh1oOFZZ8C9HoNYs3nzTkp
+JrPVZElNQs9vsqZnbHyKup9pv1K6v052jbaW9Hc870ltd3QmNlve5e9cnX5TpvRO
+B4v9vWXtrxKNs+Km8YweeejS4MOx39uKDybODtre33um+L/sf8E++E7MNA2kR/PG
+HNHrvkN7m/3Lj2dLVpLzL1bXTMVBcmcsOvDh25PDhXpv2ZHFam/mo9fBxRNnypMu
+x1/+CPbkjKSXLgcKr47ftDWtWLKztsdaSIf9lpaYnJDtthq3dS6eaBvCuspLT/dv
+eXvfNgVyOpYG5e6+6qbbNXGRLdq941QRlZ21VFoxE5uwf/K37SqxZyxuvXvuhmPe
+ZKloHflcxVYVDcfISoc2vW+hb2XPx4XsWN9q3h2z1PIH
+=xUBU
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/avdgaag
+
+==================================================================
