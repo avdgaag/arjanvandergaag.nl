@@ -132,6 +132,11 @@ rule /#{OUTPUT_DIR}.*\.(?:#{Regexp.union(CONFIG.fetch(:static_files))})/ => map(
   cp t.prerequisites.last, t.name
 end
 
+desc 'Deploy the site to remote server'
+task :deploy do
+  sh "rsync -gpPrtvz --delete-after #{OUTPUT_DIR}/ #{CONFIG.fetch(:deploy_to)}"
+end
+
 desc "Compile the entire site into ./#{OUTPUT_DIR}"
 task compile: OUTPUT_FILES
 

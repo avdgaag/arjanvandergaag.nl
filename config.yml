@@ -24,3 +24,4 @@
 :sass:
   :syntax: :scss
   :style: :compressed
+:deploy_to: webfaction:~/webapps/jekyllblog
