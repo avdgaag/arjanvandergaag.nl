@@ -99,6 +99,10 @@ p.leader {
   }
 }
 
+blockquote {
+  font-style: italic;
+}
+
 footer {
   @include desktop {
     margin-left: -144px;
