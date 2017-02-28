@@ -14,10 +14,11 @@ it. Here are three tips I picked up last year for giving better feedback.
 
 ## 1. Be optimistic
 
-First, make the feedback optimistic. The optimism does not come from being
+First, make the feedback **optimistic**. The optimism does not come from being
 positive or negative, but from what you comment on, and in what way. When you're
-giving optimistic feedback, you make it personal, general and permanent. When
-you're giving critical feedback, you make it impersonal, specific and temporary.
+giving optimistic _positive_ feedback, you make it personal, general and
+permanent. When you're giving optimistic _critical_ feedback, you make it
+impersonal, specific and temporary.
 
 For example, you could compliment your co-worker like so:
 
@@ -30,7 +31,7 @@ this alternative:
 > John, your ability to prioritise has always been key in how this team
 > delivers software.
 
-After hearing this, Alice will probably feel pretty chuffed!
+After hearing this, John will probably feel pretty chuffed!
 
 When offering critical feedback, take the reverse approach. Compare this
 feedback:
@@ -38,19 +39,19 @@ feedback:
 > Terry, we can never get any work done, because as a real slacker, you are
 > always in our way.
 
-That would probably not go down well. By being personal, general and permanent,
+This would probably not go down well. By being personal, general and permanent,
 you are making it clear there is absolutely no hope for this person. Compare
 this to the following:
 
-> Graham, your being late this morning made it hard for the team to properly plan
-> for the day.
+> Graham, your being late this morning made it hard for the team to properly
+> plan for the day.
 
 This is very actionable feedback that explains how a specific action affected
 the team. By phrasing it in terms of a specific action in a specific situation,
 you set a clear expectation of and trust in improvement.
 
-I got this tip from [Reginald Braithwaite][]’s _Optimism_ talk at
-the [Nordic Ruby 2016][] in Stockholm.
+I got this tip from [Reginald Braithwaite][]’s _Optimism_ talk
+at [Nordic Ruby 2016][] in Stockholm.
 
 ## 2. Make a sandwich
 
@@ -59,13 +60,12 @@ walk in on your first day on the job and start explaining to your team all the
 ways in which they're wrong. Instead, consider the level trust in your
 relationship with the other person:
 
-1. With junior developers, when you just got to know each other or when you’re
-   just getting started in a leadership role, the level of trust in your
-   relationship might be low. Use the **porpoise method** of giving feedback: to
-   make a porpoise perform a trick, reinforce all desired behaviour with rewards
-   (i.e. positive feedback) for doing the right thing — and ignore everything
-   else. Trust that the bad behaviour will sort itself out at some point in the
-   future.
+1. When you just got to know each other, or when you’re just getting started in a
+   leadership role, the level of trust in your relationship might be low. Use
+   the **porpoise method** of giving feedback: to make a porpoise perform a
+   trick, reinforce all desired behaviour with rewards (i.e. positive feedback)
+   for doing the right thing — and ignore everything else. Trust that the bad
+   behaviour will sort itself out at some point in the future.
 2. When you’ve built up a basic level of trust, continue to the **sandwich
    model** of feedback. You are probably familiar with this method: first offer
    some positive feedback, then gently introduce some critical feedback, and end
@@ -94,7 +94,7 @@ that case, you need to relate it something else.
 
 Especially critical feedback should relate the other person's behaviour to the
 company’s purpose, his/her role’s accountabilities, and the company’s core
-values. For example, with core values:
+values. For example, using core values:
 
 > Eric, you made a sarcastic comment toward John today. This is not in accordance
 > with our core values of mutual respect and balance of opinions.
