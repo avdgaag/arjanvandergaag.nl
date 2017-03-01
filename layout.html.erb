@@ -5,7 +5,11 @@
     <% if @converter.root.options[:encoding] %>
       <meta charset="<%= @converter.root.options[:encoding] %>">
     <% end %>
-    <title><%= front_matter.fetch('title', 'Home') %> by Arjan van der Gaag</title>
+    <% if front_matter['title'] %>
+      <title><%= front_matter['title'] %> by Arjan van der Gaag</title>
+    <% else %>
+      <title>Arjan van der Gaag, all-round geek</title>
+    <% end %>
     <link href="/styles.css" rel="stylesheet">
     <link rel="alternate" type="application/atom+xml" title="Atom feed" href="/feed.xml">
   </head>
