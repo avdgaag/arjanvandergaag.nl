@@ -15,6 +15,7 @@ end
 OUTPUT_DIR = CONFIG.fetch(:outputs)
 INPUT_DIR = CONFIG.fetch(:inputs)
 INPUT_FILES = FileList["#{INPUT_DIR}/**/*.*"]
+ARTICLES = FileList["#{INPUT_DIR}/blog/*.*"]
 OUTPUT_FILES = INPUT_FILES.pathmap("%{^#{INPUT_DIR},#{OUTPUT_DIR}}X%{.*,*}x") do |ext|
   CONFIG.fetch(:extensions).fetch(ext, ext)
 end
@@ -80,7 +81,7 @@ def map(pathmap, *dependencies)
   ]
 end
 
-rule '.html' => map('%X.erb') do |t|
+rule '.html' => map('%X.erb', CONFIG.dig(:kramdown, :template), *ARTICLES) do |t|
   warn "compile #{t.name}"
   require 'typogruby'
   require 'erb'
@@ -102,7 +103,7 @@ rule '.html' => map('%X.md', CONFIG.dig(:kramdown, :template)) do |t|
   Page.from_file(t.prerequisites.last).write(t.name)
 end
 
-rule '.xml' => map('%X.rb') do |t|
+rule '.xml' => map('%X.rb', *ARTICLES) do |t|
   warn "compile #{t.name}"
   @pages = INPUT_FILES.grep(/\.md$/)
                       .map { |p| Page.from_file(p) }
