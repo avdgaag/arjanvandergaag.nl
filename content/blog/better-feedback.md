@@ -31,7 +31,9 @@ this alternative:
 > John, your ability to prioritise has always been key in how this team
 > delivers software.
 
-After hearing this, John will probably feel pretty chuffed!
+After hearing this, John will probably feel pretty chuffed! A note of caution, though: make sure to have specific examples prepared. Too much "you are awesome" feedback coul make people afraid to make mistakes; see [Mindset by Carol Dweck][mindset].
+
+[mindset]: http://www.mindsetonline.com
 
 When offering critical feedback, take the reverse approach. Compare this
 feedback:
