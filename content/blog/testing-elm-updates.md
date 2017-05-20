@@ -180,11 +180,16 @@ Finally, we can test that tasks that are already completed will not be changed (
 ~~~ haskell
 test "does not alter already completed tasks" <|
     \_ ->
-        model
-            |> update CompleteTask 1
-            |> update CompleteTask 1
-            |> Tuple.first
-            |> Expect.equal model
+        let
+            completedOnce =
+                model
+                    |> update (CompleteTask 1)
+                    |> Tuple.first
+        in
+           completedOnce
+               |> update (CompleteTask 1)
+               |> Tuple.first
+               |> Expect.equal completedOnce
 ~~~
 
 I could have added another `Task` to the example model, or updated the model in the test itself; but instead I chose to apply the `CompleteTask` message twice and verify it results in the same output. To me, this makes sense: marking a single task as completed twice gives you the same completed task as completing it only once would. Decide for yourself what style you prefer!
