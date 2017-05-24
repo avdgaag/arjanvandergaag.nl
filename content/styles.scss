@@ -181,12 +181,12 @@ a {
 
 code {
   font-family: $monospace;
+  font-size: 16px;
 }
 
 pre {
   font-family: $monospace;
-  font-size: 13px;
-  line-height: 20px;
+  line-height: 22px;
   background-color: #f9f9f9;
   padding: 10px 20px;
   margin: -10px -20px;
@@ -199,6 +199,12 @@ ol {
   @include desktop {
     margin-left: 0;
   }
+}
+
+.note {
+  border-left: 10px solid #eee;
+  padding: 10px 20px;
+  margin: -10px 0;
 }
 
 .up,
