@@ -1,11 +1,11 @@
 @mixin mobile {
-  @media (max-width: 480px) {
+  @media only screen and (max-device-width: 667px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 481px) {
+  @media only screen and (min-width: 668px) {
     @content;
   }
 }
@@ -16,12 +16,12 @@
 $sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 $monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-$line: 24px;
+$line: 27px;
 
 body {
   background: #fff;
   color: #333;
-  font-size: 16px;
+  font-size: 18px;
   font-family: $serif;
   line-height: $line;
   margin: $line 5% lines(2) 5%;
