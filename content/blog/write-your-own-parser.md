@@ -9,7 +9,7 @@ tags:
   - leex
   - JSON
 ---
-I like regular expressions as much as the next guy, but somtimes plain old regular expressions just won't cut it. Sometimes we need a little more. Luckily for us, Elixir comes with built-in support for leex and yecc. Let's see how we can use those to write our own parser.
+I like regular expressions as much as the next guy, but sometimes plain old regular expressions just won't cut it. Sometimes we need a little more. Luckily for us, Elixir comes with built-in support for leex and yecc. Let's see how we can use those to write our own parser.
 {: .leader }
 
 ## About lexing and parsing
