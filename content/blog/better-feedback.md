@@ -31,7 +31,7 @@ this alternative:
 > John, your ability to prioritise has always been key in how this team
 > delivers software.
 
-After hearing this, John will probably feel pretty chuffed! A note of caution, though: make sure to have specific examples prepared. Too much "you are awesome" feedback coul make people afraid to make mistakes; see [Mindset by Carol Dweck][mindset].
+After hearing this, John will probably feel pretty chuffed! A note of caution, though: make sure to have specific examples prepared. Too much "you are awesome" feedback could make people afraid to make mistakes; see [Mindset by Carol Dweck][mindset].
 
 [mindset]: http://www.mindsetonline.com
 
@@ -92,7 +92,7 @@ When it comes to critical feedback, it can be useful to describe how the other
 person’s behaviour affected you. This is central
 to [nonviolent communication][]. This is solid advice, but as a team leader, you
 sometimes have to give feedback that has no real impact on you, personally. In
-that case, you need to relate it something else.
+that case, you need to relate it to something else.
 
 Especially critical feedback should relate the other person's behaviour to the
 company’s purpose, his/her role’s accountabilities, and the company’s core
