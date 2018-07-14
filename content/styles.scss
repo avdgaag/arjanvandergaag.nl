@@ -13,9 +13,13 @@
 @function lines($n: 1) {
   @return $line * $n;
 }
-$sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-$monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
+  Arial, "Lucida Grande", sans-serif;
+$serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
+  "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$monospace: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+  "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 $line: 27px;
 
 body {
@@ -105,7 +109,7 @@ blockquote {
 
 footer {
   @include desktop {
-    margin-left: -144px;
+    margin-left: lines(-6);
   }
   padding-left: 64px;
   color: #999;
@@ -220,12 +224,16 @@ header {
   margin-top: lines(1.5);
   margin-bottom: lines(-1.5);
   @include desktop {
-    margin-left: -144px;
+    margin-left: lines(-6);
   }
 }
 
 header p {
   margin: 0;
+}
+
+.tags {
+  margin-bottom: lines(2);
 }
 
 .tags li {
