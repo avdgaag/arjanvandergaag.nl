@@ -18,12 +18,14 @@
     <li><a href="https://speakerdeck.com/avdgaag/getting-started-with-ruby" title="">Getting started with ruby</a><br>Lightning talk on the ruby program and some of its options.</li>
     <li><a href="https://speakerdeck.com/avdgaag/say-hello-to-elixir" title="">Say Hello to Elixir</a><br>talk I gave at The Guild about Elixir and learning from functional programming.</li>
   </ol>
-  <h2>Articles</h2>
+  <% @pages.sort_by(&:created_at).reverse.group_by(&:year).each do |year, pages| %>
+    <h3><%= year %></h3>
   <ol>
-    <% @pages.sort_by(&:created_at).reverse.each do |page| %>
+      <% pages.each do |page| %>
       <li><a href="<%= page.url %>"><%= page.title %></a></li>
     <% end %>
   </ol>
+  <% end %>
   <header>
     <div class="cols">
       <div class="col">

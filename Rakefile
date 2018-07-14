@@ -47,6 +47,10 @@ class Page
     Time.parse(attributes.fetch('created_at'))
   end
 
+  def year
+    created_at.year
+  end
+
   def updated_at
     File.mtime(attributes.fetch('path'))
   end
