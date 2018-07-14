@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'rake'
 gem 'kramdown'
-gem 'rouge', '~> 1.8.0'
+gem 'rouge'
 gem 'sass'
 gem 'typogruby'
