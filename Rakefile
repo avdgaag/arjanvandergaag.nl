@@ -20,6 +20,7 @@ OUTPUT_FILES = INPUT_FILES.pathmap("%{^#{INPUT_DIR},#{OUTPUT_DIR}}X%{.*,*}x") do
   CONFIG.fetch(:extensions).fetch(ext, ext)
 end
 CLOBBER.include(OUTPUT_DIR)
+OUTPUT_FILES.include(File.join(OUTPUT_DIR, 'styles.css.gz'))
 OUTPUT_FILES.pathmap('%d').each do |d|
   directory d
 end
@@ -124,6 +125,11 @@ end
 rule '.css' => map('%X.scss', *INPUT_FILES.exclude('content/styles.css')) do |t|
   warn "compile #{t.name}"
   sh "./node_modules/.bin/sass #{t.prerequisites.last} | ./node_modules/.bin/postcss > #{t.name}"
+end
+
+rule '.gz' => ->(f) { f.pathmap('%X') } do |t|
+  warn "compressing #{t.name}"
+  sh "gzip --best --keep --force #{t.prerequisites.last}"
 end
 
 rule /#{OUTPUT_DIR}.*\.(?:#{Regexp.union(CONFIG.fetch(:static_files))})/ => map('%p') do |t|
