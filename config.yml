@@ -21,7 +21,4 @@
   :syntax_highlighter_opts:
     :line_numbers: false
     :wrap: true
-:sass:
-  :syntax: :scss
-  :style: :compressed
 :deploy_to: webfaction:~/webapps/jekyllblog

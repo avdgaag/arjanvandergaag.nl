@@ -1,41 +1,43 @@
 <article>
-  <div class="masthead">
-    <img src="images/avatar.png" alt="Arjan van der Gaag" width="128" height="128" class="portrait">
+  <div class="mt-6 md:mt-12 sm:text-center md:text-left">
+    <img src="images/avatar.png" alt="Arjan van der Gaag" width="128" height="128" class="rounded-full border-4 border-black md:float-right md:ml-12 mb-6 md:-mr-32">
     <h1>I am Arjan van&nbsp;der&nbsp;Gaag.</h1>
-    <p class="leader">I'm a dad, historian, software developer, agilist, self-organisation evangelist, speaker, and all-round geek. I write about some of that stuff here. You can also find me on <a href="https://github.com/avdgaag" rel="external">Github</a>, <a href="https://www.goodreads.com/user/show/22174727-arjan">Goodreads</a>, <a href="http://nl.linkedin.com/in/avdgaag/en" rel="external">LinkedIn</a> or <a href="http://twitter.com/avdgaag" rel="external">Twitter</a>.</p>
+    <p class="leader text-xl md:text-3xl">I'm a dad, historian, software developer, agilist, self-organisation evangelist, speaker, and all-round geek. I write about some of that stuff here. You can also find me on <a href="https://github.com/avdgaag" rel="external">Github</a>, <a href="https://www.goodreads.com/user/show/22174727-arjan">Goodreads</a>, <a href="http://nl.linkedin.com/in/avdgaag/en" rel="external">LinkedIn</a> or&nbsp;<a href="http://twitter.com/avdgaag" rel="external">Twitter</a>.</p>
   </div>
-  <h2>Talks and slides</h2>
-  <ol>
-    <li><a href="https://speakerdeck.com/avdgaag/how-to-lead-a-team-by-doing-nothing">How to Lead a Team by Doing Nothing</a><br>talk at <a href="http://agilemanchester.net/2017/" rel="external">Agile Manchester 2017</a> about combining Kanban and Holacracy for agile software development.</li>
-    <li><a href="https://speakerdeck.com/avdgaag/hanami-because-sometimes-you-need-to-re-invent-the-wheel" title="">Hanami: because sometimes, you need to re-invent the wheel</a><br>talk at Utrecht Ruby user group about a new-ish Ruby web framework.</li>
-    <li><a href="https://speakerdeck.com/avdgaag/web-development-that-hurts-even-less-taking-lessons-from-rails" title="">Web development that hurts even less: taking lessons from Rails</a><br>talk at <a href="http://conference.domcode.org" rel="external">DomCode</a> 2015 about life in the Ruby community beyond Rails (<a href="https://www.youtube.com/watch?v=MGPnkZsthCI&list=PL2CYqew9GBOy2yQnSFFsUgzJzkNSMaD3c&index=7">video</a>)</li>
-    <li><a href="https://speakerdeck.com/avdgaag/ruby-acting-up-a-look-at-how-celluloid-implements-the-actor-model-for-concurrency-in-ruby" title="">Ruby Acting up: How Celluloid implements the actor model</a></li>
-    <li><a href="https://speakerdeck.com/avdgaag/ecto-a-database-wrapper-and-language-integrated-query-for-elixir" title="">Ecto: a database wrapper and language integrated query for Elixir</a></li>
-    <li><a href="https://speakerdeck.com/avdgaag/using-awk-an-old-school-text-processing-tool-with-surprising-versatility" title="">Using Awk: and old school text processing tool with surprising versatility</a></li>
-    <li><a href="https://speakerdeck.com/avdgaag/lotus-because-sometimes-you-need-to-reinvent-the-wheel" title="">Lotus: because sometimes you need to reinvent the wheel</a></li>
-    <li><a href="https://speakerdeck.com/avdgaag/mikado-method-a-structured-method-for-significant-changes-in-complex-code" title="">Mikado Method: a structured method for significant changes in complex code</a></li>
-    <li><a href="https://speakerdeck.com/avdgaag/beat-impostor-syndrome" title="">Beat Impostor Syndrome</a><br>talk at the <a href="http://2014.arrrrcamp.be" rel="external">ArrrrCamp 2014</a> conference on dealing with impostor syndrome as a software developer (<a href="https://www.youtube.com/watch?v=wKz7mOZ4P-A">video</a>)</li>
-    <li><a href="https://speakerdeck.com/avdgaag/getting-started-with-ruby" title="">Getting started with ruby</a><br>Lightning talk on the ruby program and some of its options.</li>
-    <li><a href="https://speakerdeck.com/avdgaag/say-hello-to-elixir" title="">Say Hello to Elixir</a><br>talk I gave at The Guild about Elixir and learning from functional programming.</li>
-  </ol>
-  <h2>Thoughts and writings</h2>
-  <% @pages.sort_by(&:created_at).reverse.group_by(&:year).each do |year, pages| %>
-    <h3><%= year %></h3>
+  <div class="article-content">
+    <h2>Talks and slides</h2>
     <ol>
-      <% pages.each do |page| %>
-      <li><a href="<%= page.url %>"><%= page.title %></a></li>
-      <% end %>
+      <li><a href="https://speakerdeck.com/avdgaag/how-to-lead-a-team-by-doing-nothing">How to Lead a Team by Doing Nothing</a><br>talk at <a href="http://agilemanchester.net/2017/" rel="external">Agile Manchester 2017</a> about combining Kanban and Holacracy for agile software development.</li>
+      <li><a href="https://speakerdeck.com/avdgaag/hanami-because-sometimes-you-need-to-re-invent-the-wheel" title="">Hanami: because sometimes, you need to re-invent the wheel</a><br>talk at Utrecht Ruby user group about a new-ish Ruby web framework.</li>
+      <li><a href="https://speakerdeck.com/avdgaag/web-development-that-hurts-even-less-taking-lessons-from-rails" title="">Web development that hurts even less: taking lessons from Rails</a><br>talk at <a href="http://conference.domcode.org" rel="external">DomCode</a> 2015 about life in the Ruby community beyond Rails (<a href="https://www.youtube.com/watch?v=MGPnkZsthCI&list=PL2CYqew9GBOy2yQnSFFsUgzJzkNSMaD3c&index=7">video</a>)</li>
+      <li><a href="https://speakerdeck.com/avdgaag/ruby-acting-up-a-look-at-how-celluloid-implements-the-actor-model-for-concurrency-in-ruby" title="">Ruby Acting up: How Celluloid implements the actor model</a></li>
+      <li><a href="https://speakerdeck.com/avdgaag/ecto-a-database-wrapper-and-language-integrated-query-for-elixir" title="">Ecto: a database wrapper and language integrated query for Elixir</a></li>
+      <li><a href="https://speakerdeck.com/avdgaag/using-awk-an-old-school-text-processing-tool-with-surprising-versatility" title="">Using Awk: and old school text processing tool with surprising versatility</a></li>
+      <li><a href="https://speakerdeck.com/avdgaag/lotus-because-sometimes-you-need-to-reinvent-the-wheel" title="">Lotus: because sometimes you need to reinvent the wheel</a></li>
+      <li><a href="https://speakerdeck.com/avdgaag/mikado-method-a-structured-method-for-significant-changes-in-complex-code" title="">Mikado Method: a structured method for significant changes in complex code</a></li>
+      <li><a href="https://speakerdeck.com/avdgaag/beat-impostor-syndrome" title="">Beat Impostor Syndrome</a><br>talk at the <a href="http://2014.arrrrcamp.be" rel="external">ArrrrCamp 2014</a> conference on dealing with impostor syndrome as a software developer (<a href="https://www.youtube.com/watch?v=wKz7mOZ4P-A">video</a>)</li>
+      <li><a href="https://speakerdeck.com/avdgaag/getting-started-with-ruby" title="">Getting started with ruby</a><br>Lightning talk on the ruby program and some of its options.</li>
+      <li><a href="https://speakerdeck.com/avdgaag/say-hello-to-elixir" title="">Say Hello to Elixir</a><br>talk I gave at The Guild about Elixir and learning from functional programming.</li>
     </ol>
-  <% end %>
+    <h2>Thoughts and writings</h2>
+    <% @pages.sort_by(&:created_at).reverse.group_by(&:year).each do |year, pages| %>
+      <h3><%= year %></h3>
+      <ol>
+        <% pages.each do |page| %>
+        <li><a href="<%= page.url %>"><%= page.title %></a></li>
+        <% end %>
+      </ol>
+    <% end %>
+  </div>
   <header>
-    <div class="cols">
-      <div class="col">
+    <div class="flex text-grey-dark text-sm my-12 font-sans items-start md:-ml-32">
+      <div class="flex-1 mr-12">
         <h4>Arjan van der Gaag</h4>
-        <p>A thirtysomething software developer, historian and all-round geek. This is his blog about Ruby, Rails, Javascript, Git, CSS, software and the web.</p>
+        <p>A thirtysomething software developer, historian and all-round geek. This is his blog about Ruby, Rails, Javascript, Git, CSS, software and the web. Back to <a href="/" rel="up" class="dim">all talks and articles</a>?</p>
       </div>
-      <div class="col">
+      <div class="flex-1">
         <h4>Discuss</h4>
-        <p>You cannot leave comments on my site, but you can always tweet questions or comments at me: @avdgaag.</p>
+        <p>You cannot leave comments on my site, but you can always tweet questions or comments at me: <a href="https://twitter.com/avdgaag" rel="external" class="dim">@avdgaag</a>.</p>
       </div>
     </div>
   </header>

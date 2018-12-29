@@ -24,41 +24,45 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body>
-    <% if front_matter.any? %>
-      <article>
-        <footer>
-          <img src="http://arjanvandergaag.nl/images/avatar.png" alt="Arjan van der Gaag" width="48" height="48" class="avatar">
-          <p>
-            By <a href="http://arjanvandergaag.nl" rel="me">Arjan van der Gaag</a>
-            on <%= Time.parse(front_matter.fetch('created_at')).strftime('%b %e %Y') %>.<br>
-            Tagged <%= front_matter.fetch('tags').join(', ') %>.
-          </p>
-        </footer>
-        <a href="/" rel="up" class="up">&larr; back to all talks and articles</a>
-        <h1><%= front_matter.fetch('title') %></h1>
-        <%= @body %>
-        <header>
-          <ul class="tags">
-            <% front_matter.fetch('tags').each do |tag_name| %>
-              <li><%= tag_name %></li>
-            <% end %>
-          </ul>
-          <img src="http://arjanvandergaag.nl/images/avatar.png" alt="Arjan van der Gaag" width="48" height="48" class="avatar">
-          <div class="cols">
-            <div class="col">
-              <h4>Arjan van der Gaag</h4>
-              <p>A thirtysomething software developer, historian and all-round geek. This is his blog about Ruby, Rails, Javascript, Git, CSS, software and the web. Back to <a href="/" rel="up">all talks and articles</a>?</p>
-            </div>
-            <div class="col">
-              <h4>Discuss</h4>
-              <p>You cannot leave comments on my site, but you can always tweet questions or comments at me: <a href="https://twitter.com/avdgaag" rel="external">@avdgaag</a>.</p>
-            </div>
+  <body class="bg-white font-serif leading-normal text-lg text-black border-t-8 border-blue">
+    <div class="container max-w-full md:max-w-lg mx-auto px-4 md:px-32">
+      <% if front_matter.any? %>
+        <article>
+          <footer class="md:-ml-32 font-sans text-grey-dark text-sm flex items-center my-6 md:my-12">
+            <img src="http://arjanvandergaag.nl/images/avatar.png" alt="Arjan van der Gaag" width="48" height="48" class="rounded-full mr-4">
+            <p class="flex-1">
+              By <a href="http://arjanvandergaag.nl" rel="me" class="font-black text-black hover:text-grey-darker focus:text-grey-darker active:text-grey-dark visited:text-black">Arjan van der Gaag</a>
+              on <%= Time.parse(front_matter.fetch('created_at')).strftime('%b %e %Y') %>.<br>
+              Tagged <%= front_matter.fetch('tags').join(', ') %>.
+            </p>
+          </footer>
+          <a href="/" rel="up" class="dim inline-block mb-3 md:-ml-32 text-sm font-sans">&larr; back to all talks and articles</a>
+          <h1><%= front_matter.fetch('title') %></h1>
+          <div class="article-content">
+            <%= @body %>
           </div>
-        </header>
-      </article>
-    <% else %>
-      <%= @body %>
-    <% end %>
+          <header>
+            <ul class="text-grey-darker text-sm list-reset my-6 font-sans">
+              <% front_matter.fetch('tags').each do |tag_name| %>
+                <li class="bg-grey-lightest py-1 px-2 inline-block"><%= tag_name %></li>
+              <% end %>
+            </ul>
+            <div class="md:flex text-grey-dark text-sm my-12 font-sans items-start md:-ml-32">
+              <img src="http://arjanvandergaag.nl/images/avatar.png" alt="Arjan van der Gaag" width="48" height="48" class="rounded-full mx-auto mb-6 block md:ml-0 md:mr-4">
+              <div class="flex-1 mb-6 md:mr-12">
+                <h4>Arjan van der Gaag</h4>
+                <p>A thirtysomething software developer, historian and all-round geek. This is his blog about Ruby, Rails, Javascript, Git, CSS, software and the web. Back to <a href="/" rel="up" class="dim">all talks and articles</a>?</p>
+              </div>
+              <div class="flex-1">
+                <h4>Discuss</h4>
+                <p>You cannot leave comments on my site, but you can always tweet questions or comments at me: <a href="https://twitter.com/avdgaag" rel="external" class="dim">@avdgaag</a>.</p>
+              </div>
+            </div>
+          </header>
+        </article>
+      <% else %>
+        <%= @body %>
+      <% end %>
+    </div>
   </body>
 </html>
