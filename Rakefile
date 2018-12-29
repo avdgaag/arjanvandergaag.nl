@@ -121,16 +121,9 @@ rule '.xml' => map('%X.rb', *ARTICLES) do |t|
   end
 end
 
-rule '.css' => map('%X.scss') do |t|
+rule '.css' => map('%X.scss', *INPUT_FILES.exclude('content/styles.css')) do |t|
   warn "compile #{t.name}"
-  require 'sass'
-  css = Sass::Engine.new(
-    File.read(t.prerequisites.last),
-    CONFIG.fetch(:sass)
-  ).render
-  File.open(t.name, 'wb') do |f|
-    f.write css
-  end
+  sh "./node_modules/.bin/sass #{t.prerequisites.last} | ./node_modules/.bin/postcss > #{t.name}"
 end
 
 rule /#{OUTPUT_DIR}.*\.(?:#{Regexp.union(CONFIG.fetch(:static_files))})/ => map('%p') do |t|
