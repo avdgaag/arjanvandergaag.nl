@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+
+preprocess do
+  @items.each do |item|
+    if item[:created_at]
+      item[:created_at] = Time.parse(item[:created_at])
+    end
+  end
+end
+
+compile '/styles.scss' do
+  filter :tailwind
+  write '/styles.css'
+end
+
+compile '/feed.xml.erb' do
+  filter :erb
+  write '/feed.xml'
+end
+
+compile '/index.html.erb' do
+  filter :erb
+  layout '/default.*'
+  write '/index.html'
+end
+
+compile '/**/*.md' do
+  filter :kramdown, {
+    auto_id_prefix: '_',
+    syntax_highlighter: 'rouge',
+    syntax_highlighter_opts: {
+      line_numbers: false,
+      wrap: true
+    }
+  }
+  filter :typogruby
+  layout '/article.*'
+  layout '/default.*'
+  write item.identifier.without_ext + '/index.html'
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+layout '/**/*', :erb
