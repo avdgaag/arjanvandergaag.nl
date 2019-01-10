@@ -20,6 +20,7 @@ end
 
 compile '/index.html.erb' do
   filter :erb
+  filter :typogruby
   layout '/default.*'
   write '/index.html'
 end
@@ -36,7 +37,7 @@ compile '/**/*.md' do
   filter :typogruby
   layout '/article.*'
   layout '/default.*'
-  write item.identifier.without_ext + '/index.html'
+  write ext: 'html'
 end
 
 compile '/**/*' do
