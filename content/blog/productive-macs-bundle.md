@@ -8,7 +8,7 @@ tldr: "The Productive Macs bundle is worth buying, even if only for TextExpander
 There is yet another software bundle out for indie Mac OS X applications. This time, it is called the [productivity software bundle][1] and it features eight productivity-related applications.
 {: .leader }
 
-I found this bundle [via Shawn Blanc][2], and I was was rather excited at first. There are some notable apps in this bundle, such as [TextExpander][3], [Path Finder][2] and [Mail Act-On][5] — software I have heard a lot about.
+I found this bundle [via Shawn Blanc][2], and I was was rather excited at first. There are some notable apps in this bundle, such as [TextExpander][3], [Path Finder][4] and [Mail Act-On][5] — software I have heard a lot about.
 
 ## What's in the bundle?
 
@@ -82,7 +82,7 @@ The [Productive Macs bundle][1] is a good purchase. I was just about to pay to f
 [3]: http://www.smilesoftware.com/TextExpander
      "TextExpander: Mac Typing Shortcut Utility Saves You Time!"
 
-[2]: http://www.cocoatech.com
+[4]: http://www.cocoatech.com
      "Path Finder 5 by Cocoatech"
 
 [5]: http://www.indev.ca/MailActOn.html
