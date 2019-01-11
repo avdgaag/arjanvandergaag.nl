@@ -10,7 +10,16 @@ end
 
 compile '/styles.scss' do
   filter :tailwind
-  write '/styles.css'
+  snapshot :compiled
+  filter :gzip
+end
+
+route '/styles.scss', snapshot: :compiled do
+  item.identifier.without_ext + '.css'
+end
+
+route '/styles.scss', snapshot: :last do
+  item.identifier.without_ext + '.css.gz'
 end
 
 compile '/feed.xml.erb' do
