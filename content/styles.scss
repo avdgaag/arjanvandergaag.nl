@@ -11,11 +11,11 @@ h1 {
 }
 
 h2 {
-  @apply font-sans text-xl mt-6 mb-3;
+  @apply font-sans text-base mt-6 mb-2 font-semibold;
 }
 
 h3 {
-  @apply text-lg font-normal italic mt-6;
+  @apply text-base font-normal italic mt-6;
 }
 
 p.leader {
@@ -28,6 +28,10 @@ p.leader {
   a {
     @extend .dim;
   }
+}
+
+strong {
+  @apply font-semibold;
 }
 
 .article-content .leader {
@@ -47,7 +51,7 @@ li p {
 }
 
 pre {
-  @apply leading-tight text-base my-6;
+  @apply leading-tight text-sm my-6 bg-grey-lightest p-4;
 }
 
 .dim {
