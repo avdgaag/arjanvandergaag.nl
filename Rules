@@ -6,6 +6,15 @@ preprocess do
       item[:created_at] = Time.parse(item[:created_at])
     end
   end
+  @items.create('', { reviews: @items.find_all('/goodreads/*') }, '/books')
+end
+
+ignore '/goodreads/*'
+
+compile '/books' do
+  layout '/books.*'
+  layout '/default.*'
+  write item.identifier.without_ext + '.html'
 end
 
 compile '/styles.scss' do

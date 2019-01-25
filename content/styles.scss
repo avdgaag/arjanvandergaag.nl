@@ -113,6 +113,10 @@ blockquote {
   @apply ml-6 my-6 italic;
 }
 
+.border-box {
+  box-sizing: border-box;
+}
+
 .highlight .hll {
   background-color: #ffffcc;
 }

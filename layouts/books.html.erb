@@ -1,0 +1,29 @@
+<div class="article-content mt-32">
+  <a href="/" class="dim inline-block mb-3 md:-ml-32 text-sm font-sans">&larr; back to all talks and articles</a>
+  <p class="leader">
+    I love reading. And with reading, I mean listening to
+    audiobooks. I track the books I read (or abandon) on
+    <a href="https://www.goodreads.com/user/show/22174727-arjan" rel="external">Goodreads</a>,
+    but I also keep a copy here.
+  </p>
+</div>
+
+<% @item[:reviews].group_by { |r| (r[:review].read_at || r[:review].date_updated).year }.each do |year, reviews| %>
+  <h1 class="mt-24 mb-12"><%= year %>: <%= reviews.size %> books</h1>
+  <div class="flex flex-wrap md:-ml-32 -mr-4">
+    <% reviews.each do |r| %>
+      <% review = r[:review] %>
+      <% book = review.book %>
+      <div class="flex items-start pr-8 mb-4 w-1/2 border-box">
+        <img src="<%= book.small_image_url %>" alt="<%= book.title %>">
+        <div class="ml-4 mb-8">
+          <div class="text-xs uppercase font-semibold tracking-wide text-grey-darker"><%= book.authors.map(&:name).join(", ") %></div>
+          <div class="leading-tight">
+            <a href="<%= book.link %>" class="font-semibold no-underline hover:underline text-black hover:text-grey-darkest"><%= book.title %></a>
+          </div>
+          <div class="text-xs text-grey-dark"><%= '★' * review.rating %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

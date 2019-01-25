@@ -3,3 +3,6 @@ bin
 node_modules
 tmp
 crash.log
+data/goodreads.pstore
+data/http_cache.pstore
+goodreads.yml

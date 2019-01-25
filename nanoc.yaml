@@ -9,6 +9,9 @@ prune:
 data_sources:
   - type: filesystem
     encoding: utf-8
+  - type: goodreads
+    pstore: data/goodreads.pstore
+    items_root: /goodreads
 
 deploy:
   default:
