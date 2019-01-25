@@ -10,4 +10,5 @@ group :nanoc do
   gem 'rouge'
   gem 'typogruby'
   gem 'kramdown'
+  gem 'rb-readline'
 end
