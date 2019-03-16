@@ -51,7 +51,11 @@ li p {
 }
 
 pre {
-  @apply leading-tight text-sm my-6 bg-grey-lightest p-4;
+  @apply leading-tight text-sm my-6 -mx-4 bg-grey-lightest p-4 whitespace-pre-wrap;
+}
+
+code {
+  @apply bg-grey-lightest;
 }
 
 .dim {
