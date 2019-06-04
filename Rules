@@ -52,8 +52,8 @@ compile '/**/*.md' do
       wrap: true
     }
   }
-  filter :typogruby
   layout '/article.*'
+  filter :typogruby
   layout '/default.*'
   write ext: 'html'
 end
