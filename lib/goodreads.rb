@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'net/https'
 require 'rexml/document'
 require 'time'
@@ -13,9 +15,7 @@ module Goodreads
     def self.from_xml(element)
       attrs = {}
       @attributes.each do |name, options|
-        if options[:default]
-          attrs[name] = options[:default]
-        end
+        attrs[name] = options[:default] if options[:default]
 
         if options[:type] == String
           attrs[name] = element.elements[options[:at].to_s].text
@@ -24,10 +24,12 @@ module Goodreads
         elsif options[:type] == Float
           attrs[name] = element.elements[options[:at].to_s].text.to_f
         elsif options[:type] == :bool
-          attrs[name] = element.elements[options[:at].to_s].text == "true"
+          attrs[name] = element.elements[options[:at].to_s].text == 'true'
         elsif options[:type] == DateTime
           text = element.elements[options[:at].to_s].text
-          attrs[name] = Time.parse(element.elements[options[:at].to_s].text.strip).to_datetime if text && !text.strip.empty?
+          if text && !text.strip.empty?
+            attrs[name] = Time.parse(element.elements[options[:at].to_s].text.strip).to_datetime
+          end
         elsif options[:type] == URI
           text = element.elements[options[:at].to_s].text
           attrs[name] = URI.parse(text.strip) if text && !text.strip.empty?
@@ -95,7 +97,7 @@ module Goodreads
     attribute :ratings_count, type: Integer
     attribute :description
     attribute :published, type: Integer
-    attribute :authors, default: [], at: "authors/author", type: [Author]
+    attribute :authors, default: [], at: 'authors/author', type: [Author]
   end
 
   class Review < Entity
@@ -134,7 +136,7 @@ module Goodreads
     end
 
     def reviews
-      REXML::XPath.match(@document, "//GoodreadsResponse/reviews/review").map do |review_element|
+      REXML::XPath.match(@document, '//GoodreadsResponse/reviews/review').map do |review_element|
         Review.from_xml(review_element)
       end
     end
@@ -142,15 +144,15 @@ module Goodreads
     private
 
     def list_start
-      reviews_element.attributes["start"].to_i
+      reviews_element.attributes['start'].to_i
     end
 
     def list_end
-      reviews_element.attributes["end"].to_i
+      reviews_element.attributes['end'].to_i
     end
 
     def list_total
-      reviews_element.attributes["total"].to_i
+      reviews_element.attributes['total'].to_i
     end
 
     def reviews_element
@@ -172,9 +174,7 @@ module Goodreads
       http.use_ssl = true
       request = Net::HTTP::Get.new(uri.request_uri)
       should_make_request = true
-      if block_given?
-        should_make_request = yield request
-      end
+      should_make_request = yield request if block_given?
       if should_make_request
         puts "fetching #{uri.inspect}"
         data = http.request(request)
@@ -215,11 +215,11 @@ module Goodreads
         @cache.transaction do
           uri = request.path
           if cached_response = @cache[uri]
-            puts "found a cached response with etag #{cached_response["etag"]}"
-            request["If-None-Match"] = cached_response["etag"]
+            puts "found a cached response with etag #{cached_response['etag']}"
+            request['If-None-Match'] = cached_response['etag']
             has_cache = true
           else
-            puts "no info in cache"
+            puts 'no info in cache'
             has_cache = false
           end
           !has_cache || @refresh
@@ -228,10 +228,10 @@ module Goodreads
       if !has_cache || @refresh
         case response
         when Net::HTTPNotModified
-          puts "returning from cache"
+          puts 'returning from cache'
           cached_response
         else
-          puts "writing new response to cache"
+          puts 'writing new response to cache'
           @cache.transaction do
             @cache[uri] = response
           end

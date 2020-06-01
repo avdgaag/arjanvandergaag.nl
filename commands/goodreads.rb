@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pstore'
 require_relative '../lib/goodreads'
 
@@ -13,13 +15,12 @@ end
 
 option :c, :cache, 'specify path to cache file to use', argument: :optional
 option :d, :data, 'specify path to data file to use', argument: :optional
-option :a, :auth, 'file with credentials'
+option :a, :auth, 'file with credentials', argument: :optional
 
-run do |opts, args, cmd|
-
-  cache_path = opts.fetch(:cache, "data/http_cache.pstore")
-  data_path = opts.fetch(:data, "data/goodreads.pstore")
-  creds = opts.fetch(:auth, "goodreads.yml")
+run do |opts, _args, _cmd|
+  cache_path = opts.fetch(:cache, 'data/http_cache.pstore')
+  data_path = opts.fetch(:data, 'data/goodreads.pstore')
+  creds = opts.fetch(:auth, 'goodreads.yml')
   id, key, secret = YAML.load_file(creds).values_at(:id, :key, :secret)
 
   list =
