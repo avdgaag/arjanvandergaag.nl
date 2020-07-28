@@ -45,7 +45,7 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     http_parser.rb (0.6.0)
-    json (2.2.0)
+    json (2.3.1)
     json_schema (0.20.6)
     kramdown (2.1.0)
     listen (3.1.5)
