@@ -22,7 +22,7 @@
     <h2>Reading list</h2>
     <p>List of the <%= link_to 'books I have read', @items['/books'] %>.</p>
     <h2>Thoughts and writings</h2>
-    <% @items.find_all('/blog/*').sort_by { |i| i[:created_at] }.reverse.group_by { |i| i[:created_at].year }.each do |year, pages| %>
+    <% @items.find_all('/{blog,ulysses}/*').sort_by { |i| i[:created_at] }.reverse.group_by { |i| i[:created_at].year }.each do |year, pages| %>
       <h3><%= year %></h3>
       <ol>
         <% pages.each do |page| %>

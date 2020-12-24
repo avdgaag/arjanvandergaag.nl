@@ -1,7 +1,35 @@
 # A list of file extensions that Nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.
-text_extensions: [ 'adoc', 'asciidoc', 'atom', 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'rdoc', 'sass', 'slim', 'tex', 'txt', 'xhtml', 'xml' ]
+text_extensions:
+  [
+    "adoc",
+    "asciidoc",
+    "atom",
+    "coffee",
+    "css",
+    "erb",
+    "haml",
+    "handlebars",
+    "hb",
+    "htm",
+    "html",
+    "js",
+    "less",
+    "markdown",
+    "md",
+    "ms",
+    "mustache",
+    "php",
+    "rb",
+    "rdoc",
+    "sass",
+    "slim",
+    "tex",
+    "txt",
+    "xhtml",
+    "xml",
+  ]
 
 prune:
   auto_prune: true
@@ -12,6 +40,9 @@ data_sources:
   - type: goodreads
     pstore: data/goodreads.pstore
     items_root: /goodreads
+  - type: polites
+    items_root: /ulysses
+    path: ulysses
 
 deploy:
   default:

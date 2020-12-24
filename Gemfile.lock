@@ -97,6 +97,12 @@ GEM
     parallel (1.20.1)
     pastel (0.8.0)
       tty-color (~> 0.5)
+    polites (0.3.0)
+      nokogiri
+      rubyzip
+    polites-nanoc (0.3.0)
+      nanoc (~> 4)
+      polites (~> 0.3.0)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -112,6 +118,7 @@ GEM
     rexml (3.2.4)
     rouge (3.25.0)
     rubypants (0.7.1)
+    rubyzip (2.3.0)
     shellany (0.0.1)
     slow_enumerator_tools (1.1.0)
     thor (1.0.1)
@@ -138,6 +145,7 @@ DEPENDENCIES
   guard-nanoc
   kramdown
   nanoc
+  polites-nanoc (~> 0.3.0)
   pry
   rb-readline
   rouge

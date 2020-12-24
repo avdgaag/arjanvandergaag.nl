@@ -11,4 +11,5 @@ group :nanoc do
   gem 'typogruby'
   gem 'kramdown'
   gem 'rb-readline'
+  gem 'polites-nanoc', '~> 0.3.0'
 end

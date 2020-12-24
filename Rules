@@ -2,9 +2,14 @@
 
 preprocess do
   @items.each do |item|
-    if item[:created_at]
-      item[:created_at] = Time.parse(item[:created_at])
-    end
+    item[:created_at] = Time.parse(item[:created_at]) if item[:created_at]
+  end
+  @items.find_all('/ulysses/**/*').each do |item|
+    item[:created_at] = item[:mtime]
+    item[:title] = Nokogiri(item.raw_content).children.first.text
+    item[:kind] = 'article'
+    item[:tags] = item[:keywords]
+    item[:use_parts] = true
   end
   @items.create('', { reviews: @items.find_all('/goodreads/*') }, '/books')
 end
@@ -56,6 +61,15 @@ compile '/**/*.md' do
   filter :typogruby
   layout '/default.*'
   write ext: 'html'
+end
+
+compile '/ulysses/**/*' do
+  filter :drop_empty_paragraphs
+  layout '/article.*'
+  filter :typogruby
+  filter :colorize_syntax, default_colorizer: :rouge
+  layout '/default.*'
+  write('/blog/' + item.identifier.without_exts.split('/').drop(2).join('/') + '.html')
 end
 
 compile '/**/*' do

@@ -7,7 +7,7 @@
     xml.channel.about = domain + '/feed.xml'
     xml.channel.title = 'arjanvandergaag.nl'
 
-    @items.find_all('/blog/*').each do |page|
+    @items.find_all('/{blog,ulysses}/*').each do |page|
       xml.items.new_item do |item|
         item.link = domain + page.path
         item.title = page[:title]

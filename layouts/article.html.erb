@@ -8,10 +8,19 @@
     </p>
   </footer>
   <a href="/" class="dim inline-block mb-3 md:-ml-32 text-sm font-sans">&larr; back to all talks and articles</a>
-  <h1><%= @item[:title] %></h1>
-  <div class="article-content">
-    <%= yield %>
-  </div>
+  <% if item[:use_parts] %>
+    <% title, leader, content = article_parts(yield) %>
+    <h1><%= title %></h1>
+    <div class="article-content">
+      <%= leader.append_class('leader') %>
+      <%= content %>
+    </div>
+  <% else %>
+    <h1><%= @item[:title] %></h1>
+    <div class="article-content">
+      <%= yield %>
+    </div>
+  <% end %>
   <header>
     <ul class="text-grey-darker text-sm list-reset my-6 font-sans">
       <% @item[:tags].each do |tag_name| %>
