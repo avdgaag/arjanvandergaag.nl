@@ -5,11 +5,14 @@ preprocess do
     item[:created_at] = Time.parse(item[:created_at]) if item[:created_at]
   end
   @items.find_all('/ulysses/**/*').each do |item|
-    item[:created_at] = item[:mtime]
-    item[:title] = Nokogiri(item.raw_content).children.first.text
+    parsed_content = Nokogiri::HTML.fragment(item.raw_content)
+    footer = parsed_content.css('p:not(:empty)').first&.remove
+    author, date = footer.text.split('•', 2).map(&:strip)
+    item[:author] = author
+    item[:created_at] = Time.parse(date)
+    item[:title] = parsed_content.css('h1').first&.remove&.text
     item[:kind] = 'article'
     item[:tags] = item[:keywords]
-    item[:use_parts] = true
   end
   @items.create('', { reviews: @items.find_all('/goodreads/*') }, '/books')
 end
